@@ -81,54 +81,6 @@ ul.menu_ul li a.active{
 	height: 662px;
 }
 
-.foot_uno{
-	text-align: center;
-	color: white;
-	font-style: normal;
-	font-weight: normal;
-	padding: 2.5em;
-	float: left;
-}
-
-.foot_ul{
-	list-style-type: none;
-	text-align: left;
-	font-size: 15px;
-	line-height: 5px;
-}
-
-.foot_li{
-	font-weight: bold;
-}
-
-.img_foot{
-	width: 100%;
-	max-width: 46px;
-	padding-top: 6px;
-	padding-right: 10px;
-}
-
-.foot_p{
-	font-size: 15px;
-	width: 14em;
-	text-align: justify;
-}
-
-.foot_n{
-	width: 22em;
-	text-align: justify;
-}
-
-.foot_uno input{
-	width: 13em;
-}
-
-footer{
-	/* padding: 10em; */
-	overflow: hidden;
-	background: rgb(35, 31, 36);
-	float: center;
-}
 
 .img_right{
 	width: 100%;
@@ -145,17 +97,62 @@ ul.menu_ul img{
 	background-color: #111;
 }
 
-/* INICIO */
+/*Configuración del footer*/
+/*No se ve porque no tiene padding*/
 
-/*Afecta a todo el formulario*/
-.form_sub {
-	/* padding: 3px; */
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	float: left;
+.footer{
+	background: rgb(35, 31, 36);
+	overflow: hidden;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
+.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
+	float: left;
+	margin-left: 3em;
+	text-align: center;
+}
+
+.foot_tres form{
+	display: flex;
+	flex-direction: row;
+}
+
+.foot_ul{
+	width: 100%;
+	list-style-type: none;
+	text-align: justify;
+	font-size: 15px;
+	line-height: 5px;
+}
+
+.foot_li{
+	font-weight: bold;
+}
+
+.img_foot{
+	width: 100%;
+	max-width: 46px;
+	padding-top: 6px;
+	padding-right: 10px;
+}
+
+.foot_cuatro p{
+	width: 18em;
+	font-size: 15px;
+	text-align: justify;
+}
+
+.foot_tres p{
+	width: 22em;
+	font-size: 15px;
+	text-align: justify;
+}
+
+/*Caracteristicas del formulario*/
 .btn_submit{
 	background-color: #EFEFEF;
 	padding: 10px;
@@ -168,7 +165,6 @@ ul.menu_ul img{
 	border-bottom: none;
 	color: rgb(0, 0, 0)white;
 	border-radius: 4px;
-	/* box-shadow: 2px 2px 5px #aaaaaa; */
 }
 
 .btn_submit:hover {
@@ -190,9 +186,30 @@ ul.menu_ul img{
 	color: white;
 }
 
+
+
 @media screen and (max-width: 1110px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
+	}
+	
+	.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
+		margin-left: 0em;
+		float: none;
+	}
+
+	.foot_uno, .foot_dos, .foot_tres{
+		border-style: solid;
+		border-width: 1px;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		padding-bottom: 15px;
+	}
+
+	.foot_tres form{
+		display: block;
+		text-align: center;
 	}
 
 	.active{
@@ -205,27 +222,16 @@ ul.menu_ul img{
 		position: relative;
 	}
 
-	footer{
-		float: none;
-		text-align: center;
-	}
-
-	.form_sub {
-		/* padding: 3px; */
-		display: flex;
-		flex-direction: column;
-	}
-
 	.img_right{
-	max-width: 46px;
   position: absolute;
+	max-width: 46px;
 	left: 0;
 	right: 0;
 	margin: auto;
 	padding-right: 0px;
 }
-	.img_menu{
+
+.img_menu{
 		padding-bottom: 60px;
 	}
-
 }
