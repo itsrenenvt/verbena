@@ -1,6 +1,8 @@
+*{
+	font-family: Montserrat;
+}
 body{
 	margin: 0;
-	font-family: Montserrat;
 }
 
 header {
@@ -18,7 +20,6 @@ ul.menu_ul{
 	/* position: fixed; */
 	background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 ul.menu_ul li{
 	float: left;
@@ -141,13 +142,15 @@ ul.menu_ul img{
 }
 
 .foot_cuatro p{
-	width: 18em;
+	width: 100%;
+	max-width: 18em;
 	font-size: 15px;
 	text-align: justify;
 }
 
 .foot_tres p{
-	width: 22em;
+	width: 100%;
+	max-width: 22em;
 	font-size: 15px;
 	text-align: justify;
 }
@@ -158,13 +161,13 @@ ul.menu_ul img{
 	padding: 10px;
 	margin: 10px;
 	border: none;
-	border-bottom: solid #C8C8C8 .2rem;
+	border-bottom: solid #474040 .2rem;
 	transition: all .5s;
 	width: 100%;
 	max-width: 120px;
-	border-bottom: none;
 	color: rgb(0, 0, 0)white;
 	border-radius: 4px;
+	font-weight: bold;
 }
 
 .btn_submit:hover {
@@ -179,6 +182,7 @@ ul.menu_ul img{
 	border: none;
 	border-bottom: solid #C8C8C8 .2rem;
 	transition: all .5s;
+	color: white;
 }
 
 .input:focus {
@@ -200,6 +204,7 @@ ul.menu_ul img{
 
 	.foot_uno, .foot_dos, .foot_tres{
 		border-style: solid;
+		border-color: rgb(255, 255, 255);
 		border-width: 1px;
 		border-top: none;
 		border-left: none;
@@ -211,6 +216,11 @@ ul.menu_ul img{
 		display: block;
 		text-align: center;
 	}
+
+/*text-align alinea al centro el texto*/
+.foot_tres p{
+	position: center;
+}
 
 	.active{
 		font-weight: bold;
