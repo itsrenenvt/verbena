@@ -108,7 +108,7 @@ ul.menu_ul img{
 	background-color: #111;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1110px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
 	}
