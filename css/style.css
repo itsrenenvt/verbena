@@ -38,6 +38,7 @@ ul.menu_ul li a{
 
 ul.menu_ul li a:hover:not(.active){
 	background-color: #111;
+	/* background-color: rgb(2, 8, 47); */
 }
 
 ul.menu_ul li a.active{
@@ -46,20 +47,6 @@ ul.menu_ul li a.active{
 	padding-right: 7em;
 
 }
-
-/* .menu_der{
-	float: right;
-} */
-
-/* .img_menu{
-	width: 100%;
-	max-width: 40px;
-	padding-right: 20px;
-	padding-top: 8px;
-}
-.menu_der ul{
-	list-style-type: none;
-} */
 
 .seccion_1{
   background: url('../img/img_verbena1.jpg');
@@ -94,19 +81,8 @@ ul.menu_ul li a.active{
 	height: 662px;
 }
 
-.foot_uno{
-	color: white;
-	font-style: normal;
-	font-weight: normal;
-	padding: 0px;
-}
 
-footer{
-	padding: 10em;
-	background: rgb(35, 31, 36);
-}
-
-.imgme{
+.img_right{
 	width: 100%;
 	max-width: 46px;
 	padding-top: 6px;
@@ -117,40 +93,145 @@ ul.menu_ul img{
 	float: right;
 }
 
-.backimg:hover{
+.img_menu:hover{
 	background-color: #111;
 }
 
-@media screen and (max-width: 900px) {
+/*Configuración del footer*/
+/*No se ve porque no tiene padding*/
+
+.footer{
+	background: rgb(35, 31, 36);
+	overflow: hidden;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
+	float: left;
+	margin-left: 3em;
+	text-align: center;
+}
+
+.foot_tres form{
+	display: flex;
+	flex-direction: row;
+}
+
+.foot_ul{
+	width: 100%;
+	list-style-type: none;
+	text-align: justify;
+	font-size: 15px;
+	line-height: 5px;
+}
+
+.foot_li{
+	font-weight: bold;
+}
+
+.img_foot{
+	width: 100%;
+	max-width: 46px;
+	padding-top: 6px;
+	padding-right: 10px;
+}
+
+.foot_cuatro p{
+	width: 18em;
+	font-size: 15px;
+	text-align: justify;
+}
+
+.foot_tres p{
+	width: 22em;
+	font-size: 15px;
+	text-align: justify;
+}
+
+/*Caracteristicas del formulario*/
+.btn_submit{
+	background-color: #EFEFEF;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+	width: 100%;
+	max-width: 120px;
+	border-bottom: none;
+	color: rgb(0, 0, 0)white;
+	border-radius: 4px;
+}
+
+.btn_submit:hover {
+	background-color: #4c4c4d;
+	color: white;
+}
+
+.input{
+	background-color: #474040;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+
+.input:focus {
+	border-bottom: solid #F39B53 .2rem;
+	color: white;
+}
+
+
+
+@media screen and (max-width: 1110px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
 	}
 
-	.active{
-		font-weight: bold;
-		font-size: 15px;
+	.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
+		margin-left: 0em;
+		float: none;
 	}
 
-	.imgme{
-	max-width: 46px;
+	.foot_uno, .foot_dos, .foot_tres{
+		border-style: solid;
+		border-width: 1px;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		padding-bottom: 25px;
+	}
+
+	.foot_tres form{
+		display: block;
+		text-align: center;
+	}
+
+	.active{
+		font-weight: bold;
+		font-size: 13px;
+	}
+
+	header{
+		height:0;
+		position: relative;
+	}
+
+	.img_right{
   position: absolute;
+	max-width: 46px;
 	left: 0;
 	right: 0;
 	margin: auto;
 	padding-right: 0px;
 }
 
-	.backimg{
+.img_menu{
 		padding-bottom: 60px;
-		/* background-color: #333; */
 	}
-
-	/* .img_menu{
-	max-width: 65px;
-  position: absolute;
-	padding: 50px;
-	left: 0;
-	right: 0;
-	margin: auto;} */
-
 }
