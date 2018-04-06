@@ -114,6 +114,11 @@ ul.menu_ul li a.active{
 	text-align: justify;
 }
 
+.foot_n{
+	width: 22em;
+	text-align: justify;
+}
+
 .foot_uno input{
 	width: 13em;
 }
