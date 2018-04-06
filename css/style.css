@@ -64,6 +64,7 @@ ul.menu_ul li a.active{
 .seccion_1{
   background: url('../img/img_verbena1.jpg');
   background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
@@ -74,6 +75,7 @@ ul.menu_ul li a.active{
 .seccion_2{
   background: url('../img/img_verbena2.jpg');
   background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
@@ -84,6 +86,7 @@ ul.menu_ul li a.active{
 .seccion_3{
   background: url('../img/img_verbena3.jpg');
   background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
