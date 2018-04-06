@@ -82,15 +82,47 @@ ul.menu_ul li a.active{
 }
 
 .foot_uno{
+	text-align: center;
 	color: white;
 	font-style: normal;
 	font-weight: normal;
-	padding: 0px;
+	padding: 2.5em;
+	float: left;
+}
+
+.foot_ul{
+	list-style-type: none;
+	text-align: left;
+	font-size: 15px;
+	line-height: 5px;
+}
+
+.foot_li{
+	font-weight: bold;
+}
+
+.img_foot{
+	width: 100%;
+	max-width: 46px;
+	padding-top: 6px;
+	padding-right: 10px;
+}
+
+.foot_p{
+	font-size: 15px;
+	width: 14em;
+	text-align: justify;
+}
+
+.foot_uno input{
+	width: 13em;
 }
 
 footer{
-	padding: 10em;
+	/* padding: 10em; */
+	overflow: hidden;
 	background: rgb(35, 31, 36);
+	float: center;
 }
 
 .img_right{
@@ -108,6 +140,51 @@ ul.menu_ul img{
 	background-color: #111;
 }
 
+/* INICIO */
+
+/*Afecta a todo el formulario*/
+.form_sub {
+	/* padding: 3px; */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	float: left;
+}
+
+.btn_submit{
+	background-color: #EFEFEF;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+	width: 100%;
+	max-width: 120px;
+	border-bottom: none;
+	color: rgb(0, 0, 0)white;
+	border-radius: 4px;
+	/* box-shadow: 2px 2px 5px #aaaaaa; */
+}
+
+.btn_submit:hover {
+	background-color: #4c4c4d;
+	color: white;
+}
+
+.input{
+	background-color: #474040;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+
+.input:focus {
+	border-bottom: solid #F39B53 .2rem;
+	color: white;
+}
+
 @media screen and (max-width: 1110px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
@@ -123,10 +200,16 @@ ul.menu_ul img{
 		position: relative;
 	}
 
-   /* PARA HACER LOS RENGLONES MÁS PEQUEÑOS*/
-	/* ul.menu_ul li a{
-		padding: 10px 10px;
-	} */
+	footer{
+		float: none;
+		text-align: center;
+	}
+
+	.form_sub {
+		/* padding: 3px; */
+		display: flex;
+		flex-direction: column;
+	}
 
 	.img_right{
 	max-width: 46px;
@@ -136,7 +219,6 @@ ul.menu_ul img{
 	margin: auto;
 	padding-right: 0px;
 }
-
 	.img_menu{
 		padding-bottom: 60px;
 	}
