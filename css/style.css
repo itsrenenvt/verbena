@@ -38,6 +38,7 @@ ul.menu_ul li a{
 
 ul.menu_ul li a:hover:not(.active){
 	background-color: #111;
+	/* background-color: rgb(2, 8, 47); */
 }
 
 ul.menu_ul li a.active{
@@ -50,6 +51,7 @@ ul.menu_ul li a.active{
 .seccion_1{
   background: url('../img/img_verbena1.jpg');
   background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
@@ -60,6 +62,7 @@ ul.menu_ul li a.active{
 .seccion_2{
   background: url('../img/img_verbena2.jpg');
   background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
@@ -70,6 +73,7 @@ ul.menu_ul li a.active{
 .seccion_3{
   background: url('../img/img_verbena3.jpg');
   background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
@@ -111,8 +115,18 @@ ul.menu_ul img{
 
 	.active{
 		font-weight: bold;
-		font-size: 15px;
+		font-size: 13px;
 	}
+
+	header{
+		height:0;
+		position: relative;
+	}
+
+   /* PARA HACER LOS RENGLONES MÁS PEQUEÑOS*/
+	/* ul.menu_ul li a{
+		padding: 10px 10px;
+	} */
 
 	.img_right{
 	max-width: 46px;
