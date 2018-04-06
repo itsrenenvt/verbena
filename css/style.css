@@ -192,7 +192,7 @@ ul.menu_ul img{
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
 	}
-	
+
 	.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
 		margin-left: 0em;
 		float: none;
@@ -204,7 +204,7 @@ ul.menu_ul img{
 		border-top: none;
 		border-left: none;
 		border-right: none;
-		padding-bottom: 15px;
+		padding-bottom: 25px;
 	}
 
 	.foot_tres form{
