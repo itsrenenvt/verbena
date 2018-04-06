@@ -1,0 +1,153 @@
+body{
+	margin: 0;
+	font-family: Montserrat;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/*Afecta a todo el menú superior*/
+ul.menu_ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/* position: fixed; */
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+ul.menu_ul li{
+	float: left;
+	/*border-style: solid;
+	border-top: 1px;
+	border-left: 1px;
+	border-color: white; */
+	}
+
+ul.menu_ul li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px 26px;
+	text-decoration: none;
+}
+
+ul.menu_ul li a:hover:not(.active){
+	background-color: #111;
+}
+
+ul.menu_ul li a.active{
+	background-color: rgba(0,0,0, 0.8);
+	padding-left: 7em;
+	padding-right: 7em;
+
+}
+
+/* .menu_der{
+	float: right;
+} */
+
+/* .img_menu{
+	width: 100%;
+	max-width: 40px;
+	padding-right: 20px;
+	padding-top: 8px;
+}
+.menu_der ul{
+	list-style-type: none;
+} */
+
+.seccion_1{
+  background: url('../img/img_verbena1.jpg');
+  background-color: rgb(110, 201, 169);
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 662px;
+}
+
+.seccion_2{
+  background: url('../img/img_verbena2.jpg');
+  background-color: rgb(110, 201, 169);
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 662px;
+}
+
+.seccion_3{
+  background: url('../img/img_verbena3.jpg');
+  background-color: rgb(110, 201, 169);
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 662px;
+}
+
+.foot_uno{
+	color: white;
+	font-style: normal;
+	font-weight: normal;
+	padding: 0px;
+}
+
+footer{
+	padding: 10em;
+	background: rgb(35, 31, 36);
+}
+
+.imgme{
+	width: 100%;
+	max-width: 46px;
+	padding-top: 6px;
+	padding-right: 25px;
+}
+
+ul.menu_ul img{
+	float: right;
+}
+
+.backimg:hover{
+	background-color: #111;
+}
+
+@media screen and (max-width: 900px) {
+	ul.menu_ul li.right,	ul.menu_ul li{
+		float: none;
+	}
+
+	.active{
+		font-weight: bold;
+		font-size: 15px;
+	}
+
+	.imgme{
+	max-width: 46px;
+  position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding-right: 0px;
+}
+
+	.backimg{
+		padding-bottom: 60px;
+		/* background-color: #333; */
+	}
+
+	/* .img_menu{
+	max-width: 65px;
+  position: absolute;
+	padding: 50px;
+	left: 0;
+	right: 0;
+	margin: auto;} */
+
+}
