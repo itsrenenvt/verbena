@@ -96,15 +96,6 @@ ul.menu_ul li a.active{
     height: 100% !important;
     }
 
-/* .seccion_4{
-  background-color: rgb(110, 201, 169);
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	height: 400px;
-} */
-
 .img_right{
 	width: 100%;
 	max-width: 46px;
@@ -217,8 +208,6 @@ ul.menu_ul img{
 	color: white;
 }
 
-
-
 @media screen and (max-width: 1116px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
@@ -269,7 +258,7 @@ ul.menu_ul img{
 	}
 	/*Configuración de mapa*/
 	.google-maps {
-	    padding-bottom: 58%; // This is the aspect ratio
+	    padding-bottom: 55%; // This is the aspect ratio
 	    }
 
 /*alinea los parrafos cuando se hace pequeña la ventana*/
