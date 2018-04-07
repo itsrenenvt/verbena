@@ -202,6 +202,29 @@ ul.menu_ul img{
 		float: none;
 	}
 
+	.foot_cuatro p{
+		width: 100%;
+		max-width: 18em;
+		font-size: 15px;
+		margin: 0 auto;
+	}
+
+	.foot_tres p{
+		width: 100%;
+		max-width: 22em;
+		font-size: 15px;
+		text-align: justify;
+		margin: 0 auto;
+	}
+
+	.foot_ul{
+		width: 100%;
+		max-width: 15em;
+		text-align: justify;
+		font-size: 15px;
+		margin: 0 auto;
+	}
+
 	.foot_uno, .foot_dos, .foot_tres{
 		border-style: solid;
 		border-color: rgb(255, 255, 255);
@@ -217,11 +240,15 @@ ul.menu_ul img{
 		text-align: center;
 	}
 
+/*alinea los parrafos cuando se hace pequeña la ventana*/
 /*text-align alinea al centro el texto*/
-.foot_tres p{
-	position: center;
-}
 
+.footer{
+	display: relative;
+}
+.foot_cuatro p{
+	float: none;
+}
 	.active{
 		font-weight: bold;
 		font-size: 13px;
