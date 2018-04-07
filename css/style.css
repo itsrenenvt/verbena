@@ -82,15 +82,28 @@ ul.menu_ul li a.active{
 	height: 662px;
 }
 
-.seccion_4{
+.google-maps {
+    position: relative;
+    padding-bottom: 29.6%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    }
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    }
+
+/* .seccion_4{
   background-color: rgb(110, 201, 169);
 	background-attachment: fixed;
-	/* padding: 50px 100px; */
 	background-size: cover;
 	background-position: center;
 	text-align: center;
 	height: 400px;
-}
+} */
 
 .img_right{
 	width: 100%;
@@ -206,7 +219,7 @@ ul.menu_ul img{
 
 
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1116px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
 	}
@@ -254,6 +267,10 @@ ul.menu_ul img{
 		display: block;
 		text-align: center;
 	}
+	/*Configuración de mapa*/
+	.google-maps {
+	    padding-bottom: 58%; // This is the aspect ratio
+	    }
 
 /*alinea los parrafos cuando se hace pequeña la ventana*/
 /*text-align alinea al centro el texto*/
