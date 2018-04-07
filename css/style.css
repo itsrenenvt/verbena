@@ -113,8 +113,8 @@ ul.menu_ul img{
 
 .foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
 	float: left;
-	margin-left: 3em;
-	text-align: center;
+	margin-left: 2.5em;
+	/* text-align: center; */
 }
 
 .foot_tres form{
@@ -127,11 +127,15 @@ ul.menu_ul img{
 	list-style-type: none;
 	text-align: justify;
 	font-size: 15px;
-	line-height: 5px;
+	line-height: 2.5em;
 }
 
-.foot_li{
+.foot_label{
 	font-weight: bold;
+}
+
+.foot_span{
+	font-weight: normal;
 }
 
 .img_foot{
@@ -186,7 +190,8 @@ ul.menu_ul img{
 }
 
 .input:focus {
-	border-bottom: solid #F39B53 .2rem;
+	/* border-bottom: solid #F39B53 .2rem; */
+	border-bottom: solid #53f476 .2rem;
 	color: white;
 }
 
@@ -211,7 +216,7 @@ ul.menu_ul img{
 
 	.foot_tres p{
 		width: 100%;
-		max-width: 22em;
+		max-width: 18em;
 		font-size: 15px;
 		text-align: justify;
 		margin: 0 auto;
@@ -219,9 +224,10 @@ ul.menu_ul img{
 
 	.foot_ul{
 		width: 100%;
-		max-width: 15em;
+		max-width: 20em;
 		text-align: justify;
 		font-size: 15px;
+		line-height: 1.8em;
 		margin: 0 auto;
 	}
 
