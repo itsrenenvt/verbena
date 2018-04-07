@@ -208,6 +208,11 @@ ul.menu_ul img{
 	color: white;
 }
 
+@media screen and (max-width: 800px){
+	.google-maps {
+		padding-bottom: 67%; // This is the aspect ratio
+	}
+}
 @media screen and (max-width: 1116px) {
 	ul.menu_ul li.right,	ul.menu_ul li{
 		float: none;
@@ -257,9 +262,9 @@ ul.menu_ul img{
 		text-align: center;
 	}
 	/*Configuración de mapa*/
-	.google-maps {
-	    padding-bottom: 58%; // This is the aspect ratio
-	    }
+	/* .google-maps {
+	    padding-bottom: 67%; // This is the aspect ratio
+	    } */
 
 /*alinea los parrafos cuando se hace pequeña la ventana*/
 /*text-align alinea al centro el texto*/
