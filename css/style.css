@@ -82,6 +82,15 @@ ul.menu_ul li a.active{
 	height: 662px;
 }
 
+.seccion_4{
+  background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
+	/* padding: 50px 100px; */
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 400px;
+}
 
 .img_right{
 	width: 100%;
