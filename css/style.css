@@ -49,9 +49,12 @@ ul.menu_ul li a.active{
 
 }
 
+.cartelera a:nth-child(1){
+	background-color: rgba(0,0,0, 0.8);
+}
+
 .seccion_1{
   background: url('../img/img_verbena1.jpg');
-  background-color: rgb(110, 201, 169);
 	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
@@ -62,7 +65,6 @@ ul.menu_ul li a.active{
 
 .seccion_2{
   background: url('../img/img_verbena2.jpg');
-  background-color: rgb(110, 201, 169);
 	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
@@ -73,7 +75,26 @@ ul.menu_ul li a.active{
 
 .seccion_3{
   background: url('../img/img_verbena3.jpg');
-  background-color: rgb(110, 201, 169);
+	background-attachment: fixed;
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 662px;
+}
+
+.seccion_4{
+  background: url('../img/img_verbena4.jpg');
+	background-attachment: fixed;
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 662px;
+}
+
+.seccion_5{
+  background: url('../img/img_verbena5.jpg');
 	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
@@ -208,6 +229,100 @@ ul.menu_ul img{
 	color: white;
 }
 
+/*Estilo de cartelera.html*/
+
+.menu{
+	width: 2.4rem;
+	height: 2.5rem;
+	background: #161717;
+	border-radius: 0 0.5rem 0.5rem 0;
+	top: 19%;
+	left: 0%;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+	transition: left 0.7s;
+
+  position: fixed;
+  z-index: 100;
+}
+
+
+.checkbox:checked ~ .menu{
+	/*modifica la separacion del boton*/
+	left: 15%;
+	border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Safari
+background: -webkit-linear-gradient(#54BBC7,#2EE3AD,#9191f2);
+Opera
+background: -o-linear-gradient(#54BBC7,#2EE3AD,#9191f2);
+Estandar
+background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
+
+.left-panel {
+	height: 100% !important;
+	width: 100% !important;
+	/* max-height: 40%;
+	max-width: 15%; */
+	max-height: 16em;
+	max-width: 12.7em;
+	background-color: #161717;
+	position: fixed;
+  z-index: 100;
+	top: 6.2em;
+	left: -40%;
+	display: flex;
+	justify-content: center;
+	transition: left 0.5s;
+	border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.left-panel h4{
+	color: white;
+}
+
+.checkbox:checked ~ .left-panel{
+	left: 0;
+}
+
+/*Oculta el checkbox*/
+.checkbox{
+	display: none;
+}
+
+.left-panel ul a{
+	color: #F7F7E7;
+	text-decoration: none;
+}
+
+.left-panel li{
+	border-style: dotted;
+	border-width: 1px;
+	border-color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	list-style: none;
+	font-size: 15px;
+	/*este alinea el contenido dentro del li*/
+	text-align: left;
+	padding: 15px 5.5em 13px 5px;
+	/* margin: 0 .6rem 0 -1.9rem; */
+	margin-left: -2.7rem;
+}
+
+.left-panel li:hover{
+	/* color: white;
+	border: solid white;
+	border-width: 0 0.1rem; */
+	border-color: rgb(120, 120, 120);
+}
+
+
+
+
 @media screen and (max-width: 700px){
 	.google-maps {
 		padding-bottom: 90%; // This is the aspect ratio
@@ -221,6 +336,15 @@ ul.menu_ul img{
 	.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
 		margin-left: 0em;
 		float: none;
+	}
+
+	.left-panel{
+		left: -90%;
+	}
+
+	.checkbox:checked ~ .menu{
+		/* left: 29.2%; */
+		left: 6.3em;
 	}
 
 	.foot_cuatro p{
