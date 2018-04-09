@@ -422,6 +422,11 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 	cursor: pointer;
 }
 
+.div_login input[type="submit"]:hover{
+	background: #bb0001;
+	transition: .5s;
+}
+
 .div_login a{
 	color: #262626;
 	font-size: 14px;
