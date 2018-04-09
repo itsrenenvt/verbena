@@ -391,7 +391,8 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 	box-sizing: border-box;
 }
 
-::placeholder{
+.placeholder::placeholder
+{
 	color: rgba(0,0,0,.5);
 }
 
