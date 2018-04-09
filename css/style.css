@@ -231,6 +231,7 @@ ul.menu_ul img{
 
 /*Estilo de cartelera.html*/
 
+/*Cuando tiene ||| más las propiedades*/
 .menu{
 	width: 2.4rem;
 	height: 2.5rem;
@@ -242,9 +243,14 @@ ul.menu_ul img{
 	color: white;
 	text-align: center;
 	transition: left 0.7s;
-
   position: fixed;
   z-index: 100;
+}
+
+/*Las propiedades anteriores pero con imagen*/
+.menu img{
+	width: .8em;
+	padding-bottom: 3px;
 }
 
 
