@@ -1,32 +1,36 @@
+/*==============================
+  =     SELECTOR UNIVERSAL     =
+  ==============================*/
 *{
 	font-family: Montserrat;
 }
+
+/*==============================
+  =      SELECTOR CUERPO       =
+  ==============================*/
 body{
 	margin: 0;
 }
 
+/*==============================
+  =     CONFIG. HEADER_UNO     =
+  ==============================*/
 header {
-  width: 100%;
-  position: fixed;
-  z-index: 100;
+  width: 100%;     /*Da al tag header el ancho de pantala*/
+  position: fixed; /*Vuelve fijo el header*/
+  z-index: 100;    /*Superpone el header a los demás componentes*/
 }
 
-/*Afecta a todo el menú superior*/
 ul.menu_ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	/* position: fixed; */
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
 ul.menu_ul li{
 	float: left;
-	/*border-style: solid;
-	border-top: 1px;
-	border-left: 1px;
-	border-color: white; */
 	}
 
 ul.menu_ul li a{
@@ -39,7 +43,6 @@ ul.menu_ul li a{
 
 ul.menu_ul li a:hover:not(.active){
 	background-color: #111;
-	/* background-color: rgb(2, 8, 47); */
 }
 
 ul.menu_ul li a.active{
@@ -48,6 +51,23 @@ ul.menu_ul li a.active{
 	padding-right: 7em;
 
 }
+
+.img_right{
+	width: 100%;
+	max-width: 46px;
+	padding-top: 6px;
+	padding-right: 25px;
+}
+
+ul.menu_ul img{
+	float: right;
+}
+
+.img_menu:hover{
+	background-color: #111;
+}
+/*= FIN CONFIG. HEADER_UNO =*/
+
 
 .cartelera a:nth-child(1){
 	background-color: rgba(0,0,0, 0.8);
@@ -116,21 +136,6 @@ ul.menu_ul li a.active{
     width: 100% !important;
     height: 100% !important;
     }
-
-.img_right{
-	width: 100%;
-	max-width: 46px;
-	padding-top: 6px;
-	padding-right: 25px;
-}
-
-ul.menu_ul img{
-	float: right;
-}
-
-.img_menu:hover{
-	background-color: #111;
-}
 
 /*Configuración del footer*/
 /*No se ve porque no tiene padding*/
@@ -447,15 +452,105 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 	background: rgba(255,255,255,1);
 }
 
-@media screen and (max-width: 700px){
-	.google-maps {
-		padding-bottom: 90%; // This is the aspect ratio
-	}
+/*==============================
+  =   CONFIG. LARGE DESKTOP    =
+  ==============================*/
+@media screen and (max-width: 2048px){
+
 }
-@media screen and (max-width: 1116px) {
-	ul.menu_ul li.right,	ul.menu_ul li{
-		float: none;
+
+/*==============================
+  =   CONFIG. MEDIUM DESKTOP   =
+  ==============================*/
+@media screen and (max-width: 1920px){
+
 	}
+
+/*==============================
+  =      CONFIG. LARGE TABLETS       =
+  ==============================*/
+@media screen and (max-width: 1280px){
+
+}
+
+/*==============================
+  =      CONFIG. PAMPHLETS       =
+  ==============================*/
+@media screen and (max-width: 1120px){
+	/*= CONFIG. DEL HEADER CUANDO SCREEN < 1280px =*/
+	ul.menu_ul li.right,	ul.menu_ul li{  /*Tag li de la clase right que pertenece al tag ul del menu_ul , Resto de tag li que pertenecen al menu_ul, */
+		float: none;                        /*Quita la propiedad de flotado a los elementos.*/
+	}
+
+	.img_right{            /*Tag img de clase img_right*/
+  position: absolute;    /*Se coloca en relación con el elemento anterior ya posicionado no estático.*/
+	max-width: 46px;       /*Ancho máximo de 46px.*/
+	left: 0;               /*Posiciona los elementos a la izquierda en cero.*/
+	right: 0;              /*Posiciona los elementos a la derecha en cero.*/
+	margin: auto;          /*Añade margen automático*/
+	padding-right: 0px;    /*Añade borde interior derecho de 0px;*/
+}
+
+.img_menu{                /*Tag div de clase menú*/
+		padding-bottom: 60px; /*Añade un borde interior inferior de 60px.*/
+	}
+/*= FIN CONFIG. DEL HEADER_UNO =*/
+
+}
+
+/*==============================
+  =    CONFIG. SMART LARGE    =
+  ==============================*/
+@media screen and (max-width: 720px){
+/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 720=*/
+	.google-maps {
+		padding-bottom: 45%; // This is the aspect ratio
+	}
+/*= FIN CONFIG. DIV GOOGLE MAPS =*/
+}
+
+/*==============================
+  =    CONFIG. SMART MEDIUM    =
+  ==============================*/
+@media screen and (max-width: 480px){
+	/*= CONFIG. DEL HEADER_UNO CUANDO SCREEN < 320px =*/
+		ul.menu_ul li a.active{ /*Tag a con clase active que pertenece a tag li del tag ul con clase menu_ul.*/
+			padding-left:  0;     /*Coloca margen interno izquierdo en cero.*/
+			padding-right: 0;     /*Coloca margen interno derecho en cero.*/
+		}
+	/*= FIN CONFIG. DEL HEADER_UNO =*/
+
+/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 480=*/
+	.google-maps {
+		padding-bottom: 75%; // This is the aspect ratio
+	}
+/*= FIN CONFIG. DIV GOOGLE MAPS =*/
+}
+
+/*==============================
+  =    CONFIG. SMART SMALL    =
+  ==============================*/
+@media screen and (max-width: 360px){
+/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 360=*/
+	.google-maps {
+		padding-bottom: 85%; // This is the aspect ratio
+	}
+/*= FIN CONFIG. DIV GOOGLE MAPS =*/
+}
+
+/*==============================
+  = CONFIG. SMART EXTRA SMALL  =
+  ==============================*/
+@media screen and (max-width: 320px){
+
+}
+
+
+/**/
+@media screen and (max-width: 1116px) {
+	/* ul.menu_ul li.right,	ul.menu_ul li{
+		float: none;
+	} */
 
 	.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
 		margin-left: 0em;
@@ -523,17 +618,17 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 .foot_cuatro p{
 	float: none;
 }
-	.active{
+	/* .active{
 		font-weight: bold;
 		font-size: 13px;
-	}
+	} */
 
 	header{
 		height:0;
 		position: relative;
 	}
 
-	.img_right{
+	/* .img_right{
   position: absolute;
 	max-width: 46px;
 	left: 0;
@@ -544,5 +639,5 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 
 .img_menu{
 		padding-bottom: 60px;
-	}
+	} */
 }
