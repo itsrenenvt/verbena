@@ -69,9 +69,106 @@ ul.menu_ul img{
 /*= FIN CONFIG. HEADER_UNO =*/
 
 
-.cartelera a:nth-child(1){
-	background-color: rgba(0,0,0, 0.8);
+
+/*==============================
+  =       CONFIG. FOOTER       =
+  ==============================*/
+.footer{
+	background: rgb(35, 31, 36);
+	overflow: hidden;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
+
+.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
+	float: left;
+	height: 13em;
+	margin-left: .5em;
+	margin-right: 2em;
+}
+
+.foot_tres form{
+	display: flex;
+	flex-direction: row;
+}
+
+.foot_ul{
+	width: 100%;
+	list-style-type: none;
+	text-align: justify;
+	font-size: 15px;
+	line-height: 2.5em;
+}
+
+.foot_label{
+	font-weight: bold;
+}
+
+.foot_span{
+	font-weight: normal;
+}
+
+.img_foot{
+	width: 100%;
+	max-width: 46px;
+	padding-top: 6px;
+	padding-right: 10px;
+}
+
+.foot_cuatro p{
+	width: 100%;
+	max-width: 18em;
+	font-size: 15px;
+	text-align: justify;
+}
+
+.foot_tres p{
+	width: 100%;
+	max-width: 20em;
+	font-size: 15px;
+	text-align: justify;
+}
+
+.btn_submit{
+	background-color: #EFEFEF;
+	padding: 10px;
+	/* margin: 10px; */
+	height: 20%;
+	border: none;
+	border-bottom: solid /*#474040*/#C8C8C8 .2rem;
+	transition: all .5s;
+	width: 100%;
+	max-width: 120px;
+	color: rgb(0, 0, 0)white;
+	border-radius: 0 4px 4px 0;
+	font-weight: bold;
+}
+
+.btn_submit:hover {
+	background-color: #4c4c4d;
+	color: white;
+}
+
+.input{
+	background-color: #474040;
+	padding: 10px;
+	/* margin: 10px; */
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+	color: white;
+}
+
+.input:focus {
+	/* border-bottom: solid #F39B53 .2rem; */
+	border-bottom: solid #53f476 .2rem;
+	color: white;
+}
+
+/*= FIN FOOTER =*/
 
 .seccion_1{
   background: url('../img/img_verbena1.jpg');
@@ -137,105 +234,12 @@ ul.menu_ul img{
     height: 100% !important;
     }
 
-/*Configuración del footer*/
-/*No se ve porque no tiene padding*/
-
-.footer{
-	background: rgb(35, 31, 36);
-	overflow: hidden;
-	width: 100%;
-	color: white;
-	text-align: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
-}
-
-.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
-	float: left;
-	margin-left: 2.5em;
-	/* text-align: center; */
-}
-
-.foot_tres form{
-	display: flex;
-	flex-direction: row;
-}
-
-.foot_ul{
-	width: 100%;
-	list-style-type: none;
-	text-align: justify;
-	font-size: 15px;
-	line-height: 2.5em;
-}
-
-.foot_label{
-	font-weight: bold;
-}
-
-.foot_span{
-	font-weight: normal;
-}
-
-.img_foot{
-	width: 100%;
-	max-width: 46px;
-	padding-top: 6px;
-	padding-right: 10px;
-}
-
-.foot_cuatro p{
-	width: 100%;
-	max-width: 18em;
-	font-size: 15px;
-	text-align: justify;
-}
-
-.foot_tres p{
-	width: 100%;
-	max-width: 22em;
-	font-size: 15px;
-	text-align: justify;
-}
-
-/*Caracteristicas del formulario*/
-.btn_submit{
-	background-color: #EFEFEF;
-	padding: 10px;
-	margin: 10px;
-	border: none;
-	border-bottom: solid #474040 .2rem;
-	transition: all .5s;
-	width: 100%;
-	max-width: 120px;
-	color: rgb(0, 0, 0)white;
-	border-radius: 4px;
-	font-weight: bold;
-}
-
-.btn_submit:hover {
-	background-color: #4c4c4d;
-	color: white;
-}
-
-.input{
-	background-color: #474040;
-	padding: 10px;
-	margin: 10px;
-	border: none;
-	border-bottom: solid #C8C8C8 .2rem;
-	transition: all .5s;
-	color: white;
-}
-
-.input:focus {
-	/* border-bottom: solid #F39B53 .2rem; */
-	border-bottom: solid #53f476 .2rem;
-	color: white;
-}
 
 /*Estilo de cartelera.html*/
 
+.cartelera a:nth-child(1){
+	background-color: rgba(0,0,0, 0.8);
+}
 /*Cuando tiene ||| más las propiedades*/
 .menu{
 	width: 2.4rem;
@@ -265,18 +269,9 @@ ul.menu_ul img{
 	border-radius: 0 0.5rem 0.5rem 0;
 }
 
-/* Safari
-background: -webkit-linear-gradient(#54BBC7,#2EE3AD,#9191f2);
-Opera
-background: -o-linear-gradient(#54BBC7,#2EE3AD,#9191f2);
-Estandar
-background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
-
 .left-panel {
 	height: 100% !important;
 	width: 100% !important;
-	/* max-height: 40%;
-	max-width: 15%; */
 	max-height: 16em;
 	max-width: 12.7em;
 	background-color: #161717;
@@ -470,16 +465,28 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
   =      CONFIG. LARGE TABLETS       =
   ==============================*/
 @media screen and (max-width: 1280px){
-
+	/*= CONFIG. DEL FOOTER CUANDO SCREEN < 1280px =*/
+.foot_tres, .foot_cuatro{
+	padding-left: 45px;
+}
+.foot_dos{
+	padding-left: 7em;
+}
+/*= FIN CONFIG. DEL FOOTER =*/
 }
 
 /*==============================
   =      CONFIG. PAMPHLETS       =
   ==============================*/
 @media screen and (max-width: 1120px){
-	/*= CONFIG. DEL HEADER CUANDO SCREEN < 1280px =*/
+	/*= CONFIG. DEL HEADER CUANDO SCREEN < 1120px =*/
 	ul.menu_ul li.right,	ul.menu_ul li{  /*Tag li de la clase right que pertenece al tag ul del menu_ul , Resto de tag li que pertenecen al menu_ul, */
 		float: none;                        /*Quita la propiedad de flotado a los elementos.*/
+	}
+
+	header{
+		height:0;
+		position: relative;
 	}
 
 	.img_right{            /*Tag img de clase img_right*/
@@ -496,6 +503,14 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 	}
 /*= FIN CONFIG. DEL HEADER_UNO =*/
 
+
+.left-panel{
+	left: -90%;
+}
+
+.checkbox:checked ~ .menu{
+	left: 6.3em;
+}
 }
 
 /*==============================
@@ -507,64 +522,23 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 		padding-bottom: 45%; // This is the aspect ratio
 	}
 /*= FIN CONFIG. DIV GOOGLE MAPS =*/
+
+/*= CONFIG. DEL FOOTER CUANDO SCREEN < 1120px =*/
+.foot_dos, .foot_tres, .foot_cuatro{
+	padding-left: 0px;
+}
+.footer{
+	padding-left: 0;
+	display: relative;
 }
 
-/*==============================
-  =    CONFIG. SMART MEDIUM    =
-  ==============================*/
-@media screen and (max-width: 480px){
-	/*= CONFIG. DEL HEADER_UNO CUANDO SCREEN < 320px =*/
-		ul.menu_ul li a.active{ /*Tag a con clase active que pertenece a tag li del tag ul con clase menu_ul.*/
-			padding-left:  0;     /*Coloca margen interno izquierdo en cero.*/
-			padding-right: 0;     /*Coloca margen interno derecho en cero.*/
-		}
-	/*= FIN CONFIG. DEL HEADER_UNO =*/
-
-/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 480=*/
-	.google-maps {
-		padding-bottom: 75%; // This is the aspect ratio
-	}
-/*= FIN CONFIG. DIV GOOGLE MAPS =*/
-}
-
-/*==============================
-  =    CONFIG. SMART SMALL    =
-  ==============================*/
-@media screen and (max-width: 360px){
-/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 360=*/
-	.google-maps {
-		padding-bottom: 85%; // This is the aspect ratio
-	}
-/*= FIN CONFIG. DIV GOOGLE MAPS =*/
-}
-
-/*==============================
-  = CONFIG. SMART EXTRA SMALL  =
-  ==============================*/
-@media screen and (max-width: 320px){
+.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
+	height: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	float: none;
 
 }
-
-
-/**/
-@media screen and (max-width: 1116px) {
-	/* ul.menu_ul li.right,	ul.menu_ul li{
-		float: none;
-	} */
-
-	.foot_uno, .foot_dos, .foot_tres, .foot_cuatro{
-		margin-left: 0em;
-		float: none;
-	}
-
-	.left-panel{
-		left: -90%;
-	}
-
-	.checkbox:checked ~ .menu{
-		/* left: 29.2%; */
-		left: 6.3em;
-	}
 
 	.foot_cuatro p{
 		width: 100%;
@@ -601,43 +575,75 @@ background: linear-gradient(#54BBC7,#2EE3AD,#9191f2); */
 	}
 
 	.foot_tres form{
-		display: block;
+		display: inline;
 		text-align: center;
 	}
-	/*Configuración de mapa*/
-	/* .google-maps {
-	    padding-bottom: 67%; // This is the aspect ratio
-	    } */
 
-/*alinea los parrafos cuando se hace pequeña la ventana*/
-/*text-align alinea al centro el texto*/
 
-.footer{
-	display: relative;
-}
-.foot_cuatro p{
+  .foot_cuatro p{
 	float: none;
-}
-	/* .active{
-		font-weight: bold;
-		font-size: 13px;
-	} */
+  }
 
-	header{
-		height:0;
-		position: relative;
+	.btn_submit{
+		margin-top: 20px;
+		margin-left: -10px;
+	}
+/*= FIN CONFIG. DEL FOOTER =*/
+
+}
+
+/*==============================
+  =    CONFIG. SMART MEDIUM    =
+  ==============================*/
+@media screen and (max-width: 480px){
+	/*= CONFIG. DEL HEADER_UNO CUANDO SCREEN < 320px =*/
+		ul.menu_ul li a.active{ /*Tag a con clase active que pertenece a tag li del tag ul con clase menu_ul.*/
+			padding-left:  0;     /*Coloca margen interno izquierdo en cero.*/
+			padding-right: 0;     /*Coloca margen interno derecho en cero.*/
+		}
+	/*= FIN CONFIG. DEL HEADER_UNO =*/
+
+/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 480=*/
+	.google-maps {
+		padding-bottom: 75%; // This is the aspect ratio
+	}
+/*= FIN CONFIG. DIV GOOGLE MAPS =*/
+}
+
+/*==============================
+  =    CONFIG. SMART SMALL    =
+  ==============================*/
+@media screen and (max-width: 360px){
+/*= CONFIG. DIV GOOGLE-MAPS CUANDO SCREEN < 360=*/
+	.google-maps {
+		padding-bottom: 85%; // This is the aspect ratio
+	}
+/*= FIN CONFIG. DIV GOOGLE MAPS =*/
+
+}
+
+/*==============================
+  = CONFIG. SMART EXTRA SMALL  =
+  ==============================*/
+@media screen and (max-width: 320px){
+	.btn_submit{
+		margin-left: -10px;
+		border-radius: 4px;
+		margin: 5px;
 	}
 
-	/* .img_right{
-  position: absolute;
-	max-width: 46px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	padding-right: 0px;
+	.input{
+		width: 80%;
+		margin: 5px;
+	}
+
+	.foot_tres p , .foot_cuatro p{
+		margin:  1em;
+	}
 }
 
-.img_menu{
-		padding-bottom: 60px;
-	} */
+
+/**/
+@media screen and (max-width: 1116px) {
+
 }
