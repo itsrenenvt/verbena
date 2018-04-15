@@ -127,9 +127,11 @@ footer{
 @media screen and (max-width: 1020px){
   .footer_main .foot_columna:nth-child(odd){
     width: 45%;
+		padding-bottom: .5em;
   }
   .footer_main .foot_columna:nth-child(even){
    width: 46%;
+	 padding-bottom: .5em;
   }
 }
 
