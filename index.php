@@ -12,9 +12,12 @@
   </head>
   <body>
 
-    <?php
-    include("header_uno.html");
-    ?>
+    <div class="header">
+      <?php
+      include("header_uno.html");
+      ?>
+    </div>
+
     <div class="seccion_1">
 
     </div>
@@ -42,8 +45,12 @@
         </ul>
       </div>
       </div>
-<?php
-    include("footer.html");
-?>
+
+      <div class="footer">
+        <?php
+        include("footer.html");
+        ?>
+      </div>
+      
   </body>
 </html>

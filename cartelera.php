@@ -32,7 +32,7 @@
           <h4>CARTELERA</h4>
           <a href=""><li>EVENTOS</li></a>
           <a href=""><li>GALERIAS</li></a>
-          <a href=""><li>VERBUENOS</li></a>
+          <a href="verbuenos.php"><li>VERBUENOS</li></a>
         </ul>
       </div>
     </div>

@@ -1,11 +1,14 @@
-// $(document).ready(function(){
-//
-// 	$(window).scroll(function(){
-// 		if( $(this).scrollTop() > 0 ){
-// 			$('.header').addClass('header2');
-// 		} else {
-// 			$('.header').removeClass('header2');
-// 		}
-// 	});
-//
-// });
+$(function () {
+function obtenerAncho( ancho ) {
+	if(ancho<1120){
+    
+	}else {
+
+		}
+}
+
+$(window).resize(function(){
+     obtenerAncho($( window ).width() );
+});
+
+});
