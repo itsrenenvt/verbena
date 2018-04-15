@@ -35,7 +35,6 @@
           <a href=""><li>VERBUENOS</li></a>
         </ul>
       </div>
-
     </div>
 
     <?php

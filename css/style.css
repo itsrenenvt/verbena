@@ -1,24 +1,13 @@
-/*==============================
-  =     SELECTOR UNIVERSAL     =
-  ==============================*/
+
 *{
 	font-family: Montserrat;
 }
 
-/*==============================
-  =      SELECTOR CUERPO       =
-  ==============================*/
 body{
 	margin: 0;
 }
-/*
-ELIMINE HEADER
-*/
 
-/*
-ELIMINE FOOTER
-*/
-
+/*Estilo de index*/
 .seccion_1{
   background: url('../img/img_verbena1.jpg');
 	background-attachment: fixed;
@@ -49,6 +38,64 @@ ELIMINE FOOTER
 	height: 662px;
 }
 
+.panel_lateral_index .menu{
+	width: 2.4rem;
+	height: 2.5rem;
+	background: #161717;
+	border-radius: 0.5rem 0 0 0.5rem;
+	top: 70%;
+	right: 0%;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+	transition: right 0.7s;
+	position: fixed;
+	z-index: 100;
+}
+
+.panel_lateral_index .checkbox:checked ~ .menu{
+	right: 15%;
+	border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.panel_lateral_index .left-panel {
+	height: 100% !important;
+	width: 100% !important;
+	max-height: 10em;
+	max-width: 12.7em;
+	background-color: #161717;
+	position: fixed;
+  z-index: 100;
+	top: 27.2em;
+	right: -40%;
+	display: flex;
+	justify-content: center;
+	transition: right 0.5s;
+	border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.panel_lateral_index .checkbox:checked ~ .left-panel{
+	right: 0;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 29.6%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    }
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    }
+
+
+/*Estilo de cartelera.html*/
+
 .seccion_4{
   background: url('../img/img_verbena4.jpg');
 	background-attachment: fixed;
@@ -69,28 +116,11 @@ ELIMINE FOOTER
 	height: 662px;
 }
 
-.google-maps {
-    position: relative;
-    padding-bottom: 29.6%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-    }
-.google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    }
-
-
-/*Estilo de cartelera.html*/
-
-.cartelera a:nth-child(1){
+/* .cartelera a:nth-child(1){
 	background-color: rgba(0,0,0, 0.8);
-}
-/*Cuando tiene ||| más las propiedades*/
-.menu{
+} */
+
+.panel_lateral .menu{
 	width: 2.4rem;
 	height: 2.5rem;
 	background: #161717;
@@ -105,20 +135,19 @@ ELIMINE FOOTER
   z-index: 100;
 }
 
-/*Las propiedades anteriores pero con imagen*/
+
 .menu img{
 	width: .8em;
 	padding-bottom: 2.5px;
 }
 
 
-.checkbox:checked ~ .menu{
-	/*modifica la separacion del boton*/
+.panel_lateral .checkbox:checked ~ .menu{
 	left: 15%;
 	border-radius: 0 0.5rem 0.5rem 0;
 }
 
-.left-panel {
+.panel_lateral .left-panel {
 	height: 100% !important;
 	width: 100% !important;
 	max-height: 16em;
@@ -138,11 +167,10 @@ ELIMINE FOOTER
 	color: white;
 }
 
-.checkbox:checked ~ .left-panel{
+.panel_lateral .checkbox:checked ~ .left-panel{
 	left: 0;
 }
 
-/*Oculta el checkbox*/
 .checkbox{
 	display: none;
 }
@@ -161,19 +189,15 @@ ELIMINE FOOTER
 	border-right: none;
 	list-style: none;
 	font-size: 15px;
-	/*este alinea el contenido dentro del li*/
 	text-align: left;
 	padding: 15px 5.5em 13px 5px;
-	/* margin: 0 .6rem 0 -1.9rem; */
 	margin-left: -2.7rem;
 }
 
 .left-panel li:hover{
-	/* color: white;
-	border: solid white;
-	border-width: 0 0.1rem; */
 	border-color: rgb(120, 120, 120);
 }
+
 
 /*Estilo de login.html*/
 
@@ -322,13 +346,23 @@ ELIMINE FOOTER
   ==============================*/
 @media screen and (max-width: 1120px){
 
-.left-panel{
+.panel_lateral .left-panel{
 	left: -90%;
 }
 
-.checkbox:checked ~ .menu{
+.panel_lateral .checkbox:checked ~ .menu{
 	left: 6.3em;
 }
+
+.panel_lateral_index .left-panel{
+	right: -90%;
+	top: 25.7em;
+}
+
+.panel_lateral_index .checkbox:checked ~ .menu{
+	right: 6.3em;
+}
+
 }
 
 /*==============================
@@ -371,9 +405,5 @@ ELIMINE FOOTER
   = CONFIG. SMART EXTRA SMALL  =
   ==============================*/
 @media screen and (max-width: 320px){
-
-}
-
-@media screen and (max-width: 1116px) {
 
 }
