@@ -6,6 +6,7 @@
 body{
 	margin: 0;
 }
+
 .container-redes img{
 	width: 3em;
   color: rgb(90, 85, 238);
@@ -17,7 +18,8 @@ main{
   padding: 20px;
   padding-top: 44px;
   position: relative;
-  background-image: url(../img/img_verbena3.jpg);
+  /* background-image: url(../img/img_verbena3.jpg); */
+	background: url('../img/img_verbena3.jpg');
   background-position: center;
   background-size: cover;
   margin: auto;
@@ -68,7 +70,7 @@ main{
   margin-bottom: 5em;
 }
 
-.photo-perfil1, .photo-perfil2 ,.photo-perfil3{
+.photo-perfil1, .photo-perfil2 ,.photo-perfil3,.photo-perfil4, .photo-perfil5 ,.photo-perfil6{
 	margin: auto;
 	width: 120px;
 	height: 120px;
@@ -81,14 +83,25 @@ main{
 }
 
 .photo-perfil1{
-  background-image: url(../img/zaira.jpg);
+	background-image: url(../img/zaira.jpg);
+  /* background: url('../img/zaira.jpg'); */
 	/* background-position: center; */
 }
 .photo-perfil2{
-	background-image: url(../img/zaira.jpg);
+	background-image: url(../img/luis.jpg);
 }
 .photo-perfil3{
 	background-image: url(../img/zaira.jpg);
+}
+.photo-perfil4{
+  background-image: url(../img/luis.jpg);
+	/* background-position: center; */
+}
+.photo-perfil5{
+	background-image: url(../img/zaira.jpg);
+}
+.photo-perfil6{
+	background-image: url(../img/luis.jpg);
 }
 
 .testimonial h2{
