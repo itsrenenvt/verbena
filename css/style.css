@@ -43,7 +43,8 @@ body{
 	height: 2.5rem;
 	background: #161717;
 	border-radius: 0.5rem 0 0 0.5rem;
-	top: 70%;
+	top: 14.4em;
+	/* top: 70%; */
 	right: 0%;
 	font-size: 2rem;
 	color: white;
@@ -125,7 +126,8 @@ body{
 	height: 2.5rem;
 	background: #161717;
 	border-radius: 0 0.5rem 0.5rem 0;
-	top: 19%;
+	top: 3.8em;
+	/* top: 19%; */
 	left: 0%;
 	font-size: 2rem;
 	color: white;
