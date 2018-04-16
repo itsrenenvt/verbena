@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="img/octocat.ico">
+    <link rel="icon" href="img/verbena.ico">
     <script src="js/main.js" charset="utf-8"></script>
     <title>Inicio Sesión - Verbena de la buena</title>
   </head>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="img/octocat.ico">
+    <link rel="icon" href="img/verbena.ico">
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
     <title>Verbena de la buena</title>
@@ -51,6 +51,6 @@
         include("footer.html");
         ?>
       </div>
-      
+
   </body>
 </html>
