@@ -19,7 +19,7 @@
     <div class="background-login">
       <div class="div_login">
         <div class="div_cristal">
-          <img src="img/user.svg" class="img_usuario_login" alt="">
+          <img src="img/verbena.svg" class="img_usuario_login" alt="">
           <h3>Inicia Sesi&oacute;n</h3>
           <form>
             <div class="input_box">

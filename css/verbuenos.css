@@ -9,6 +9,7 @@ body{
 
 .container-redes img{
 	width: 3em;
+	padding: 0 .2em;
   color: rgb(90, 85, 238);
 }
 
@@ -16,10 +17,10 @@ main{
 	width: 97%;
   text-align: center;
   padding: 20px;
-  padding-top: 44px;
+  padding-top: 37px;
   position: relative;
   /* background-image: url(../img/img_verbena3.jpg); */
-	background: url('../img/img_verbena3.jpg');
+	background: url('../img/img_verbena7.jpg');
   background-position: center;
   background-size: cover;
   margin: auto;
@@ -38,6 +39,7 @@ main{
 .h1{
   position: relative;
   color: white;
+	font-weight: bold; /*agrege esta linea*/
 }
 
 .parrafo1{
@@ -60,10 +62,10 @@ main{
 }
 
 .testimonial{
-	width: 320px;
+	width: 300px;
 	margin: 20px;
 	background: #fff;
-	padding: 20px;
+	padding: 18px;
 	text-align: center;
   border-radius: 10px;
   box-shadow: 0px 0px 40px 5px black;
