@@ -32,9 +32,9 @@
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                  <div class="container-redes">
-                   <label class=""><img src="img/facebook.svg" alt=""></label>
-                   <label class=""><img src="img/instagram.svg" alt=""></label>
-                   <label class=""><img src="img/twitter.svg" alt=""></label>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/face_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/insta_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/tweet_color.svg" alt=""></a>
                  </div>
 
            </div>
@@ -47,9 +47,9 @@
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                  <div class="container-redes">
-                   <label class=""><img src="img/facebook.svg" alt=""></label>
-                   <label class=""><img src="img/instagram.svg" alt=""></label>
-                   <label class=""><img src="img/twitter.svg" alt=""></label>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/face_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/insta_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/tweet_color.svg" alt=""></a>
                  </div>
 
            </div>
@@ -62,9 +62,9 @@
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                  <div class="container-redes">
-                   <label class=""><img src="img/facebook.svg" alt=""></label>
-                   <label class=""><img src="img/instagram.svg" alt=""></label>
-                   <label class=""><img src="img/twitter.svg" alt=""></label>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/face_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/insta_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/tweet_color.svg" alt=""></a>
                  </div>
 
            </div>
@@ -77,9 +77,9 @@
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                  <div class="container-redes">
-                   <label class=""><img src="img/facebook.svg" alt=""></label>
-                   <label class=""><img src="img/instagram.svg" alt=""></label>
-                   <label class=""><img src="img/twitter.svg" alt=""></label>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/face_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/insta_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/tweet_color.svg" alt=""></a>
                  </div>
 
            </div>
@@ -92,9 +92,9 @@
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                  <div class="container-redes">
-                   <label class=""><img src="img/facebook.svg" alt=""></label>
-                   <label class=""><img src="img/instagram.svg" alt=""></label>
-                   <label class=""><img src="img/twitter.svg" alt=""></label>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/face_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/insta_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/tweet_color.svg" alt=""></a>
                  </div>
 
            </div>
@@ -107,9 +107,9 @@
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                  <div class="container-redes">
-                   <label class=""><img src="img/facebook.svg" alt=""></label>
-                   <label class=""><img src="img/instagram.svg" alt=""></label>
-                   <label class=""><img src="img/twitter.svg" alt=""></label>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/face_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/insta_color.svg" alt=""></a>
+                   <a href="https://www.facebook.com/Verbenadelabuena/" target="_blank"><img src="img/tweet_color.svg" alt=""></a>
                  </div>
 
            </div>
