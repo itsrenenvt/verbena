@@ -33,6 +33,7 @@
             <input type="submit" name="" value="Iniciar Sesión">
           </form>
           <a href="#">¿Olvid&oacute; su contraseña?</a>
+          <a href="registrarse.php">Registrarse</a>
         </div>
       </div>
     </div>

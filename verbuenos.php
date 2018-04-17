@@ -22,8 +22,9 @@
       <h1 class="h1">TEAM VERBENA</h1>
       <p class="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+         
          <div class="container-testimonials">
+
            <div class="testimonial">
              <div class="photo-perfil1"></div>
                <h2>Zaira Cerecedo</h2>
@@ -113,6 +114,7 @@
                  </div>
 
            </div>
+
          </div>
 
     </main>
