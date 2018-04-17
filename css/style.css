@@ -213,7 +213,7 @@ body{
 
 .div_login{
 	position: absolute;
-	top: 23em;
+	top: 22.5em;
 	/* top: 50%; */
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -315,7 +315,7 @@ body{
 }
 
 .div_cristal:hover{
-	transform: translate(20px, 20px);
+	transform: translate(12px, 12px);
 	box-shadow: 0 10px 20px rgba(0,0,0,.5);
 }
 
