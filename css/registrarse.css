@@ -74,14 +74,17 @@ body{
 	padding-top: 20px;
 	color: #262626;
   font-size: 20px;
+	text-align: center;
 }
 
 .izquierdo h3{
   padding-top: 20px;
   padding-bottom: 2.6em;
+	padding-right: 2em;
   margin-top: -25px;
 	color: #262626;
   font-size: 20px;
+	text-align: center;
 }
 
 .div_login input{
