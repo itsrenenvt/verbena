@@ -57,7 +57,7 @@
               </div>
 
               <div class="input_box">
-                <input class="placeholder" type="tel" name="" placeholder="Telef&oacute;no" value="">
+                <input class="placeholder" type="tel" name="" placeholder="Tel&eacute;fono" value="">
               </div>
 
               <div class="input_box">

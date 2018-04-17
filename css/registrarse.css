@@ -39,8 +39,8 @@ body{
 .derecho{
 	top: 50%;
 	left: 25%;
-  border: none;
-  border-right: 1px solid rgba(71, 71, 71,0.5);
+  /* border: none;
+  border-right: 1px solid rgba(71, 71, 71,0.5); */
   /* display: flex;
   align-content: center;
   align-items: center; */
@@ -51,6 +51,8 @@ body{
   padding-left: 40px;
 	top: 53%;
 	left: 75%;
+	/* border: none;
+  border-left: 1px solid rgba(71, 71, 71,0.5); */
   /* display: flex;
   flex-wrap: wrap; */
 }

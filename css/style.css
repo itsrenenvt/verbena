@@ -313,6 +313,9 @@ body{
 	text-align: center;
 	display: block;
 }
+.div_login a:hover{
+	color: #1d40d6;
+}
 
 .div_cristal:hover{
 	transform: translate(12px, 12px);
