@@ -23,11 +23,11 @@
           <h3>Inicia Sesi&oacute;n</h3>
           <form>
             <div class="input_box">
-              <input class="placeholder" type="text" name="" placeholder="Usuario" value="">
+              <input class="placeholder" type="text" name="" placeholder="Usuario" value="" required>
               <span><i class="fas fa-user"></i></span>
             </div>
             <div class="input_box">
-              <input class="placeholder" type="password" name="" placeholder="Contraseña" value="">
+              <input class="placeholder" type="password" name="" placeholder="Contraseña" value="" required>
               <span><i class="fas fa-lock"></i></span>
             </div>
             <input type="submit" name="" value="Iniciar Sesión">

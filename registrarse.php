@@ -35,39 +35,39 @@
             <h3>Rellena estos campos</h3>
             <form>
               <div class="input_box">
-                <input class="placeholder" type="text" name="" placeholder="Nombre" value="">
-              </div>
+                <input class="placeholder" type="text" name="" placeholder="Nombre" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="text" name="" placeholder="Apellido Paterno" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="text" name="" placeholder="Apellido Paterno" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="text" name="" placeholder="Apellido Materno" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="text" name="" placeholder="Apellido Materno" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="text" name="" placeholder="Usuario" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="text" name="" placeholder="Usuario" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="password" name="" placeholder="Contraseña" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="password" name="" placeholder="Contraseña" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="password" name="" placeholder="Confirme Contraseña" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="password" name="" placeholder="Confirme Contraseña" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="email" name="" placeholder="Email" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="email" name="" placeholder="Email" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" type="tel" name="" placeholder="Tel&eacute;fono" value="">
-              </div>
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" type="tel" name="" placeholder="Tel&eacute;fono" value="" required>
+              <!-- </div> -->
 
-              <div class="input_box">
-                <input class="placeholder" id="dir" type="text" name="" placeholder="Direcci&oacute;n" value="">
+              <!-- <div class="input_box"> -->
+                <input class="placeholder" id="dir" type="text" name="" placeholder="Direcci&oacute;n" value="" required>
               </div>
 
               <input type="submit" name="" value="Registrarse">
