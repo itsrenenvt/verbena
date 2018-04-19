@@ -68,24 +68,38 @@ body{
 }
 
 .img_derecha{
-	margin-top: -75px;
+	margin-top: -95px;
 	width: 450px;
 }
 
 .derecho h3{
+	/* font-family: 'Gaegu', cursive; */
+	/* font-family: 'Gamja Flower', cursive; */
+	/* font-family: 'Black Han Sans', sans-serif; */
+	/* font-family: 'Jua', sans-serif; */
+	/* font-family: 'Righteous', cursive; */
+	/* font-family: 'Concert One', cursive; */
 	padding-top: 20px;
 	color: #262626;
-  font-size: 20px;
+  font-size: 25px;
+	font-weight: 400;
 	text-align: center;
 }
 
 .izquierdo h3{
+	/*font-family: 'Gaegu', cursive;*/
+	/* font-family: 'Gamja Flower', cursive; */
+	/* font-family: 'Black Han Sans', sans-serif; */
+	/* font-family: 'Jua', sans-serif; */
+	/* font-family: 'Righteous', cursive; */
+	/* font-family: 'Concert One', cursive; */
   padding-top: 20px;
-  padding-bottom: 2.6em;
+  padding-bottom: 1.5em;
 	padding-right: 2em;
   margin-top: -25px;
 	color: #262626;
-  font-size: 20px;
+  font-size: 25px;
+	font-weight: 400;
 	text-align: center;
 }
 
