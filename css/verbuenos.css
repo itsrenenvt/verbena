@@ -23,6 +23,7 @@ main{
 	background: url('../img/img_verbena7.jpg');
   background-position: center;
   background-size: cover;
+	background-attachment: fixed;
   margin: auto;
 
 }

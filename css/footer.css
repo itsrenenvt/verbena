@@ -74,6 +74,10 @@ footer{
   color: white;
 }
 
+.footer_main .foot_columna:nth-child(2) p{
+  text-align: justify;
+}
+
 .footer_main .foot_columna:nth-child(3) p{
   text-align: justify;
 }

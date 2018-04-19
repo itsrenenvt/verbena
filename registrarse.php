@@ -43,7 +43,7 @@
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="text" name="" placeholder="Apellido Materno" value="" required>
+                <input class="placeholder" type="text" name="" placeholder="Apellido Materno" value="">
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
@@ -63,11 +63,11 @@
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="tel" name="" placeholder="Tel&eacute;fono" value="" required>
+                <input class="placeholder" type="tel" name="" placeholder="Tel&eacute;fono" value="">
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" id="dir" type="text" name="" placeholder="Direcci&oacute;n" value="" required>
+                <input class="placeholder" id="dir" type="text" name="" placeholder="Direcci&oacute;n" value="">
               </div>
 
               <input type="submit" name="" value="Registrarse">
