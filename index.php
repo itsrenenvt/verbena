@@ -12,11 +12,9 @@
   </head>
   <body>
 
-    <div class="header">
       <?php
       include("header.html");
       ?>
-    </div>
 
     <div class="seccion_1">
 

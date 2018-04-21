@@ -36,13 +36,21 @@ ul.menu_ul li a:hover:not(.verbena){
 	background-color: #111;
 }
 
+ul.menu_ul li a.verbena:hover{
+	color: #ffffff;
+}
+
 ul.menu_ul li a.verbena{
 	position: relative;
+	color: #ffffff;
 	background-color: rgba(0,0,0, 0.8);
-	color: white;
 	padding-left: 7em;
 	padding-right: 7em;
 
+}
+
+#btn{
+	margin-left: 1.5em;
 }
 
 #btn_icon{
@@ -66,13 +74,14 @@ ul.menu_ul li a.verbena{
 
 @media screen and (max-width: 767px){
 	#btn_icon{
-		padding-bottom: .5em;
+		padding-top: .6em;
+		padding-bottom: .6em;
 		margin-right: 0;
 	}
 
 }
 
-@media screen and (max-width: 485px){
+@media screen and (max-width: 550px){
 		ul.menu_ul li a.verbena{
 			padding-left:  0;
 			padding-right: 0;
