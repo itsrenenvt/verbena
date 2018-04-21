@@ -79,6 +79,10 @@ ul.menu_ul li a.verbena{
 		margin-right: 0;
 	}
 
+	.hover:hover{
+		background-color: #111;
+	}
+	
 }
 
 @media screen and (max-width: 550px){

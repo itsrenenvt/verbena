@@ -96,7 +96,12 @@ body{
 
 
 /*Estilo de cartelera.html*/
-
+/* .slide_carrusel{
+	background-attachment: fixed;
+}
+.slide_carrusel img{
+	height: 100vh;
+} */
 .seccion_4{
   background: url('../img/img_verbena4.jpg');
 	background-attachment: fixed;
@@ -114,7 +119,8 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	height: 662px;
+	/* height: 662px; */
+	height: 100vh;
 }
 
 /* .cartelera a:nth-child(1){
