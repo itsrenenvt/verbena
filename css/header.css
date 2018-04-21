@@ -32,26 +32,21 @@ ul.menu_ul li a{
 	text-decoration: none;
 }
 
-ul.menu_ul li a:hover:not(.active){
+ul.menu_ul li a:hover:not(.verbena){
 	background-color: #111;
 }
 
-ul.menu_ul li a.active{
+ul.menu_ul li a.verbena{
+	position: relative;
 	background-color: rgba(0,0,0, 0.8);
+	color: white;
 	padding-left: 7em;
 	padding-right: 7em;
 
 }
 
-.img_right{
-	width: 100%;
-	max-width: 46px;
-	padding-top: 6px;
-	padding-right: 25px;
-}
-
-ul.menu_ul img{
-	float: right;
+#btn_icon{
+	margin-right: 1em;
 }
 
 .img_menu:hover{
@@ -63,32 +58,24 @@ ul.menu_ul img{
 	ul.menu_ul li.right,	ul.menu_ul li{  /*Tag li de la clase right que pertenece al tag ul del menu_ul , Resto de tag li que pertenecen al menu_ul, */
 		float: none;                        /*Quita la propiedad de flotado a los elementos.*/
 	}
-
-	header{
-		height:0;
-		position: relative;
+	ul.menu_ul li.right,	ul.menu_ul li button{
+		margin-top: -.4em;
+		margin-bottom: -.4em;
 	}
-
-	.img_right{            /*Tag img de clase img_right*/
-  position: absolute;    /*Se coloca en relación con el elemento anterior ya posicionado no estático.*/
-	max-width: 46px;       /*Ancho máximo de 46px.*/
-	left: 0;               /*Posiciona los elementos a la izquierda en cero.*/
-	right: 0;              /*Posiciona los elementos a la derecha en cero.*/
-	margin: auto;          /*Añade margen automático*/
-	padding-right: 0px;    /*Añade borde interior derecho de 0px;*/
 }
 
-.img_menu{                /*Tag div de clase menú*/
-		padding-bottom: 60px; /*Añade un borde interior inferior de 60px.*/
+@media screen and (max-width: 767px){
+	#btn_icon{
+		padding-bottom: .5em;
+		margin-right: 0;
 	}
-/*= FIN CONFIG. DEL HEADER_UNO =*/
+
 }
 
-@media screen and (max-width: 480px){
-	/*= CONFIG. DEL HEADER_UNO CUANDO SCREEN < 320px =*/
-		ul.menu_ul li a.active{ /*Tag a con clase active que pertenece a tag li del tag ul con clase menu_ul.*/
-			padding-left:  0;     /*Coloca margen interno izquierdo en cero.*/
-			padding-right: 0;     /*Coloca margen interno derecho en cero.*/
+@media screen and (max-width: 485px){
+		ul.menu_ul li a.verbena{
+			padding-left:  0;
+			padding-right: 0;
 		}
-	/*= FIN CONFIG. DEL HEADER_UNO =*/
+
 }
