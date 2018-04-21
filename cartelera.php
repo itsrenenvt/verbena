@@ -12,7 +12,7 @@
   <body>
 
     <?php
-    include("header_uno.html");
+    include("header.html");
     ?>
 
     <div class="seccion_4">
