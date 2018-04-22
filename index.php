@@ -6,14 +6,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/verbena.ico">
-    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
-    <script src="js/main.js" charset="utf-8"></script>
     <title>Verbena de la buena</title>
   </head>
   <body>
 
       <?php
-       include("header.html");
+       // include("header.html");
+       include 'header.html';
       ?>
 
     <div class="seccion_1">
@@ -43,9 +42,10 @@
         </ul>
       </div>
       </div>
-      
+
       <?php
-      include("footer.html");
+      // include("footer.html");
+      include 'footer.html';
       ?>
 
 
