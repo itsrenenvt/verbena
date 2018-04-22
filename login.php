@@ -35,7 +35,7 @@
             <input type="submit" name="" value="Iniciar Sesión" id="iniciar">
           </form>
           <a href="#">¿Olvid&oacute; su contraseña?</a>
-          <a href="registrarse.php">Registrarse</a>
+          <a href="registro_cliente.php">Registrarse</a>
         </div>
       </div>
     </div>
