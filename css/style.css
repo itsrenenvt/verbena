@@ -96,12 +96,7 @@ body{
 
 
 /*Estilo de cartelera.html*/
-/* .slide_carrusel{
-	background-attachment: fixed;
-}
-.slide_carrusel img{
-	height: 100vh;
-} */
+
 .seccion_4{
   background: url('../img/img_verbena4.jpg');
 	background-attachment: fixed;
@@ -109,7 +104,8 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	height: 662px;
+	/* height: 662px; */
+	height: 100vh;
 }
 
 .seccion_5{
@@ -335,17 +331,6 @@ body{
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
 	background: rgba(255,255,255,1);
 }
-
-/* configuración verbuenos */
-/* .seccion_verbuenos{
-  background: url('../img/img_verbena3.jpg');
-	background-attachment: fixed;
-	padding: 50px 100px;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	height: 662px;
-} */
 
 /*==============================
   =   CONFIG. LARGE DESKTOP    =

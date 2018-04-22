@@ -7,7 +7,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/verbena.ico">
-    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="js/login.js" charset="utf-8"></script>
     <title>Inicio Sesión - Verbena de la buena</title>
   </head>
   <body>
@@ -22,15 +23,16 @@
           <img src="img/verbena.svg" class="img_usuario_login" alt="">
           <h3>Inicia Sesi&oacute;n</h3>
           <form>
+            <!-- Poner requieres despues -->
             <div class="input_box">
-              <input class="placeholder" type="text" name="" placeholder="Usuario" value="" required>
+              <input class="placeholder" type="text" name="" placeholder="Usuario" value="" id="usuario" >
               <span><i class="fas fa-user"></i></span>
             </div>
             <div class="input_box">
-              <input class="placeholder" type="password" name="" placeholder="Contraseña" value="" required>
+              <input class="placeholder" type="password" name="" placeholder="Contraseña" value="" id="contraseña">
               <span><i class="fas fa-lock"></i></span>
             </div>
-            <input type="submit" name="" value="Iniciar Sesión">
+            <input type="submit" name="" value="Iniciar Sesión" id="iniciar">
           </form>
           <a href="#">¿Olvid&oacute; su contraseña?</a>
           <a href="registrarse.php">Registrarse</a>
