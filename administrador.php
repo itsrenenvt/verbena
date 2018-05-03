@@ -9,22 +9,9 @@
     <title>Administrador</title>
   </head>
   <body>
-
-      <?php
-       // include 'header.html';
-       // include_once 'aside.html';
-      ?>
+    <?php include_once 'aside.html'; ?>
       <div class="fondo_ventana">
-        <div class="marco_portada">
-          <div class="portada">
-            <img src="img/img_verbena6.jpg" alt="">
-          </div>
-        </div>
       </div>
-      <?php
-      // include 'footer.html';
-      include_once 'aside.html';
-      ?>
 
 
   </body>

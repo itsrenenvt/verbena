@@ -6,24 +6,89 @@ body{
 	margin: 0;
 }
 
+
+.marco_portada{
+	position: fixed;
+	background: url('../img/img_verbena8.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+  height: 20vh;
+}
+
+/* .portada img{
+  position: relative;
+  width: 100%;
+  height: 20vh;
+} */
+
+/* .fondo_ventana{
+	background: url('../img/img_verbena6.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 662px;
+} */
+
 .caja_fondo{
-  /* background-color: white; */
   position: fixed;
   float: left;
   width: 15em;
   height: 100vh;
+	top: 20%;
 }
 
+.caja_fondo_der{
+	position: fixed;
+  /* float: right; */
+	width: 20em;
+	height: 15em;
+	top: 20%;
+}
+
+.derecho{
+	position: fixed;
+	/* float: right; */
+	left: 70%;
+	background-color: white;
+	transition: .5s;
+	width: 25em;
+	height: 20em;
+	top: 21.7%;
+	box-shadow: 0px 0px 20px -6px black;
+}
+
+.caja_fondo_der_dos{
+	position: fixed;
+  /* float: right; */
+	width: 25em;
+	height: 15em;
+	top: 20%;
+}
+
+.derecho_dos{
+	position: fixed;
+	/* float: right; */
+	left: 70%;
+	background-color: white;
+	transition: .5s;
+	width: 25em;
+	height: 10em;
+	top: 74%;
+	box-shadow: 0px 0px 20px -6px black;
+}
 .izquierdo{
   position: fixed;
   float: left;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   background-color: white;
+	transition: .5s;
   width: 15em;
   height: 100vh;
   top: 20%;
   box-shadow: 0px 0px 20px -6px black;
 }
+
 
 .izquierdo nav{
   margin-top: -15px;
@@ -53,19 +118,19 @@ body{
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
-  margin-left: 4em;
+  margin-left: 22%;
 }
 
 .estadistica{
   margin: auto;
+	margin-top: 1.2em;
   display: flex;
   flex-wrap: wrap;
-  /* font-size: 15px; */
 }
 
 .estadistica p{
 	font-size: 3em;
-	margin-top: -1px;
+	margin-top: -12px;
 	padding-top: 9px;
 	margin-bottom: -1px;
 	color: rgb(43, 48, 218);
@@ -77,26 +142,17 @@ body{
 	color: rgb(69, 7, 186);
 }
 .estadistica_cliente , .estadistica_colaboradores{
-	/* width: 16.3%; */
 	width: 119.3px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: rgb(145, 145, 145);
-	/* box-shadow: 0px 0px 25px -9px black; */
-	/* padding: 2.5em; */
-	/* padding-top: 1em;
-	padding-bottom: 1em; */
-	/* padding-top: 0em; */
 	top: -20%;
 	text-align: center;
 	font-size: 12px;
 	font-weight: bold;
-	/* border-radius: 2px; */
-	/* margin-right: 1em; */
 }
 
 .estadistica_cliente{
-	/* margin-left: 1.6em; */
 	border-left: none;
 	border-right: none;
 }
@@ -119,6 +175,7 @@ body{
 .img_perfil{
   background-image: url(../img/luis.jpg);
   margin: auto;
+	margin-bottom: -2em;
 	width: 120px;
 	height: 120px;
 	background-size: cover;
@@ -126,4 +183,10 @@ body{
 	position: relative;
 	top: -3.3em;
   box-shadow: 0px 0px 30px -6px black;
+}
+
+.label_img{
+	color: black;
+	font-weight: bold;
+	margin-left: 20%;
 }

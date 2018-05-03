@@ -13,7 +13,7 @@
     // include("header.html");
     include_once 'header.html';
     ?>
-    
+
     <div class="seccion_1">
 
     </div>

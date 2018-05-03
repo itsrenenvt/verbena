@@ -5,22 +5,13 @@
 body{
 	margin: 0;
 }
-.portada{
-	position: relative;
-}
-.portada img{
-  position: relative;
-  width: 100%;
-  height: 20vh;
-  /* background-size: cover; */
-}
 
 .fondo_ventana{
-	background: url('../img/img_verbena9.jpg');
+	background: url('../img/img_verbena6.jpg');
 	background-attachment: fixed;
-	/* padding: 50px 100px; */
 	background-size: cover;
 	background-position: center;
 	text-align: center;
+	/* background-color: red; */
 	height: 662px;
 }
