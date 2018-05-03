@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/verbena.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Verbena de la buena</title>
   </head>
   <body>
-
-      <?php
-       // include("header.html");
-       include 'header.html';
-      ?>
-
+    <?php
+    // include("header.html");
+    include_once 'header.html';
+    ?>
+    
     <div class="seccion_1">
 
     </div>
@@ -45,7 +44,7 @@
 
       <?php
       // include("footer.html");
-      include 'footer.html';
+      include_once 'footer.html';
       ?>
 
 

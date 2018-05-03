@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="icon" href="img/verbena.ico">
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="js/login.js" charset="utf-8"></script>
@@ -14,10 +14,10 @@
   <body>
 
     <?php
-    include("header.html");
+    include_once("header.html");
     ?>
 
-    <div class="background-login">
+    <div class="fondo_iniciosesion">
       <div class="div_login">
         <div class="div_cristal">
           <img src="img/verbena.svg" class="img_usuario_login" alt="">
