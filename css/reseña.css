@@ -19,8 +19,10 @@ body{
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
+  /* position: fixed; */
 	text-align: center;
 	height: 100%;
+  width: 100%;
 }
 
 .contenido_reseña span{
@@ -41,7 +43,7 @@ body{
   font-size: 14px;
 }
 .contenido_reseña{
-  width: 50em;
+  width: 60%;
   height: 100%;
   background-color: rgb(147, 164, 185);
   margin: auto;
@@ -108,4 +110,30 @@ body{
   float: left;
   border-radius: 5%;
   margin: 0 2.5em 2em 2.5em;
+}
+
+@media screen and (max-width: 770px){
+  .fondo_reseña{
+    width: 100%;
+  }
+
+  .contenido_reseña{
+    width: 25em;
+
+}
+
+}
+
+@media screen and (max-width: 440px){
+  .fondo_reseña{
+    width: 130%;
+    /* width: 100vh; */
+  }
+}
+
+@media screen and (max-width: 340px){
+  .fondo_reseña{
+    width: 160%;
+    /* width: 100vh; */
+  }
 }
