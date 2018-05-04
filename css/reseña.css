@@ -1,0 +1,111 @@
+*{
+	font-family: Montserrat;
+}
+
+body{
+	margin: 0;
+}
+
+.img_cabecera .cabecera{
+	background: url('../img/img_verbena8.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+  height: 20vh;
+}
+
+.fondo_reseña{
+  background: url('../img/img_verbena6.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 100%;
+}
+
+.contenido_reseña span{
+  float: left;
+}
+
+.fecha_pub{
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(77, 12, 215);
+}
+
+.nombre_autor{
+  font-weight: bold;
+}
+
+.puesto_autor{
+  font-size: 14px;
+}
+.contenido_reseña{
+  width: 50em;
+  height: 100%;
+  background-color: rgb(147, 164, 185);
+  margin: auto;
+  border-radius: 1em;
+  border-style: solid;
+	border-width: .3em;
+	border-color: rgb(92, 92, 92);
+}
+
+.seccion_reseña{
+  margin-bottom: 2em;
+}
+
+.espacio{
+  padding: 5em;
+}
+
+
+.parrafo_reseña {
+  text-align: justify;
+  margin: 0 2.5em 2em 2.5em;
+}
+.datos_reseña{
+  margin: auto;
+	margin-top: 1.2em;
+  margin-bottom: -1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.titulo_reseña{
+  text-align: center;
+}
+
+.contenido_reseña a{
+  color: #262626;
+	padding-bottom: 6px;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+
+.contenido_reseña a:hover{
+  color: #1d40d6;
+  text-decoration: none;
+}
+
+.datos_escritor{
+  margin-left: -20px;
+  margin-right: 5px;
+}
+
+.contenido_reseña h4{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1em;
+  font-size: 2em;
+}
+
+.contenido_reseña img{
+  width: 7em;
+  float: left;
+  border-radius: 5%;
+  margin: 0 2.5em 2em 2.5em;
+}

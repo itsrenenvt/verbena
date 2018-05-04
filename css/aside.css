@@ -40,7 +40,7 @@ body{
 }
 
 .caja_fondo_der{
-	position: fixed;
+	position: relative;
   /* float: right; */
 	width: 20em;
 	height: 15em;
@@ -58,9 +58,9 @@ body{
 	top: 21.7%;
 	box-shadow: 0px 0px 20px -6px black;
 }
-
+/*Cambiar la posición para ya sabes que*/
 .caja_fondo_der_dos{
-	position: fixed;
+	/* position: absolute; */
   /* float: right; */
 	width: 25em;
 	height: 15em;
