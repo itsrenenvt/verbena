@@ -12,6 +12,5 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	/* background-color: red; */
-	height: 662px;
+	height: 100vh;
 }

@@ -1,0 +1,32 @@
+*{
+	font-family: Montserrat;
+}
+
+body{
+	margin: 0;
+}
+
+.fondo_reseña{
+  background: url('../img/img_verbena6.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+  /* position: fixed; */
+	text-align: justify;
+	height: 100vh;
+  /* width: 100%; */
+}
+
+.editor_texto_reseña{
+	/* background-color: white;
+	width: 50%;
+	height: 40%; */
+	
+}
+
+.container{
+}
+
+.form-group{
+	background-color: white;
+}

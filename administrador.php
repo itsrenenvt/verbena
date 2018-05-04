@@ -10,7 +10,9 @@
   </head>
   <body>
     <?php include_once 'aside.html'; ?>
+
       <div class="fondo_ventana">
+        
       </div>
 
 
