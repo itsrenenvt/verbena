@@ -35,6 +35,12 @@ body{
   color: rgb(77, 12, 215);
 }
 
+.hora_pub{
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(77, 12, 215);
+}
+
 .nombre_autor{
   font-weight: bold;
 }

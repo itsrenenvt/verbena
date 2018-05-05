@@ -37,6 +37,7 @@
                 <span class="nombre_autor">Zaira Cerecedo</span><br>
                 <span class="puesto_autor">CEO Verbena de la buena</span><br>
                 <span class="fecha_pub">03/05/2018</span>
+                <span class="hora_pub">03:15:00</span>
               </div>
 
               <!-- <div class="titulo_reseña">

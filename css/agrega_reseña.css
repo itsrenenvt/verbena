@@ -77,6 +77,10 @@ body{
 .row{
 }
 
+.texto_del_area{
+	/* outline: none; */
+}
+
 .form-group{
 	background-color: white;
 	width: 55em;
