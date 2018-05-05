@@ -11,22 +11,74 @@ body{
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
-  /* position: fixed; */
 	text-align: justify;
 	height: 100vh;
-  /* width: 100%; */
+}
+
+.titulo_caja{
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .editor_texto_reseña{
-	/* background-color: white;
-	width: 50%;
-	height: 40%; */
-	
+	position: absolute;
+	top: 23%;
+	left: 26%;
+	/* border-style: solid;
+	border-width: 1px;
+	border-color: rgb(92, 92, 92); */
+}
+
+.btn-enviar{
+	background-color: #13cb74;
+  padding: 10px;
+  margin: -2.3px;
+  height: 20%;
+  border: none;
+  border-bottom: solid #00a633 .2rem;
+  transition: all .5s;
+  width: 100%;
+  max-width: 110px;
+  color: rgba(#13cb74, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-cancelar{
+	background-color: #d42823;
+  padding: 10px;
+  margin: -2.3px;
+  height: 20%;
+  border: none;
+  border-bottom: solid #be1700 .2rem;
+  transition: all .5s;
+  width: 100%;
+  max-width: 110px;
+  color: rgba(#d42823, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+	margin-left: 20px;
+}
+.btn-enviar:hover{
+	background-color: #0fa25c;
+	border-bottom: solid #05822b .2rem;
+}
+.btn-cancelar:hover{
+	background-color: #c1110c;
+	border-bottom: solid #931200 .2rem;
 }
 
 .container{
+
+}
+
+.row{
 }
 
 .form-group{
 	background-color: white;
+	width: 55em;
+	/* left: 40%; */
 }

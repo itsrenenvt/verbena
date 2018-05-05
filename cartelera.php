@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cartelera.css">
     <link rel="icon" href="img/verbena.ico">
     <script src="js/main.js" charset="utf-8"></script>
     <title>Cartelera - Verbena de la buena</title>
@@ -12,7 +12,7 @@
   <body>
 
     <?php
-    include("header.html");
+    include_once("header.html");
     ?>
 
 
@@ -77,7 +77,7 @@
     </div>
 
     <?php
-    include("footer.html");
+    include_once("footer.html");
     ?>
 
   </body>
