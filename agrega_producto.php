@@ -13,8 +13,8 @@
       <?php
       include_once 'aside.html';
        ?>
-      <div class="fondo_agrega_colaborador">
-        <div class="contenedor_form_colaborador">
+      <div class="fondo_agrega_producto">
+        <div class="contenedor_form_producto">
           <!-- <h3>AGREA UN EVENTO</h3> -->
           <div class="formulario">
           <form class="" action="" method="post">

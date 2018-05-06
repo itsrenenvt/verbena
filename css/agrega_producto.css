@@ -54,7 +54,7 @@ body{
 	border-bottom: solid #931200 .2rem;
 }
 
-.fondo_agrega_ruta{
+.fondo_agrega_producto{
   background: url('../img/img_verbena6.jpg');
 	background-attachment: fixed;
 	background-size: cover;
@@ -63,7 +63,7 @@ body{
 	height: 100vh;
 }
 
-.contenedor_form_ruta{
+.contenedor_form_producto{
   /* margin: auto; */
   position: absolute;
   top: 28%;
