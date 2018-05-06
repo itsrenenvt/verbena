@@ -54,6 +54,11 @@ body{
 	z-index: 100;
 }
 
+.menu img{
+	width: .8em;
+	padding-bottom: 2.5px;
+}
+
 .panel_lateral_index .checkbox:checked ~ .menu{
 	right: 15%;
 	border-radius: 0.5rem 0 0 0.5rem;
@@ -75,8 +80,40 @@ body{
 	border-radius: 0.7rem 0 0 0.7rem;
 }
 
+.left-panel h4{
+	color: white;
+}
+
 .panel_lateral_index .checkbox:checked ~ .left-panel{
 	right: 0;
+}
+
+
+.checkbox{
+	display: none;
+}
+
+.left-panel ul a{
+	color: #F7F7E7;
+	text-decoration: none;
+}
+
+.left-panel li{
+	border-style: dotted;
+	border-width: 1px;
+	border-color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	list-style: none;
+	font-size: 15px;
+	text-align: left;
+	padding: 15px 5.5em 13px 5px;
+	margin-left: -2.7rem;
+}
+
+.left-panel li:hover{
+	border-color: rgb(120, 120, 120);
 }
 
 .google-maps {
