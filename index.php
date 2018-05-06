@@ -11,7 +11,7 @@
   <body>
     <?php
     // include("header.html");
-    include_once 'header.html';
+    include_once 'includes/header.html';
     ?>
 
     <div class="seccion_1">
@@ -44,7 +44,7 @@
 
       <?php
       // include("footer.html");
-      include_once 'footer.html';
+      include_once 'includes/footer.html';
       ?>
 
 

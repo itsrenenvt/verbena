@@ -9,10 +9,10 @@
     <title>Administrador</title>
   </head>
   <body>
-    <?php include_once 'aside.html'; ?>
+    <?php include_once 'includes/aside.html'; ?>
 
       <div class="fondo_ventana">
-        
+
       </div>
 
 

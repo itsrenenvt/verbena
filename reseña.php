@@ -11,7 +11,7 @@
   <body>
 
       <?php
-       include_once 'header.html';
+       include_once 'includes/header.html';
       ?>
 
       <!-- <div class="img_cabecera">
@@ -81,7 +81,7 @@
       </div>
 
       <?php
-      include 'footer.html';
+      include 'includes/footer.html';
       ?>
 
 

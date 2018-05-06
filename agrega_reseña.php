@@ -27,7 +27,7 @@
   <body>
 
     <?php
-    include_once 'aside.html';
+    include_once 'includes/aside.html';
     ?>
 
     <div class="fondo_reseña">
