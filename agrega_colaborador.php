@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" type="text/css" href="css/agrega_producto.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/agrega_colaborador.css">
     <link rel="icon" href="img/verbena.ico">
-    <title>e-commerce</title>
+    <title>Colaboradores</title>
   </head>
   <body>
 
@@ -20,35 +21,35 @@
           <form class="" action="" method="post">
             <div class="input_box">
               <label for="nombre_evento">Nombre</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre de la ruta">
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre(s)">
             </div>
             <div class="input_box">
-              <label for="nombre_evento">Apellido Mat</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Código Postal">
+              <label for="nombre_evento">Ap. Mat</label>
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Apellido Materno">
             <!-- </div>
             <div class="input_box"> -->
-              <label for="nombre_evento">Apellido Pat</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Calle o Avenida">
+              <label for="nombre_evento">Ap. Pat</label>
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Apellido Paterno">
             </div>
             <div class="input_box">
               <label for="nombre_evento">Usuario</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Colonia">
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre de usuario">
             <!-- </div>
             <div class="input_box"> -->
               <label for="nombre_evento">Contraseña</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Ciudad">
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Contraseña">
             </div>
             <div class="input_box">
               <label for="nombre_evento">E-mail</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Número Exterior">
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Correo Electronico">
             <!-- </div>
             <div class="input_box"> -->
               <label for="nombre_evento">Telefono</label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Número Interior">
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Telefono">
             </div>
             <div class="input_box">
               <label for="url_maps">Dirección</label>
-              <input class="input_ancho" type="text" name="url_maps" value="" placeholder="URL de Google Maps">
+              <input class="input_ancho" type="text" name="url_maps" value="" placeholder="Dirección">
             </div>
 
               <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar">
