@@ -20,35 +20,35 @@
           <div class="formulario">
           <form class="" action="" method="post">
             <div class="input_box">
-              <label for="nombre_evento">Nombre</label>
+              <label for="nombre_evento"><i class="fas fa-user"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre(s)">
             </div>
             <div class="input_box">
-              <label for="nombre_evento">Ap. Mat</label>
+              <label for="nombre_evento"><i class="fas fa-id-card"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Apellido Materno">
             <!-- </div>
             <div class="input_box"> -->
-              <label for="nombre_evento">Ap. Pat</label>
+              <label for="nombre_evento"><i class="fas fa-id-card"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Apellido Paterno">
             </div>
             <div class="input_box">
-              <label for="nombre_evento">Usuario</label>
+              <label for="nombre_evento"><i class="fas fa-user-circle"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre de usuario">
             <!-- </div>
             <div class="input_box"> -->
-              <label for="nombre_evento">Contraseña</label>
+              <label for="nombre_evento"><i class="fas fa-lock"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Contraseña">
             </div>
             <div class="input_box">
-              <label for="nombre_evento">E-mail</label>
+              <label for="nombre_evento"><i class="fas fa-envelope"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Correo Electronico">
             <!-- </div>
             <div class="input_box"> -->
-              <label for="nombre_evento">Telefono</label>
+              <label for="nombre_evento"><i class="fas fa-phone"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Telefono">
             </div>
             <div class="input_box">
-              <label for="url_maps">Dirección</label>
+              <label for="url_maps"><i class="fas fa-map-marker"></i></label>
               <input class="input_ancho" type="text" name="url_maps" value="" placeholder="Dirección">
             </div>
 

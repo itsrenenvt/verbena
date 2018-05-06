@@ -90,6 +90,12 @@ body{
 	padding-left: 30px;
 
 }
+i{
+	font-size: 1.5rem;
+	color: #000000;
+	font-style: normal;
+	font-family: FontAwesome;
+}
 
 .formulario input[type="text"]{
   padding-right: 20px;
