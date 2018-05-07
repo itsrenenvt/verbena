@@ -27,7 +27,7 @@
   <body>
 
     <?php
-    include_once 'includes/aside.html';
+    include_once 'includes/aside_admin.html';
     ?>
 
     <div class="fondo_reseña">
@@ -37,7 +37,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
-              <form class="" action="guarda_resena.php" method="post" id="frm-test">
+              <form class="" action="" method="post" id="frm-test">
 
                 <div class="form-group">
                   <textarea class="texto_del_area" id="txt-content" name="txt-content"></textarea>

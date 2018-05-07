@@ -14,7 +14,7 @@
   <body>
 
     <?php
-    include_once("header.html");
+    include_once("includes/header.html");
     ?>
 
     <div class="fondo_iniciosesion">
@@ -22,14 +22,14 @@
         <div class="div_cristal">
           <img src="img/verbena.svg" class="img_usuario_login" alt="">
           <h3>Inicia Sesi&oacute;n</h3>
-          <form>
+          <form id="formulario_login" method="post" action="accesodatos/ingreso.php">
             <!-- Poner requieres despues -->
             <div class="input_box">
-              <input class="placeholder" type="text" name="" placeholder="Usuario" value="" id="usuario" >
+              <input class="placeholder" type="text" name="txtuser" placeholder="Usuario" value="" id="usuario" required>
               <span><i class="fas fa-user"></i></span>
             </div>
             <div class="input_box">
-              <input class="placeholder" type="password" name="" placeholder="Contraseña" value="" id="contraseña">
+              <input class="placeholder" type="password" name="txtpass" placeholder="Contraseña" value="" id="contraseña" required>
               <span><i class="fas fa-lock"></i></span>
             </div>
             <input type="submit" name="" value="Iniciar Sesión" id="iniciar">
@@ -41,7 +41,7 @@
     </div>
 
     <?php
-    include("footer.html");
+    include("includes/footer.html");
     ?>
 
   </body>

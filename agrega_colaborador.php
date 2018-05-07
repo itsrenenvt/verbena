@@ -13,7 +13,7 @@
   <body>
 
       <?php
-      include_once 'includes/aside.html';
+      include_once 'includes/aside_admin.html';
        ?>
       <div class="fondo_agrega_colaborador">
         <div class="contenedor_form_colaborador">

@@ -11,12 +11,12 @@
   <body>
 
       <?php
-       include 'header.html';
+       include 'includes/header.html';
       ?>
 
 
       <?php
-      include 'footer.html';
+      include 'includes/footer.html';
       ?>
 
 

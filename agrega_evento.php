@@ -10,7 +10,7 @@
   </head>
   <body>
     <?php
-    include_once 'includes/aside.html';
+    include_once 'includes/aside_admin.html';
      ?>
     <div class="fondo_agrega_evento">
       <div class="contenedor_form_evento">

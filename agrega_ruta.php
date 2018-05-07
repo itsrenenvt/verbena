@@ -11,7 +11,7 @@
   <body>
 
       <?php
-      include_once 'includes/aside.html';
+      include_once 'includes/aside_admin.html';
        ?>
       <div class="fondo_agrega_ruta">
         <div class="contenedor_form_ruta">

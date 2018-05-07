@@ -1,0 +1,121 @@
+*{
+	font-family: Montserrat;
+}
+
+body{
+	margin: 0;
+}
+
+.contenedor_tabla{
+	overflow: scroll;
+	position: absolute;
+	top: 28%;
+  left: 19%;
+	width: 68em;
+	height: 20em;
+	background-color: white;
+	/* border-radius: .5em; */
+}
+
+.tabla_clientes{
+}
+
+.contenedor_tabla table{
+
+}
+
+.fondo_tabla{
+  background: url('../img/img_verbena6.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	text-align: justify;
+	height: 100vh;
+}
+
+.tabla_clientes td, .tabla_cliente th {
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+.tabla_clientes td{
+	font-size: 15px;
+}
+.tabla_clientes td:nth-child(1){
+	text-align: center;
+	font-weight: bold;
+	width: 5em;
+}
+
+.tabla_clientes td:nth-child(4){
+	text-align: center;
+	width: 10em;
+}
+
+
+.contenedor_tabla .tabla_clientes tr:nth-child(even){
+	/* background-color: #def432; */
+	background-color: rgb(167, 164, 164);
+}
+
+.contenedor_tabla .tabla_clientes tr:hover {
+	background-color: #d7d7c4;
+}
+
+.contenedor_tabla .tabla_clientes th {
+	/* position: absolute; */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #00d0bd;
+    color: white;
+		font-size: 15px;
+}
+
+
+.btn-enviar{
+	background-color: #f0e00d;
+  padding: 10px;
+  /* margin: -2.3px; */
+  height: 20%;
+  border: none;
+  border-bottom: solid #b4a80a .2rem;
+  transition: all .5s;
+  /* width: 100%; */
+  /* max-width: 110px; */
+  color: rgba(#13cb74, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-enviar, .btn-cancelar{
+  position: relative;
+  /* margin-top: 2em;
+
+  left: 30%; */
+}
+
+.btn-cancelar{
+	background-color: #d42823;
+  padding: 10px;
+  /* margin: -2.3px; */
+  height: 20%;
+  border: none;
+  border-bottom: solid #851404 .2rem;
+  transition: all .5s;
+  /* width: 100%;
+  max-width: 110px; */
+  color: rgba(#d42823, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+	/* margin-left: 20px; */
+}
+.btn-enviar:hover{
+	background-color: #c7ba0a;
+	border-bottom: solid #918807 .2rem;
+}
+.btn-cancelar:hover{
+	background-color: #c1110c;
+	border-bottom: solid #931200 .2rem;
+}
