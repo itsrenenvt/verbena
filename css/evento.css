@@ -63,13 +63,19 @@ body{
 	height: 100vh;
 }
 
+i{
+	font-size: 1.5rem;
+	color: #000000;
+	font-style: normal;
+	font-family: FontAwesome;
+}
+
 .contenedor_form_evento{
-  /* margin: auto; */
-  position: absolute;
-  top: 35%;
+	position: absolute;
+  top: 28%;
   left: 32%;
-  width: 50%;
-  height: 18em;
+	width: 45em;
+  height: 15em;
   background-color: rgb(255, 255, 255);
   border-radius: 1em;
   padding: 2em;
@@ -105,14 +111,48 @@ body{
 .formulario .input_box label{
   position: relative;
   background-color: rgb(249, 244, 129);
-  padding: .72em;
-  padding-right: 1em;
   border-radius: .5em;
-  /* font-weight: bold; */
   font-weight: 500;
-  margin-right: .3em;
 }
 
-.formulario input[type="text"]{
-  width: 60%;
+.formulario .input_box:nth-child(1) label{
+	margin-right: .3em;
+}
+
+.formulario .input_box:nth-child(2) label{
+	margin-right: .3em;
+}
+
+.formulario .input_box:nth-child(3) label{
+	margin-right: .3em;
+}
+
+
+.label_uno,.label_dos,.label_tres,.label_cuatro{
+	padding-top: 13px;
+	padding-left: 10px;
+	padding-right:10px;
+	padding-bottom: 11px;
+}
+
+.label_cinco{
+	padding-top: 13px;
+	padding-left: 10px;
+	padding-right:10px;
+	padding-bottom: 13px;
+}
+.label_cinco i{
+}
+.input_box:nth-child(1) input,.input_box:nth-child(3) input{
+  width: 84%;
+}
+
+.input_box:nth-child(2) input{
+	width: 20.75%;
+	margin-right: .3em;
+}
+
+
+.formulario input[type="date"]{
+  font-size: 14px;
 }

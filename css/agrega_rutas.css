@@ -65,10 +65,15 @@ body{
 
 .contenedor_form_ruta{
   /* margin: auto; */
-  position: absolute;
+  /* position: absolute;
   top: 28%;
   left: 32%;
   width: 50%;
+  height: 22em; */
+	position: absolute;
+  top: 28%;
+  left: 32%;
+	width: 45em;
   height: 22em;
   background-color: rgb(255, 255, 255);
   border-radius: 1em;
@@ -103,31 +108,62 @@ body{
 .formulario .input_box label{
   position: relative;
   background-color: rgb(249, 244, 129);
-  padding: .72em;
-  padding-right: 1em;
+  /* padding: .72em;
+  padding-right: 1em; */
   border-radius: .5em;
   /* font-weight: bold; */
   font-weight: 500;
   margin-right: .3em;
 }
-.input_box:nth-child(1) input{
-  width: 75%;
-}
-.input_box:nth-child(5) input{
-  width: 69.3%;
+.input_box:nth-child(1) input,.input_box:nth-child(5) input{
+  width: 84%;
 }
 .input_box:nth-child(2) input{
-  width: 23.85%;
+  width: 33.5%;
 }
 
 .input_box:nth-child(3) input{
-  width: 26.2%;
+  width: 33.4%;
 }
 
 .input_box:nth-child(4) input{
-  width: 23.7%;
+  width: 33.5%;
 }
 
 .input_box:nth-child(2) input,.input_box:nth-child(3) input,.input_box:nth-child(4) input{
   margin-right: .8em;
+}
+
+i{
+	font-size: 1.5rem;
+	color: #000000;
+	font-style: normal;
+	font-family: FontAwesome;
+}
+/* .input_box:nth-child(1) input{
+  width: 84%;
+} */
+
+.label_uno{
+	padding-top: 13px;
+	padding-left: 10px;
+	padding-right:10px;
+	padding-bottom: 11px;
+}
+
+
+
+
+.label_dos{
+	padding-top: 13px;
+	padding-left: 15px;
+	padding-right:15px;
+	padding-bottom: 11px;
+}
+
+.label_tres{
+	padding-top: 13px;
+	padding-left: 13px;
+	padding-right:13px;
+	padding-bottom: 11px;
 }

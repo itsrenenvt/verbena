@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" type="text/css" href="../css/tabla_cliente.css">
-    <link rel="icon" href="../img/verbena.ico">
+    <link rel="stylesheet" type="text/css" href="css/tabla_cliente.css">
+    <link rel="icon" href="img/verbena.ico">
     <title>Usuarios Cliente</title>
   </head>
   <body>
     <?php
-    include_once '../includes/aside_admin.html';
-    include_once 'conexion.php';
-    include_once 'persona.php';
+    include_once 'includes/aside_admin.html';
+    include_once 'accesodatos/conexion.php';
+    include_once 'accesodatos/persona.php';
     $objPersona = new persona();
     $result=pg_query($conexion, 'select * from "Usuario"');
     ?>
