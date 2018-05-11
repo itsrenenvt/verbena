@@ -11,10 +11,11 @@
   <body>
     <?php
     include_once 'includes/aside_admin.html';
-    include_once 'accesodatos/conexion.php';
+    include_once 'basedatos/conexion.php';
     include_once 'accesodatos/persona.php';
+    // session_start();
     $objPersona = new persona();
-    $result=pg_query($conexion, 'select * from "Usuario"');
+    $result=pg_query($conexion, 'select * from usuario order by id_usuario');
     ?>
 
     <div class="fondo_tabla">
@@ -23,7 +24,7 @@
           <tr>
             <th class="t">ID</th>
             <th>Username</th>
-            <th>Password</th>
+            <!-- <th>Password</th> -->
             <th>Nombre</th>
             <th>E-mail</th>
             <th>Teléfono</th>
@@ -37,33 +38,33 @@
 
             $objPersona = new persona();
 
-            $objPersona->setid($dato['ID_Usuario']);
-            $objPersona->setusuario($dato['Usuario']);
-            $objPersona->setcontrasena($dato['Contraseña']);
-            $objPersona->setnombre($dato['Nombre']);
-            $objPersona->setpaterno($dato['Ap_Paterno']);
-            $objPersona->setmaterno($dato['Ap_Materno']);
-            $objPersona->setemail($dato['Email']);
-            $objPersona->settelefono($dato['Teléfono']);
-            $objPersona->setdireccion($dato['Dirección']);
+            $objPersona->setid($dato['id_usuario']);
+            $objPersona->setusuario($dato['usuario']);
+            $objPersona->setcontrasena($dato['contraseña']);
+            $objPersona->setnombre($dato['nombre']);
+            $objPersona->setpaterno($dato['ap_paterno']);
+            $objPersona->setmaterno($dato['ap_materno']);
+            $objPersona->setemail($dato['email']);
+            $objPersona->settelefono($dato['telefono']);
+            $objPersona->setdireccion($dato['direccion']);
 
+            /* <td>'.$objPersona->getcontrasena().'</td> */
             echo '<tr>
             <td>' .$objPersona->getid().'</td>
             <td>' .$objPersona->getusuario().'</td>
-            <td>' .$objPersona->getcontrasena().'</td>
             <td>' .$objPersona->getNombreCompleto().'</td>
             <td>' .$objPersona->getemail().'</td>
             <td>' .$objPersona->gettelefono().'</td>
             <td>' .$objPersona->getdireccion().'</td>
-            <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar"></td>
-            <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar"></td>
+            <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onclick=""></td>
+            <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onclick=""></td>
             </tr>';
 }
 pg_close($conexion);
            ?>
-
         </table>
       </div>
+      <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onclick="">
     </div>
 
   </body>

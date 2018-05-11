@@ -1,7 +1,7 @@
 <?php
 
 class persona{
-  protected $identificadors="";
+  protected $identificador="";
   protected $nombre="";
 	protected $ap_paterno="";
 	protected $ap_materno="";

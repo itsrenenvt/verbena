@@ -19,7 +19,7 @@
         <div class="contenedor_form_colaborador">
           <!-- <h3>AGREA UN EVENTO</h3> -->
           <div class="formulario">
-          <form class="" action="" method="post">
+          <form name="mod_c" class="" action="" method="post">
             <div class="input_box">
               <label class="label_uno" for="nombre_evento"><i class="fas fa-user"></i></label>
               <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre(s)">
@@ -54,7 +54,7 @@
             </div>
 
               <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar">
-              <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar">
+              <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onClick="mod_c.action='tabla_cliente.php';">
 
             </form>
             </div>
