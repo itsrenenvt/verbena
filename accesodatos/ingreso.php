@@ -23,7 +23,13 @@ if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
           header('Location: ../administrador.php');
         }else{
           // header('Location: ../login.php');
-          echo "USUARIO NO EXISTE";
+          // echo "USUARIO NO EXISTE";
+          ?>
+          <script type="text/javascript">
+          alert('VERIFIQUE CREDENCIALES O EL USUARIO NO EXISTE.');
+          window.location="../login.php";
+        </script>
+          <?php
         }
       }
     }
