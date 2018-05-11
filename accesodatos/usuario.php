@@ -41,23 +41,30 @@ class usuario{
     while ($dato = pg_fetch_array($result)){
       $c_user = $dato['usuario'];
       $c_pass = $dato['contraseña'];
-      // echo "c_user: ".$c_user;
-      // echo "c_pass: ".$c_pass;
-      // if ($this->getpass()==$c_pass) {
-      //   header('Location: ../administrador.php');
-      // }else{
-      //   header('Location: ../login.php');
-      // }
       $this->setpass_c($c_pass);
     }
-    echo "USUARIO NO EXISTE";
 
   }
-  public function buscacolaborador(){
 
+  public function buscacolaborador(){
+    require '..\basedatos\conexion.php';
+    $result=pg_query($conexion,
+    'select usuario, contraseña from colaborador where usuario ='."'". $this->getuser()."'");
+    while ($dato = pg_fetch_array($result)){
+      $c_user = $dato['usuario'];
+      $c_pass = $dato['contraseña'];
+      $this->setpass_c($c_pass);
+    }
   }
   public function buscacliente(){
-
+    require '..\basedatos\conexion.php';
+    $result=pg_query($conexion,
+    'select usuario, contraseña from usuario where usuario ='."'". $this->getuser()."'");
+    while ($dato = pg_fetch_array($result)){
+      $c_user = $dato['usuario'];
+      $c_pass = $dato['contraseña'];
+      $this->setpass_c($c_pass);
+    }
   }
 
 }
