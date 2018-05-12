@@ -11,19 +11,20 @@ if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
   try {
     $sesion_user->buscaadmin();
     if ($contrasena==$sesion_user->getpass_c()) {
-      header('Location: ../administrador.php');
+      $_SESSION["usuario"]="administrador";
+      header('Location: ../inicio.php');
     }else{
       $sesion_user->buscacolaborador();
       if ($contrasena==$sesion_user->getpass_c()) {
-        header('Location: ../administrador.php');
+        $_SESSION["usuario"]="colaborador";
+        header('Location: ../inicio.php');
       }else{
-        // header('Location: ../login.php');
         $sesion_user->buscacliente();
         if ($contrasena==$sesion_user->getpass_c()) {
-          header('Location: ../administrador.php');
+          $_SESSION["usuario"]="cliente";
+          header('Location: ../inicio.php');
         }else{
-          // header('Location: ../login.php');
-          // echo "USUARIO NO EXISTE";
+          // $_SESSION["usuario"]="No hay sesion";
           ?>
           <script type="text/javascript">
           alert('VERIFIQUE CREDENCIALES O EL USUARIO NO EXISTE.');

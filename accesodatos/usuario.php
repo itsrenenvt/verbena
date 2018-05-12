@@ -43,7 +43,7 @@ class usuario{
       $c_pass = $dato['contraseña'];
       $this->setpass_c($c_pass);
     }
-
+    pg_close($conexion);
   }
 
   public function buscacolaborador(){
@@ -55,7 +55,9 @@ class usuario{
       $c_pass = $dato['contraseña'];
       $this->setpass_c($c_pass);
     }
+    pg_close($conexion);
   }
+
   public function buscacliente(){
     require '..\basedatos\conexion.php';
     $result=pg_query($conexion,
@@ -65,7 +67,8 @@ class usuario{
       $c_pass = $dato['contraseña'];
       $this->setpass_c($c_pass);
     }
+    pg_close($conexion);
   }
-
+  
 }
 ?>

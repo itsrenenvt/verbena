@@ -9,22 +9,20 @@
     <title>Usuarios Cliente</title>
   </head>
   <body>
+
     <?php
-    include_once 'includes/aside_admin.html';
+    session_start();
+    include_once 'accesodatos/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
     include_once 'accesodatos/persona.php';
-    // session_start();
-    $objPersona = new persona();
-    $result=pg_query($conexion, 'select * from usuario order by id_usuario');
     ?>
 
     <div class="fondo_tabla">
       <div class="contenedor_tabla">
         <table class="tabla_clientes">
           <tr>
-            <th class="t">ID</th>
+            <th>ID</th>
             <th>Username</th>
-            <!-- <th>Password</th> -->
             <th>Nombre</th>
             <th>E-mail</th>
             <th>Teléfono</th>
@@ -33,7 +31,7 @@
           </tr>
 
           <?php
-
+          $result=pg_query($conexion, 'select * from usuario order by id_usuario');
           while ($dato = pg_fetch_array($result)){
 
             $objPersona = new persona();
@@ -48,7 +46,6 @@
             $objPersona->settelefono($dato['telefono']);
             $objPersona->setdireccion($dato['direccion']);
 
-            /* <td>'.$objPersona->getcontrasena().'</td> */
             echo '<tr>
             <td>' .$objPersona->getid().'</td>
             <td>' .$objPersona->getusuario().'</td>
@@ -59,13 +56,15 @@
             <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onclick=""></td>
             <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onclick=""></td>
             </tr>';
-}
-pg_close($conexion);
-           ?>
+          }
+          if (!empty(pg_fetch_array($result))) {
+            echo "<tr><td colspan='8' >NO HAY DATOS</td></tr>";
+          }
+          pg_close($conexion);
+          ?>
         </table>
       </div>
       <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onclick="">
     </div>
-
   </body>
-</html>
+  </html>

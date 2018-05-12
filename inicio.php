@@ -9,7 +9,11 @@
     <title>Administrador</title>
   </head>
   <body>
-    <?php include_once 'includes/aside_admin.html'; ?>
+    <?php
+
+    include_once 'accesodatos/ingreso.php';
+    include_once 'accesodatos/verifica_sesion.php';
+    ?>
 
       <div class="fondo_ventana">
 
