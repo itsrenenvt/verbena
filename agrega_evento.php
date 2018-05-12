@@ -12,7 +12,8 @@
   </head>
   <body>
     <?php
-    include_once 'includes/aside_admin.html';
+    session_start();
+    include_once 'accesodatos/verifica_sesion.php';
      ?>
     <div class="fondo_agrega_evento">
       <div class="contenedor_form_evento">

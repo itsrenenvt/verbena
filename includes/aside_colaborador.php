@@ -24,7 +24,7 @@
           <div class="img_perfil"></div>
           <label class="label_img">COLABORADOR</label>
           <div class="estadistica">
-            <div class="estadistica_cliente">
+            <div class="estadistica_cliente_col">
               <?php
               include_once 'basedatos/conexion.php';
               $result=pg_query($conexion, 'select count (id_usuario) from usuario');
@@ -35,16 +35,7 @@
               <p><?php echo $total_user ?></p>
               <label for="estadistica_cliente">Clientes</label>
             </div>
-            <div class="estadistica_colaboradores">
-              <?php
-              $result=pg_query($conexion, 'select count (id_colaborador) from colaborador');
-              while ($dato = pg_fetch_array($result)) {
-                $total_colaboradores = $dato["count"];
-              }
-               ?>
-              <p><?php echo $total_colaboradores ?></p>
-              <label for="estadistica_colaboradores">Colaboradores</label>
-            </div>
+            
           </div>
           <nav>
             <ul>

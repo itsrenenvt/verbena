@@ -27,7 +27,8 @@
   <body>
 
     <?php
-    include_once 'includes/aside_admin.html';
+    session_start();
+    include_once 'accesodatos/verifica_sesion.php';
     ?>
 
     <div class="fondo_reseña">
