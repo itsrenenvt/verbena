@@ -22,24 +22,37 @@
       <div class="caja_fondo">
         <div class="izquierdo">
           <div class="img_perfil"></div>
-          <label class="label_img">ADMINISTRADOR</label>
+          <label class="label_img">CLIENTE</label>
           <div class="estadistica">
             <div class="estadistica_cliente">
-              <p>132</p>
+              <?php
+              include_once 'basedatos/conexion.php';
+              $result=pg_query($conexion, 'select count (id_usuario) from usuario');
+              while ($dato = pg_fetch_array($result)) {
+                $total_user = $dato["count"];
+              }
+               ?>
+              <p><?php echo $total_user ?></p>
               <label for="estadistica_cliente">Clientes</label>
             </div>
             <div class="estadistica_colaboradores">
-              <p>13</p>
+              <?php
+              $result=pg_query($conexion, 'select count (id_colaborador) from colaborador');
+              while ($dato = pg_fetch_array($result)) {
+                $total_colaboradores = $dato["count"];
+              }
+               ?>
+              <p><?php echo $total_colaboradores ?></p>
               <label for="estadistica_colaboradores">Colaboradores</label>
             </div>
           </div>
           <nav>
             <ul>
               <li><a href="index.php">Inicio</a></li>
-              <li><a href="tabla_cliente.php">Clientes</a></li>
-              <li><a href="agrega_colaborador.php">Colaboradores</a></li>
+              <!-- <li><a href="tabla_cliente.php">Clientes</a></li> -->
+              <!-- <li><a href="agrega_colaborador.php">Colaboradores</a></li> -->
               <li><a href="agrega_evento.php">Eventos</a></li>
-              <li><a href="agrega_reseña.php">Reseña</a></li>
+              <!-- <li><a href="agrega_reseña.php">Reseña</a></li> -->
               <li><a href="agrega_ruta.php">Rutas</a></li>
               <li><a href="agrega_producto.php">Tienda</a></li>
             </ul>

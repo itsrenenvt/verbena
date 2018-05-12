@@ -5,10 +5,10 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
     include_once 'includes/aside_admin.php';
   }else{
     if ($sesion_user=="colaborador"){
-      include_once 'includes/aside_colaborador.html';
+      include_once 'includes/aside_colaborador.php';
     }else{
       if ($sesion_user=="cliente"){
-        include_once 'includes/aside_cliente.html';
+        include_once 'includes/aside_cliente.php';
       }
     }
   }
