@@ -24,7 +24,6 @@ if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
           $_SESSION["usuario"]="cliente";
           header('Location: ../inicio.php');
         }else{
-          // $_SESSION["usuario"]="No hay sesion";
           ?>
           <script type="text/javascript">
           alert('VERIFIQUE CREDENCIALES O EL USUARIO NO EXISTE.');

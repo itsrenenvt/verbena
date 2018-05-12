@@ -1,8 +1,8 @@
-<?php 
+<?php
 if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
   $sesion_user=$_SESSION["usuario"];
   if ($sesion_user=="administrador") {
-    include_once 'includes/aside_admin.html';
+    include_once 'includes/aside_admin.php';
   }else{
     if ($sesion_user=="colaborador"){
       include_once 'includes/aside_colaborador.html';
