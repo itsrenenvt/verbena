@@ -2,15 +2,15 @@
 
 include_once 'persona.php';
 $d_user = new persona();
-
-$d_user->setusuario($_POST["txtusername"]);
-$d_user->setcontrasena($_POST["txtpass"]);
-$d_user->setnombre($_POST["txtnombre"]);
-$d_user->setpaterno($_POST["txtapp"]);
-$d_user->setmaterno($_POST["txtapm"]);
-$d_user->setemail($_POST["txtemail"]);
-$d_user->setdireccion($_POST["txtdireccion"]);
-$d_user->settelefono($_POST["txttelefono"]);
+//$conversion =isset($_POST['op']) ? $_POST['op'] : "No hay sistema";
+$d_user->setusuario(isset ($_POST["txtusername"]) ? $_POST["txtusername"] : "");
+$d_user->setcontrasena(isset ($_POST["txtpass"]) ? $_POST["txtpass"] : "");
+$d_user->setnombre(isset($_POST["txtnombre"]) ? $_POST["txtnombre"] : "");
+$d_user->setpaterno(isset($_POST["txtnombre"]) ? $_POST["txtnombre"] : "");
+$d_user->setmaterno(isset($_POST["txtapm"]) ? $_POST["txtapm"] : "");
+$d_user->setemail(isset($_POST["txtemail"]) ? $_POST["txtemail"] : "");
+$d_user->setdireccion(isset($_POST["txtdireccion"]) ? $_POST["txtdireccion"] : "");
+$d_user->settelefono(isset($_POST["txttelefono"]) ? $_POST["txttelefono"] : "");
 
 session_start();
 if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
@@ -144,7 +144,7 @@ if ($sesion == "si") {
 
   <script type="text/javascript">
     alert('EL REGISTRO SE HA REALIZADO CON EXITO.');
-  // window.location="../tabla_cliente.php";
+    window.location="../tabla_cliente.php";
   </script>
 
   <?php
@@ -163,10 +163,24 @@ if ($sesion == "si") {
  }
 
 function modificausuario(){
+  global $d_user;
+  // echo "sirve metodo modifica";
 
 }
 
-function eliminaausuario(){
+function eliminausuario(){
+  include '../basedatos/conexion.php';
+  if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {
+    $delete_id = $_POST["txtid_crud"];
+    pg_query($conexion,"delete from usuario where id_usuario =". $delete_id);
+    pg_close($conexion);
+    ?>
+    <script type="text/javascript">
+    alert('EL USUARIO CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADO.');
+    window.location="../tabla_cliente.php";
+  </script>
+    <?php
+  }
 
 }
 
