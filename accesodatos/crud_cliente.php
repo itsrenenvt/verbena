@@ -41,15 +41,6 @@ function compruebadatos(){
 }
 
 function registrocliente(){
-  // $nombre_user= $_POST["txtnombre"];
-  // $app_user= $_POST["txtapp"];
-  // $apm_user= $_POST["txtapm"];
-  // $name_user= $_POST["txtusername"];
-  // $pass_user= $_POST["txtpass"];
-  // $pass_user_confirm= $_POST["txtpass_confirm"];
-  // $email_user= $_POST["txtemail"];
-  // $telefono_user= $_POST["txttelefono"];
-  // $direccion_user= $_POST["txtdireccion"];
 
   include_once '../basedatos/conexion.php';
 
@@ -73,18 +64,6 @@ function registrocliente(){
            .$d_user->getemail()."','"
            .$d_user->getdireccion()."','"
            .$d_user->gettelefono()."')");
-
-  // $insert=pg_query($conexion,
-  // "insert into usuario
-  // values (".$autogenera_id.",'"
-  //          .$name_user."','"
-  //          .$pass_user."','"
-  //          .$nombre_user."','"
-  //          .$app_user."','"
-  //          .$apm_user."','"
-  //          .$email_user."','"
-  //          .$direccion_user."','"
-  //          .$telefono_user."')");
 
 pg_close($conexion);
 ?>
