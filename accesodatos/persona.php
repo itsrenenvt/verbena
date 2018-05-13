@@ -7,6 +7,7 @@ class persona{
 	protected $ap_materno="";
 	protected $usuario="";
 	protected $contraseña="";
+  protected $ccontraseña="";
   protected $email="";
   protected $telefono="";
   protected $direccion="";
@@ -59,6 +60,14 @@ class persona{
 
   function getcontrasena(){
     return $this->contraseña;
+  }
+
+  function setconfirmcontrasena($pcontraseña){
+    $this->ccontraseña = $pcontraseña;
+  }
+
+  function getconfirmcontrasena(){
+    return $this->ccontraseña;
   }
 
   function setemail($pemail){

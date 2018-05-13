@@ -5,6 +5,7 @@ $d_user = new persona();
 
 $d_user->setusuario($_POST["txtusername"]);
 $d_user->setcontrasena($_POST["txtpass"]);
+$d_user->setconfirmcontrasena($_POST["txtpass_confirm"]);
 $d_user->setnombre($_POST["txtnombre"]);
 $d_user->setpaterno($_POST["txtapp"]);
 $d_user->setmaterno($_POST["txtapm"]);
@@ -22,13 +23,10 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
   compruebadatos();
 }
 
-function usuarioexiste()
-{
-
-}
 
 function compruebadatos(){
-  if($pass_user= $_POST["txtpass"] != $pass_user_confirm= $_POST["txtpass_confirm"]){
+  global $d_user;
+  if($d_user->getcontrasena() != $d_user->getconfirmcontrasena()){
     ?>
     <script type="text/javascript">
     alert('LAS CONTRASEÑAS NO COINCIDEN.');
@@ -69,7 +67,7 @@ pg_close($conexion);
 ?>
 
 <script type="text/javascript">
-alert('EL REGISTRO SE HA REALIZADO CON EXITO, SERA REDIRIGIDO AL LOGIN E INICIE SESIÓN CON SUS CREDENCIALES.');
+  alert('EL REGISTRO SE HA REALIZADO CON EXITO, SERA REDIRIGIDO AL INICIO SE SESIÓN E INGRESE CON SUS CREDENCIALES.');
 window.location="../login.php";
 </script>
 
