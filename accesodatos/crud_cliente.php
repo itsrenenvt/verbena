@@ -16,14 +16,14 @@ $d_user->settelefono($_POST["txttelefono"]);
 session_start();
 if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
   if(isset($_POST["txtope"]) && !empty($_POST["txtope"])){
-
+    
   }
 
 }else{
   verificausuario();
 }
 
-
+// Metodos cuando no hay sesión
 function verificausuario(){
   include '../basedatos/conexion.php';
   global $d_user;

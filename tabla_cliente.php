@@ -47,16 +47,28 @@
               $objPersona->settelefono($dato['telefono']);
               $objPersona->setdireccion($dato['direccion']);
 
-              echo '<tr>
-              <td>' .$objPersona->getid().'</td>
-              <td>' .$objPersona->getusuario().'</td>
-              <td>' .$objPersona->getNombreCompleto().'</td>
-              <td>' .$objPersona->getemail().'</td>
-              <td>' .$objPersona->gettelefono().'</td>
-              <td>' .$objPersona->getdireccion().'</td>
-              <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onclick=""></td>
-              <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onclick=""></td>
-              </tr>';
+              // echo '<tr>
+              // <td>' .$objPersona->getid().'</td>
+              // <td>' .$objPersona->getusuario().'</td>
+              // <td>' .$objPersona->getNombreCompleto().'</td>
+              // <td>' .$objPersona->getemail().'</td>
+              // <td>' .$objPersona->gettelefono().'</td>
+              // <td>' .$objPersona->getdireccion().'</td>
+              // <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar"></td>
+              // <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar"></td>
+              // </tr>';
+              ?>
+              <tr>
+                <td><?php echo $objPersona->getid() ?></td>
+                <td><?php echo $objPersona->getusuario() ?></td>
+                <td><?php echo $objPersona->getNombreCompleto() ?></td>
+                <td><?php echo $objPersona->getemail() ?></td>
+                <td><?php echo $objPersona->gettelefono() ?></td>
+                <td><?php echo $objPersona->getdireccion() ?></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='cliente.php';"></td>
+                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='cliente.php';"></td>
+              </tr>
+              <?php
             }
             if (!empty(pg_fetch_array($result))) {
               echo "<tr><td colspan='8' >NO HAY DATOS</td></tr>";
