@@ -5,7 +5,6 @@ $d_user = new persona();
 
 $d_user->setusuario($_POST["txtusername"]);
 $d_user->setcontrasena($_POST["txtpass"]);
-// $d_user->setconfirmcontrasena($_POST["txtpass_confirm"]);
 $d_user->setnombre($_POST["txtnombre"]);
 $d_user->setpaterno($_POST["txtapp"]);
 $d_user->setmaterno($_POST["txtapm"]);
@@ -16,18 +15,34 @@ $d_user->settelefono($_POST["txttelefono"]);
 session_start();
 if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
   $sesion ="si";
-  if(isset($_POST["txtope"]) && !empty($_POST["txtope"])){
-    // echo "Ewe, si hay sesión la operacion es: ". $_POST["txtope"];
-    $clv_operacion = $_POST["txtope"];
+  if(isset($_POST["txtope_crud"]) && !empty($_POST["txtope_crud"])){
+    $clv_operacion = $_POST["txtope_crud"];
+    // echo "clave_crud: ".$clv_operacion;
 
-    if ($clv_operacion = "g") {
-      // echo "Hola, si sirvo.";
+    if ($clv_operacion == "g") {
       try {
         verificausuario();
-      } catch (Exception $e) {
+      } catch (Exception $e){
 
       }
+    }else{
+      if ($clv_operacion == "m"){
+      // echo "Modificar";
+      try {
+        modificausuario();
+      } catch (Exception $e){
 
+      }
+      }else{
+        if ($clv_operacion == "e"){
+          // echo "Eliminar";
+          try {
+            eliminausuario();
+          } catch (Exception $e){
+
+          }
+        }
+      }
     }
   }
 
@@ -129,7 +144,7 @@ if ($sesion == "si") {
 
   <script type="text/javascript">
     alert('EL REGISTRO SE HA REALIZADO CON EXITO.');
-  window.location="../tabla_cliente.php";
+  // window.location="../tabla_cliente.php";
   </script>
 
   <?php
@@ -146,5 +161,13 @@ if ($sesion == "si") {
 }
 
  }
+
+function modificausuario(){
+
+}
+
+function eliminaausuario(){
+
+}
 
 ?>

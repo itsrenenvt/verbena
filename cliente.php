@@ -54,8 +54,13 @@
               <input class="input_ancho" type="text" name="txtdireccion" value="" placeholder="Dirección">
             </div>
             <!-- <input type="hidden" name="txtclave"> -->
-            <input type="hidden" name="txtope">
-              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar" onClick="mod_c.action='accesodatos/crud_cliente.php';txtope.value='g'">
+            <?php
+            try { $clv_ope=$_POST["txtope"]; } catch (Exception $e) { }
+            echo "clve: " . $clv_ope;
+             ?>
+            <input type="hidden" name="txtope_crud" value="<?php echo $clv_ope?>">
+
+              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar" onClick="mod_c.action='accesodatos/crud_cliente.php';">
               <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onClick="mod_c.action='tabla_cliente.php';">
 
             </form>

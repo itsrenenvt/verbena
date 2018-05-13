@@ -20,6 +20,9 @@
     <div class="fondo_tabla">
       <div class="contenedor_tabla">
         <form name="form_cliente" class="" action="" method="post">
+          
+          <input type="hidden" name="txtope">
+
           <table class="tabla_clientes">
             <tr>
               <th>ID</th>
@@ -47,16 +50,6 @@
               $objPersona->settelefono($dato['telefono']);
               $objPersona->setdireccion($dato['direccion']);
 
-              // echo '<tr>
-              // <td>' .$objPersona->getid().'</td>
-              // <td>' .$objPersona->getusuario().'</td>
-              // <td>' .$objPersona->getNombreCompleto().'</td>
-              // <td>' .$objPersona->getemail().'</td>
-              // <td>' .$objPersona->gettelefono().'</td>
-              // <td>' .$objPersona->getdireccion().'</td>
-              // <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar"></td>
-              // <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar"></td>
-              // </tr>';
               ?>
               <tr>
                 <td><?php echo $objPersona->getid() ?></td>
@@ -65,8 +58,8 @@
                 <td><?php echo $objPersona->getemail() ?></td>
                 <td><?php echo $objPersona->gettelefono() ?></td>
                 <td><?php echo $objPersona->getdireccion() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='cliente.php';"></td>
-                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='cliente.php';"></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='cliente.php';txtope.value='m'"></td>
+                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='cliente.php';txtope.value='e'"></td>
               </tr>
               <?php
             }
@@ -77,7 +70,8 @@
             ?>
           </table>
         </div>
-          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='cliente.php';">
+
+          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='cliente.php';txtope.value='g'">
         </form>
     </div>
   </body>
