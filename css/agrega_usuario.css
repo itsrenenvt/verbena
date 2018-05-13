@@ -76,7 +76,8 @@ body{
   padding: 2em;
 }
 
-.formulario input[type="text"]{
+.formulario input[type="text"],
+.formulario input[type="email"]{
   position: relative;
   margin-top: 1em;
 
@@ -98,7 +99,8 @@ i{
 	font-family: FontAwesome;
 }
 
-.formulario input[type="text"]{
+.formulario input[type="text"],
+.formulario input[type="email"]{
   padding-right: 20px;
 }
 
@@ -110,21 +112,9 @@ i{
 .formulario .input_box label{
   position: relative;
   background-color: rgb(249, 244, 129);
-	/* padding: .8em .5em .5em .5em; */
 	text-align: center;
-	/* width: .5em;
-	height: .5em; */
-  /* padding: .8em; */
-  /* padding-right: 1em; */
   border-radius: .5em;
-  /* font-weight: bold; */
-  /* font-weight: 500; */
-
   margin-right: .3em;
-	/* padding-top: 10px;
-	padding-left: 10px;
-	padding-right:10px;
-	padding-bottom: 10px; */
 }
 
 .label_uno{

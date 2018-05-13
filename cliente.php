@@ -43,7 +43,7 @@
             </div>
             <div class="input_box">
               <label class="label_seis" for="txtemail"><i class="fas fa-envelope"></i></label>
-              <input class="input_ancho" type="text" name="txtemail" value="" placeholder="Correo Electronico">
+              <input class="input_ancho" type="email" name="txtemail" value="" placeholder="Correo Electronico">
             <!-- </div>
             <div class="input_box"> -->
               <label class="label_siete" for="txttelefono"><i class="fas fa-phone"></i></label>
