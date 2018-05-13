@@ -20,11 +20,30 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
   }
 
 }else{
-  compruebadatos();
+  verificausuario();
 }
 
 
-function compruebadatos(){
+function verificausuario(){
+  include '../basedatos/conexion.php';
+  global $d_user;
+    $result=pg_query($conexion, "select id_usuario from usuario where usuario ='".$d_user->getusuario()."'");
+    while ($dato = pg_fetch_array($result)) {
+       $id_user = $dato['id_usuario'];
+     }
+     if (empty($id_user)) {
+       compruebacontraseña();
+     }else{
+       ?>
+       <script type="text/javascript">
+       alert('EL USUARIO YA EXISTE, INGRESA UNO NUEVO.');
+     window.location="../registro_cliente.php";
+       </script> -->
+       <?php
+     }
+}
+
+function compruebacontraseña(){
   global $d_user;
   if($d_user->getcontrasena() != $d_user->getconfirmcontrasena()){
     ?>
@@ -40,7 +59,7 @@ function compruebadatos(){
 
 function registrocliente(){
 
-  include_once '../basedatos/conexion.php';
+  include '../basedatos/conexion.php';
 
   $result=pg_query($conexion, 'select max (id_usuario) from usuario');
   while ($dato = pg_fetch_array($result)) {
