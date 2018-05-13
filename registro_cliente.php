@@ -14,7 +14,7 @@
   <body>
 
     <?php
-    include("header.html");
+    include_once 'includes/header.html';
     ?>
 
     <div class="background-login">
@@ -28,41 +28,41 @@
 
           <div class="izquierdo">
             <h3>Rellena estos campos</h3>
-            <form>
+            <form name="" class="" action="accesodatos/crud_cliente.php" method="post">
               <div class="input_box">
-                <input class="placeholder" type="text" name="" placeholder="Nombre" value="" required>
+                <input class="placeholder" type="text" id="idnombre" name="txtnombre" placeholder="Nombre" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="text" name="" placeholder="Apellido Paterno" value="" required>
+                <input class="placeholder" type="text" name="txtapp" placeholder="Apellido Paterno" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="text" name="" placeholder="Apellido Materno" value="">
+                <input class="placeholder" type="text" name="txtapm" placeholder="Apellido Materno" value="">
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="text" name="" placeholder="Usuario" value="" required>
+                <input class="placeholder" type="text" name="txtusername" placeholder="Usuario" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="password" name="" placeholder="Contraseña" value="" required>
+                <input class="placeholder" type="password" name="txtpass" placeholder="Contraseña" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="password" name="" placeholder="Confirme Contraseña" value="" required>
+                <input class="placeholder" type="password" name="txtpass_confirm" placeholder="Confirme Contraseña" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="email" name="" placeholder="Email" value="" required>
+                <input class="placeholder" type="email" name="txtemail" placeholder="Email" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" type="tel" name="" placeholder="Tel&eacute;fono" value="">
+                <input class="placeholder" type="tel" name="txttelefono" placeholder="Tel&eacute;fono" value="">
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
-                <input class="placeholder" id="dir" type="text" name="" placeholder="Direcci&oacute;n" value="">
+                <input class="placeholder" id="dir" type="text" name="txtdireccion" placeholder="Direcci&oacute;n" value="">
               </div>
 
               <input type="submit" name="" value="Registrarse">
@@ -74,7 +74,7 @@
     </div>
 
     <?php
-    include("footer.html");
+    include_once 'includes/footer.html';
     ?>
 
   </body>

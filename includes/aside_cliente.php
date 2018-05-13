@@ -48,6 +48,7 @@
           </div>
           <nav>
             <ul>
+              <li><a href="cliente.php">Perfil</a></li>
               <li><a href="index.php">Inicio</a></li>
               <!-- <li><a href="tabla_cliente.php">Clientes</a></li> -->
               <!-- <li><a href="agrega_colaborador.php">Colaboradores</a></li> -->

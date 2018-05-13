@@ -19,52 +19,54 @@
 
     <div class="fondo_tabla">
       <div class="contenedor_tabla">
-        <table class="tabla_clientes">
-          <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Nombre</th>
-            <th>E-mail</th>
-            <th>Teléfono</th>
-            <th>Dirección</th>
-            <th colspan="2">Operaciones</th>
-          </tr>
+        <form name="form_cliente" class="" action="" method="post">
+          <table class="tabla_clientes">
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Nombre</th>
+              <th>E-mail</th>
+              <th>Teléfono</th>
+              <th>Dirección</th>
+              <th colspan="2">Operaciones</th>
+            </tr>
 
-          <?php
-          $result=pg_query($conexion, 'select * from usuario order by id_usuario');
-          while ($dato = pg_fetch_array($result)){
+            <?php
+            $result=pg_query($conexion, 'select * from usuario order by id_usuario');
+            while ($dato = pg_fetch_array($result)){
 
-            $objPersona = new persona();
+              $objPersona = new persona();
 
-            $objPersona->setid($dato['id_usuario']);
-            $objPersona->setusuario($dato['usuario']);
-            $objPersona->setcontrasena($dato['contraseña']);
-            $objPersona->setnombre($dato['nombre']);
-            $objPersona->setpaterno($dato['ap_paterno']);
-            $objPersona->setmaterno($dato['ap_materno']);
-            $objPersona->setemail($dato['email']);
-            $objPersona->settelefono($dato['telefono']);
-            $objPersona->setdireccion($dato['direccion']);
+              $objPersona->setid($dato['id_usuario']);
+              $objPersona->setusuario($dato['usuario']);
+              $objPersona->setcontrasena($dato['contraseña']);
+              $objPersona->setnombre($dato['nombre']);
+              $objPersona->setpaterno($dato['ap_paterno']);
+              $objPersona->setmaterno($dato['ap_materno']);
+              $objPersona->setemail($dato['email']);
+              $objPersona->settelefono($dato['telefono']);
+              $objPersona->setdireccion($dato['direccion']);
 
-            echo '<tr>
-            <td>' .$objPersona->getid().'</td>
-            <td>' .$objPersona->getusuario().'</td>
-            <td>' .$objPersona->getNombreCompleto().'</td>
-            <td>' .$objPersona->getemail().'</td>
-            <td>' .$objPersona->gettelefono().'</td>
-            <td>' .$objPersona->getdireccion().'</td>
-            <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onclick=""></td>
-            <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onclick=""></td>
-            </tr>';
-          }
-          if (!empty(pg_fetch_array($result))) {
-            echo "<tr><td colspan='8' >NO HAY DATOS</td></tr>";
-          }
-          pg_close($conexion);
-          ?>
-        </table>
-      </div>
-      <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onclick="">
+              echo '<tr>
+              <td>' .$objPersona->getid().'</td>
+              <td>' .$objPersona->getusuario().'</td>
+              <td>' .$objPersona->getNombreCompleto().'</td>
+              <td>' .$objPersona->getemail().'</td>
+              <td>' .$objPersona->gettelefono().'</td>
+              <td>' .$objPersona->getdireccion().'</td>
+              <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onclick=""></td>
+              <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onclick=""></td>
+              </tr>';
+            }
+            if (!empty(pg_fetch_array($result))) {
+              echo "<tr><td colspan='8' >NO HAY DATOS</td></tr>";
+            }
+            pg_close($conexion);
+            ?>
+          </table>
+        </div>
+          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='cliente.php';">
+        </form>
     </div>
   </body>
   </html>
