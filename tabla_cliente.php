@@ -25,15 +25,17 @@
           <input type="hidden" name="txtid">
 
           <table class="tabla_clientes">
-            <tr>
-              <th>ID</th>
-              <th>Username</th>
-              <th>Nombre</th>
-              <th>E-mail</th>
-              <th>Teléfono</th>
-              <th>Dirección</th>
-              <th colspan="2">Operaciones</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Nombre</th>
+                <th>E-mail</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th colspan="2">Operaciones</th>
+              </tr>
+            </thead>
 
             <?php
             $result=pg_query($conexion, 'select * from usuario order by id_usuario desc');
@@ -59,10 +61,7 @@
                 <td><?php echo $objPersona->getemail() ?></td>
                 <td><?php echo $objPersona->gettelefono() ?></td>
                 <td><?php echo $objPersona->getdireccion() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar"
-                           onClick="form_cliente.action='cliente.php';
-                                           txtope.value='m';
-                                           txtid.value='<?php echo $objPersona->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='cliente.php';txtope.value='m';txtid.value='<?php echo $objPersona->getid() ?>'"></td>
                 <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='cliente.php';txtope.value='e';txtid.value='<?php echo $objPersona->getid() ?>'"></td>
               </tr>
               <?php
