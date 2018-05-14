@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/agrega_usuario.css">
     <link rel="icon" href="img/verbena.ico">
-    <title>Colaboradores</title>
+    <title>Clientes</title>
   </head>
   <body>
 
