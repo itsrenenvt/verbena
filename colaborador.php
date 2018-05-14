@@ -15,7 +15,7 @@
       <?php
       session_start();
       include_once 'accesodatos/verifica_sesion.php';
-      include 'accesodatos/persona.php';
+      include 'accesodatos/sget_persona.php';
       $objduser = new persona();
        ?>
       <div class="fondo_agrega_colaborador">

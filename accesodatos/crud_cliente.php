@@ -1,6 +1,6 @@
 <?php
 
-include_once 'persona.php';
+include_once 'sget_persona.php';
 $d_user = new persona();
 //$conversion =isset($_POST['op']) ? $_POST['op'] : "No hay sistema";
 $d_user->setusuario(isset ($_POST["txtusername"]) ? $_POST["txtusername"] : "");
