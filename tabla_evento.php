@@ -14,7 +14,7 @@
     session_start();
     include_once 'accesodatos/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
-    include_once 'accesodatos/evento.php';
+    include_once 'accesodatos/sget_evento.php';
     ?>
 
     <div class="fondo_tabla">
