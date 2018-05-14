@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" type="text/css" href="css/tablas.css">
     <link rel="icon" href="img/verbena.ico">
-    <title>Eventos</title>
+    <title>Tabla Eventos</title>
   </head>
   <body>
 
