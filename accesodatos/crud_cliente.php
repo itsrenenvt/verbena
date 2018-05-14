@@ -6,7 +6,7 @@ $d_user = new persona();
 $d_user->setusuario(isset ($_POST["txtusername"]) ? $_POST["txtusername"] : "");
 $d_user->setcontrasena(isset ($_POST["txtpass"]) ? $_POST["txtpass"] : "");
 $d_user->setnombre(isset($_POST["txtnombre"]) ? $_POST["txtnombre"] : "");
-$d_user->setpaterno(isset($_POST["txtnombre"]) ? $_POST["txtnombre"] : "");
+$d_user->setpaterno(isset($_POST["txtapp"]) ? $_POST["txtapp"] : "");
 $d_user->setmaterno(isset($_POST["txtapm"]) ? $_POST["txtapm"] : "");
 $d_user->setemail(isset($_POST["txtemail"]) ? $_POST["txtemail"] : "");
 $d_user->setdireccion(isset($_POST["txtdireccion"]) ? $_POST["txtdireccion"] : "");
@@ -141,7 +141,6 @@ pg_close($conexion);
 
 if ($sesion == "si") {
   ?>
-
   <script type="text/javascript">
     alert('EL REGISTRO SE HA REALIZADO CON EXITO.');
     window.location="../tabla_cliente.php";
@@ -164,7 +163,29 @@ if ($sesion == "si") {
 
 function modificausuario(){
   global $d_user;
-  // echo "sirve metodo modifica";
+  include '../basedatos/conexion.php';
+  if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {
+    $modifica_id = $_POST["txtid_crud"];
+    pg_query($conexion,"update usuario
+                        set usuario = '".$d_user->getusuario()."',
+                         contraseña = '".$d_user->getcontrasena()."',
+                         nombre = '".$d_user->getnombre()."',
+                         ap_paterno = '".$d_user->getpaterno()."',
+                         ap_materno = '".$d_user->getmaterno()."',
+                         email = '".$d_user->getemail()."',
+                         direccion = '".$d_user->getdireccion()."',
+                         telefono = '".$d_user->gettelefono()."'
+
+                         where id_usuario = ".$modifica_id);
+    pg_close($conexion);
+    ?>
+
+    <script type="text/javascript">
+    alert('EL USUARIO CON ID: <?php echo $modifica_id ?> HA SIDO MODIFICADO.');
+    window.location="../tabla_cliente.php";
+   </script>
+    <?php
+  }
 
 }
 
