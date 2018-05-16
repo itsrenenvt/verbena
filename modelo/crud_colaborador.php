@@ -126,14 +126,14 @@ function registrocliente(){
   $insert=pg_query($conexion,
   "insert into colaborador
   values (".$d_user->getid().",'"
-           .$d_user->getusuario()."','"
-           .$d_user->getcontrasena()."','"
            .$d_user->getnombre()."','"
            .$d_user->getpaterno()."','"
            .$d_user->getmaterno()."','"
+           .$d_user->getusuario()."','"
+           .$d_user->getcontrasena()."','"
            .$d_user->getemail()."','"
-           .$d_user->getdireccion()."','"
-           .$d_user->gettelefono()."')");
+           .$d_user->gettelefono()."','"
+           .$d_user->getdireccion()."')");
 
 pg_close($conexion);
 
