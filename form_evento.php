@@ -13,13 +13,13 @@
   <body>
     <?php
     session_start();
-    include_once 'accesodatos/verifica_sesion.php';
+    include_once 'modelo/verifica_sesion.php';
      ?>
     <div class="fondo_agrega_evento">
       <div class="contenedor_form_evento">
         <!-- <h3>AGREA UN EVENTO</h3> -->
         <div class="formulario">
-        <form class="" action="" method="post">
+        <form class="" name="evento" action="" method="post">
           <div class="input_box">
             <label class="label_uno" for="nombre_evento"><i class="fas fa-bell"></i></label>
             <input type="text" name="nombre_evento" value="" placeholder="Inserte nombre del evento">
@@ -41,7 +41,7 @@
             <input type="text" name="descripcion_evento" value="" placeholder="Descripción del evento">
           </div>
             <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar">
-            <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar">
+            <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onclick="evento.action='tabla_evento.php';">
           </form>
           </div>
       </div>

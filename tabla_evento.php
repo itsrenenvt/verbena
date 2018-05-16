@@ -12,14 +12,14 @@
 
     <?php
     session_start();
-    include_once 'accesodatos/verifica_sesion.php';
+    include_once 'modelo/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
-    include_once 'accesodatos/sget_evento.php';
+    include_once 'modelo/sget_evento.php';
     ?>
 
     <div class="fondo_tabla">
       <div class="contenedor_tabla">
-        <form name="form_cliente" class="" action="" method="post">
+        <form name="form_evento" class="" action="" method="post">
 
           <input type="hidden" name="txtope">
           <input type="hidden" name="txtid">
@@ -62,8 +62,8 @@
                 <td><?php echo $objEvento->getdireccion() ?></td>
                 <td><?php echo $objEvento->getfecha() ?></td>
                 <td><?php echo $objEvento->gettiempo() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='cliente.php';txtope.value='m';txtid.value='<?php echo $objEvento->getid() ?>'"></td>
-                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='cliente.php';txtope.value='e';txtid.value='<?php echo $objEvento->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_evento.action='form_evento.php';txtope.value='m';txtid.value='<?php echo $objEvento->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_evento.action='form_evento.php';txtope.value='e';txtid.value='<?php echo $objEvento->getid() ?>'"></td>
               </tr>
               <?php
             }
@@ -75,7 +75,7 @@
           </table>
         </div>
 
-          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='cliente.php';txtope.value='g'">
+          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_evento.action='form_evento.php';txtope.value='g'">
         </form>
     </div>
   </body>

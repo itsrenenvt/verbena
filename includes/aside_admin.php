@@ -53,8 +53,8 @@
               <li><a href="tabla_colaborador.php">Colaboradores</a></li>
               <li><a href="tabla_evento.php">Eventos</a></li>
               <li><a href="tabla_resena.php">Reseña</a></li>
-              <li><a href="agrega_ruta.php">Rutas</a></li>
-              <li><a href="agrega_producto.php">Tienda</a></li>
+              <li><a href="tabla_rutas.php">Rutas</a></li>
+              <li><a href="tabla_obras.php">Tienda</a></li>
             </ul>
           </nav>
           <a class="cerrar" href="logout.php">Cerrar Sesi&oacute;n</a>

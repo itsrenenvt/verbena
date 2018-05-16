@@ -12,9 +12,9 @@
 
     <?php
     session_start();
-    include_once 'accesodatos/verifica_sesion.php';
+    include_once 'modelo/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
-    include_once 'accesodatos/sget_persona.php';
+    include_once 'modelo/sget_persona.php';
     ?>
 
     <div class="fondo_tabla">
@@ -61,8 +61,8 @@
                 <td><?php echo $objPersona->getemail() ?></td>
                 <td><?php echo $objPersona->gettelefono() ?></td>
                 <td><?php echo $objPersona->getdireccion() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='cliente.php';txtope.value='m';txtid.value='<?php echo $objPersona->getid() ?>'"></td>
-                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='cliente.php';txtope.value='e';txtid.value='<?php echo $objPersona->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_cliente.action='form_cliente.php';txtope.value='m';txtid.value='<?php echo $objPersona->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_cliente.action='form_cliente.php';txtope.value='e';txtid.value='<?php echo $objPersona->getid() ?>'"></td>
               </tr>
               <?php
             }
@@ -74,7 +74,7 @@
           </table>
         </div>
 
-          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='cliente.php';txtope.value='g'">
+          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='form_cliente.php';txtope.value='g'">
         </form>
     </div>
   </body>
