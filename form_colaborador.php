@@ -8,14 +8,14 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/agrega_usuario.css">
     <link rel="icon" href="img/verbena.ico">
-    <title>Clientes</title>
+    <title>Colaboradores</title>
   </head>
   <body>
 
       <?php
       session_start();
-      include_once 'accesodatos/verifica_sesion.php';
-      include 'accesodatos/sget_persona.php';
+      include_once 'modelo/verifica_sesion.php';
+      include 'modelo/sget_persona.php';
       $objduser = new persona();
        ?>
       <div class="fondo_agrega_colaborador">
@@ -29,10 +29,10 @@
               if($clv_ope == "m" || $clv_ope == "e"){
                 $id_ope=$_POST["txtid"];
                 include 'basedatos/conexion.php';
-                $result=pg_query($conexion, 'select * from usuario where id_usuario ='.$id_ope);
+                $result=pg_query($conexion, 'select * from colaborador where id_colaborador ='.$id_ope);
                 while ($dato = pg_fetch_array($result)){
 
-                  $objduser->setid($dato['id_usuario']);
+                  $objduser->setid($dato['id_colaborador']);
                   $objduser->setusuario($dato['usuario']);
                   $objduser->setcontrasena($dato['contraseña']);
                   $objduser->setnombre($dato['nombre']);
@@ -55,7 +55,7 @@
             }
 
              ?>
-          <form name="mod_c" class="" action="" method="post">
+          <form name="colaborador" class="" action="" method="post">
             <div class="input_box">
               <label class="label_uno" for="txtnombre"><i class="fas fa-user"></i></label>
               <input class="input_ancho" type="text" name="txtnombre" value="<?php echo $objduser->getnombre(); ?>" placeholder="Nombre(s)" <?php echo $editable ?>>
@@ -92,8 +92,8 @@
             <input type="hidden" name="txtope_crud" value="<?php echo $clv_ope?>">
             <input type="hidden" name="txtid_crud" value="<?php echo $objduser->getid(); ?>">
 
-              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onClick="mod_c.action='accesodatos/crud_cliente.php';">
-              <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onClick="mod_c.action='tabla_cliente.php';">
+              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onClick="colaborador.action='accesodatos/crud_colaborador.php';">
+              <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onClick="colaborador.action='tabla_colaborador.php';">
 
             </form>
             </div>

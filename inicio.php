@@ -11,8 +11,8 @@
   <body>
     <?php
 
-    include_once 'accesodatos/ingreso.php';
-    include_once 'accesodatos/verifica_sesion.php';
+    include_once 'modelo/ingreso.php';
+    include_once 'modelo/verifica_sesion.php';
     ?>
 
       <div class="fondo_ventana">

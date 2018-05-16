@@ -22,7 +22,7 @@
         <div class="div_cristal">
           <img src="img/verbena.svg" class="img_usuario_login" alt="">
           <h3>Inicia Sesi&oacute;n</h3>
-          <form id="formulario_login" method="post" action="accesodatos\ingreso.php">
+          <form id="formulario_login" method="post" action="modelo\ingreso.php">
             <!-- Poner requieres despues -->
             <div class="input_box">
               <input class="placeholder" type="text" name="txtuser" placeholder="Usuario" value="" id="usuario" required>

@@ -12,9 +12,9 @@
 
     <?php
     session_start();
-    include_once 'accesodatos/verifica_sesion.php';
+    include_once 'modelo/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
-    include_once 'accesodatos/sget_reseña.php';
+    include_once 'modelo/sget_reseña.php';
     ?>
 
     <div class="fondo_tabla">
