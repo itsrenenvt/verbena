@@ -92,7 +92,7 @@
             <input type="hidden" name="txtope_crud" value="<?php echo $clv_ope?>">
             <input type="hidden" name="txtid_crud" value="<?php echo $objduser->getid(); ?>">
 
-              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onClick="colaborador.action='accesodatos/crud_colaborador.php';">
+              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onClick="colaborador.action='modelo/crud_colaborador.php';">
               <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onClick="colaborador.action='tabla_colaborador.php';">
 
             </form>

@@ -19,7 +19,7 @@
 
     <div class="fondo_tabla">
       <div class="contenedor_tabla">
-        <form name="form_ruta" class="" action="" method="post">
+        <form name="form_obras" class="" action="" method="post">
 
           <input type="hidden" name="txtope">
           <input type="hidden" name="txtid">
@@ -59,8 +59,8 @@
                 <td><?php echo $objObra->getdescripcion() ?></td>
                 <td><?php echo "$ ".$objObra->getprecio() ?></td>
                 <td><?php echo $objObra->getcategoria() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_ruta.action='form_ruta.php';txtope.value='m';txtid.value='<?php echo $objObra->getid() ?>'"></td>
-                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_ruta.action='form_ruta.php';txtope.value='e';txtid.value='<?php echo $objObra->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_obras.action='form_obras.php';txtope.value='m';txtid.value='<?php echo $objObra->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_obras.action='form_obras.php';txtope.value='e';txtid.value='<?php echo $objObra->getid() ?>'"></td>
               </tr>
               <?php
             }
@@ -75,7 +75,7 @@
           </table>
         </div>
 
-          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_ruta.action='form_ruta.php';txtope.value='g'">
+          <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_obras.action='form_obras.php';txtope.value='g'">
         </form>
     </div>
   </body>

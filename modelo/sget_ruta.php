@@ -76,11 +76,19 @@ class rutas{
   }
 
   function setcoordenadas($pcoordenadas){
+    // $textplano = htmlspecialchars($pcoordenadas, ENT_QUOTES);
+    // $this->coordenadas = $pcoordenadas;
+    // $textplano = htmlentities($pcoordenadas);
     $this->coordenadas = $pcoordenadas;
   }
 
   function getcoordenadas(){
+    // return $textplano = htmlentities($this->coordenadas);
     return $this->coordenadas;
+  }
+
+  function getcoordenadasformulario(){
+    return $textplano = htmlentities($this->coordenadas);
   }
 
   function getnumeros(){

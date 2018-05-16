@@ -11,10 +11,10 @@
     <title>Cartelera</title>
   </head>
   <body>
-    <?php
+    <!-- <?php
     session_start();
     include_once 'modelo/verifica_sesion.php';
-     ?>
+     ?> -->
     <div class="fondo_agrega_evento">
       <div class="contenedor_form_evento">
         <!-- <h3>AGREA UN EVENTO</h3> -->
@@ -31,37 +31,33 @@
           <div class="input_box">
             <label class="label_dos" for="fecha_evento"><i class="fas fa-calendar"></i></label>
             <input type="date" name="fecha_evento" value="">
-          <!-- </div>
-          <div class="input_box"> -->
+
             <label class="label_tres" for="hora_inicio_evento"><i class="fas fa-hourglass-start"></i></label>
             <input type="time" name="hora_inicio_evento" value="" max="23:59:59" min="00:00:00" step="1">
-          <!-- </div>
-          <div class="input_box"> -->
+
             <label class="label_cuatro" for="hora_fin_evento"><i class="fas fa-hourglass-end"></i></label>
             <input type="time" name="hora_fin_evento" value="" max="23:59:59" min="00:00:00" step="1">
           </div>
           <div class="input_box">
             <label class="label_dos" for="orgaizador"><i class="fas fa-calendar"></i></label>
             <input type="text" name="organizador" value="" placeholder="Inserte nombre del orgaizador">
-          <!-- </div>
-          <div class="input_box"> -->
+
             <label class="label_tres" for="categoria"><i class="fas fa-hourglass-start"></i></label>
             <select class="categoria" name="categoria">
-              <option value="Cultural"></option>
-              <option value="Literatura"></option>
-              <option value="Artistico"></option>
-              <option value="Feria"></option>
-              <option value="Perfofance"></option>
+              <option value="Cultural">Cultural</option>
+              <option value="Literatura">Literatura</option>
+              <option value="Artistico">Artistico</option>
+              <option value="Feria">Feria</option>
+              <option value="Perfofance">Perfofance</option>
             </select>
-          <!-- </div>
-          <div class="input_box"> -->
+          
             <label class="label_cuatro" for="clasificación"><i class="fas fa-hourglass-end"></i></label>
             <select class="clasificación" name="clasificación">
-              <option value="Público en general"></option>
-              <option value="Niños"></option>
-              <option value="Adolecentes"></option>
-              <option value="Jovenes"></option>
-              <option value="Adultos"></option>
+              <option value="Público en general">Público en general</option>
+              <option value="Niños">Niños</option>
+              <option value="Adolecentes">Adolecentes</option>
+              <option value="Jovenes">Jovenes</option>
+              <option value="Adultos">Adultos</option>
             </select>
           </div>
           <div class="input_box">

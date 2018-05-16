@@ -28,7 +28,7 @@
 
     <?php
     session_start();
-    include_once 'accesodatos/verifica_sesion.php';
+    include_once 'modelo/verifica_sesion.php';
     ?>
 
     <div class="fondo_reseña">
@@ -38,13 +38,13 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
-              <form class="" action="" method="post" id="frm-test">
+              <form name="reseña" class="" action="" method="post" id="frm-test">
 
                 <div class="form-group">
                   <textarea class="texto_del_area" id="txt-content" name="txt-content"></textarea>
                 </div>
                 <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar">
-                <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar">
+                <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onclick="reseña.action='tabla_resena.php';">
 
               </form>
 
