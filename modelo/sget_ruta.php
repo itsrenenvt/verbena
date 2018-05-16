@@ -2,11 +2,14 @@
 
 class rutas{
   protected $identificador="";
-  protected $titulo="";
-  protected $autor="";
-  protected $fecha_pub="";
-	protected $hora_pub="";
-	protected $descripcion="";
+  protected $nombre="";
+  protected $calle="";
+  protected $cp="";
+	protected $colonia="";
+	protected $ciudad="";
+  protected $num_ext="";
+  protected $num_int="";
+  protected $coordenadas="";
 
   function setid($pidentificador){
     $this->identificador = $pidentificador;
@@ -16,44 +19,72 @@ class rutas{
     return $this->identificador;
   }
 
-  function settitulo($ptitulo){
-    $this->titulo = $ptitulo;
+  function setnombre($pnombre){
+    $this->nombre = $pnombre;
   }
 
-  function gettitulo(){
-    return $this->titulo;
+  function getnombre(){
+    return $this->nombre;
   }
 
-  function setautor($pautor){
-    $this->autor = $pautor;
+  function setcalle($pcalle){
+    $this->calle = $pcalle;
   }
 
-  function getautor(){
-    return $this->autor;
+  function getcalle(){
+    return $this->calle;
   }
 
-  function setfechapub($pfecha_pub){
-    $this->fecha_pub = $pfecha_pub;
+  function setcp($pcp){
+    $this->cp = $pcp;
   }
 
-  function getfechapub(){
-    return $this->fecha_pub;
+  function getcp(){
+    return $this->cp;
   }
 
-  function sethorapub($phora_pub){
-    $this->hora_pub = $phora_pub;
+  function setcolonia($pcolonia){
+    $this->colonia = $pcolonia;
   }
 
-  function gethorapub(){
-    return $this->hora_pub;
+  function getcolonia(){
+    return $this->colonia;
   }
 
-  function setdescripcion($pdescripcion){
-    $this->descripcion = $pdescripcion;
+  function setciudad($pciudad){
+    $this->ciudad = $pciudad;
   }
 
-  function getdescripcion(){
-    return $this->descripcion;
+  function getciudad(){
+    return $this->ciudad;
+  }
+
+  function setnumext($pnum_ext){
+    $this->num_ext = $pnum_ext;
+  }
+
+  function getnumext(){
+    return $this->num_ext;
+  }
+
+  function setnumint($pnum_int){
+    $this->num_int = $pnum_int;
+  }
+
+  function getnumint(){
+    return $this->num_int;
+  }
+
+  function setcoordenadas($pcoordenadas){
+    $this->coordenadas = $pcoordenadas;
+  }
+
+  function getcoordenadas(){
+    return $this->coordenadas;
+  }
+
+  function getnumeros(){
+    return $this->num_ext." - ".$this->num_int;
   }
 
 }
