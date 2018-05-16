@@ -2,11 +2,11 @@
 
 class obras{
   protected $identificador="";
-  protected $titulo="";
-  protected $autor="";
-  protected $fecha_pub="";
-	protected $hora_pub="";
-	protected $descripcion="";
+  protected $nombre="";
+  protected $artista="";
+  protected $categoria="";
+  protected $descripcion="";
+	protected $precio="";
 
   function setid($pidentificador){
     $this->identificador = $pidentificador;
@@ -16,36 +16,28 @@ class obras{
     return $this->identificador;
   }
 
-  function settitulo($ptitulo){
-    $this->titulo = $ptitulo;
+  function setnombre($pnombre){
+    $this->nombre = $pnombre;
   }
 
-  function gettitulo(){
-    return $this->titulo;
+  function getnombre(){
+    return $this->nombre;
   }
 
-  function setautor($pautor){
-    $this->autor = $pautor;
+  function setartista($partista){
+    $this->artista = $partista;
   }
 
-  function getautor(){
-    return $this->autor;
+  function getartista(){
+    return $this->artista;
   }
 
-  function setfechapub($pfecha_pub){
-    $this->fecha_pub = $pfecha_pub;
+  function setcategoria($pcategoria){
+    $this->categoria = $pcategoria;
   }
 
-  function getfechapub(){
-    return $this->fecha_pub;
-  }
-
-  function sethorapub($phora_pub){
-    $this->hora_pub = $phora_pub;
-  }
-
-  function gethorapub(){
-    return $this->hora_pub;
+  function getcategoria(){
+    return $this->categoria;
   }
 
   function setdescripcion($pdescripcion){
@@ -55,6 +47,16 @@ class obras{
   function getdescripcion(){
     return $this->descripcion;
   }
+
+  function setprecio($pprecio){
+    $this->precio = $pprecio;
+  }
+
+  function getprecio(){
+    return $this->precio;
+  }
+
+
 
 }
 ?>
