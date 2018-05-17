@@ -11,7 +11,7 @@
   </head>
   <body>
 
-      <?php
+       <?php
       session_start();
       include_once 'modelo/verifica_sesion.php';
        ?>
@@ -20,37 +20,38 @@
           <!-- <h3>AGREA UN EVENTO</h3> -->
           <div class="formulario">
           <form class="" action="" method="post">
+
             <div class="input_box">
-              <label class="label_uno" for="nombre_evento"><i class="fas fa-user"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre(s)">
+              <label class="label_uno" for="nombre_evento"><i class="fas fa-shopping-bag"></i></label>
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre">
             </div>
+
             <div class="input_box">
-              <label class="label_dos" for="nombre_evento"><i class="fas fa-id-card"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Apellido Materno">
-            <!-- </div>
-            <div class="input_box"> -->
-              <label class="label_tres" for="nombre_evento"><i class="fas fa-id-card"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Apellido Paterno">
+
+              <label class="label_dos" for="nombre_evento"><i class="fas fa-coffee"></i></label>
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Artista">
+
+              <label class="label_tres" for="txtcategoria"><i class="fas fa-folder-open"></i></label>
+              <!-- <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Categoría"> -->
+              <select class="categoria" name="txtcategoria" >
+                <option value=""></option>
+                <option value="Cultural">Decoración</option>
+                <option value="Literatura">Ropa</option>
+                <option value="Artistico">Bisuteria</option>
+                <option value="Feria">Accesorios</option>
+                <option value="Performance">Otro</option>
+              </select>
+
+              <label class="label_cuatro" for="nombre_evento"><i class="fas fa-fire"></i></label>
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Precio">
+
             </div>
+
             <div class="input_box">
-              <label class="label_cuatro" for="nombre_evento"><i class="fas fa-user-circle"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Nombre de usuario">
-            <!-- </div>
-            <div class="input_box"> -->
-              <label class="label_cinco" for="nombre_evento"><i class="fas fa-lock"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Contraseña">
-            </div>
-            <div class="input_box">
-              <label class="label_seis" for="nombre_evento"><i class="fas fa-envelope"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Correo Electronico">
-            <!-- </div>
-            <div class="input_box"> -->
-              <label class="label_siete" for="nombre_evento"><i class="fas fa-phone"></i></label>
-              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Telefono">
-            </div>
-            <div class="input_box">
-              <label class="label_ocho" for="url_maps"><i class="fas fa-map-marker"></i></label>
-              <input class="input_ancho" type="text" name="url_maps" value="" placeholder="Dirección">
+
+              <label class="label_cinco" for="nombre_evento"><i class="fas fa-edit"></i></label>
+              <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Descripción">
+
             </div>
 
               <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar">
