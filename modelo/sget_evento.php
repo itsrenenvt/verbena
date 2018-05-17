@@ -8,8 +8,8 @@ class evento{
 	protected $hr_inicio="";
 	protected $hr_fin="";
 	protected $organizador="";
-  protected $clasificacion="";
-  protected $categoria="";
+  protected $clasificacion="Clasificación";
+  protected $categoria="Categoría";
   protected $descripcion="";
 
   function setid($pidentificador){

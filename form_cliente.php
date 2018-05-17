@@ -23,7 +23,6 @@
           <!-- <h3>AGREA UN EVENTO</h3> -->
           <div class="formulario">
             <?php
-
             try {
               $clv_ope=$_POST["txtope"];
               if($clv_ope == "m" || $clv_ope == "e"){

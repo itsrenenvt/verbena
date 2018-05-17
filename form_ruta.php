@@ -91,7 +91,7 @@
             <input type="hidden" name="txtope_crud" value="<?php echo $clv_ope?>">
             <input type="hidden" name="txtid_crud" value="<?php echo $objdruta->getid(); ?>">
 
-              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Guardar" onclick="ruta.action='modelo/crud_ruta.php';">
+              <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onclick="ruta.action='modelo/crud_ruta.php';">
               <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onclick="ruta.action='tabla_rutas.php';">
 
             </form>
