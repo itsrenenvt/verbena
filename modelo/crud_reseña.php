@@ -2,18 +2,21 @@
 
 include_once 'sget_reseña.php';
 $d_reseña = new resena();
-//
-// $paso = $_POST["txtnameuser"];
-// echo "LLEGO: ".$paso;
-$nombre_de_usuario= $_GET['keyname'];
+date_default_timezone_set('America/Mexico_City');
+
 $d_reseña->settitulo(isset ($_POST["txttitulo"]) ? $_POST["txttitulo"] : "");
+$d_reseña->setautor("none");
+$d_reseña->setfechapub(date("d-m-Y"));
+$d_reseña->sethorapub(date("H:i:s"));
 $d_reseña->setcontenido(isset ($_POST["txtcontenido"]) ? $_POST["txtcontenido"] : "");
 
 
 ?>
-<p>Titulo: <?php echo $d_reseña->gettitulo(); ?></p>
-<p>Contenido: <?php  echo $d_reseña->getcontenido();?></p>
-<p>Autor: <?php echo $nombre_de_usuario;?></p>
+<!-- <p>Titulo: <?php //echo $d_reseña->gettitulo(); ?></p>
+<p>Fecha: <?php  //echo $d_reseña->getfechapub();?></p>
+<p>Hora: <?php  //echo $d_reseña->gethorapub();?></p>
+<p>Contenido: <?php // echo $d_reseña->getcontenido();?></p> -->
+<!-- <p>Autor: <?php //echo $nombre_de_usuario;?></p>  -->
 <?php
 
 
@@ -26,21 +29,21 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
 
     if ($clv_operacion == "g") {
       try {
-        registroruta();
+        registroresena();
       } catch (Exception $e){
 
       }
     }else{
       if ($clv_operacion == "m"){
       try {
-        modificaruta();
+        modificaresena();
       } catch (Exception $e){
 
       }
       }else{
         if ($clv_operacion == "e"){
           try {
-            eliminaruta();
+            eliminaresena();
           } catch (Exception $e){
 
           }
@@ -66,31 +69,28 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
 
 
 
-function registroruta(){
+function registroresena(){
 
   include '../basedatos/conexion.php';
-  global $d_ruta;
+  global $d_reseña;
   global $sesion;
 
-  $result=pg_query($conexion, 'select max (id_ruta) from ruta');
+  $result=pg_query($conexion, 'select max (id_reseña) from reseña');
   while ($dato = pg_fetch_array($result)) {
     $max_id = $dato['max'];
   }
   $autogenera_id = $max_id +1;
 
-  $d_ruta->setid($autogenera_id);
+  $d_reseña->setid($autogenera_id);
 
   $insert=pg_query($conexion,
-  "insert into ruta
-  values (".$d_ruta->getid().",'"
-           .$d_ruta->getnombre()."','"
-           .$d_ruta->getcalle()."','"
-           .$d_ruta->getcp()."','"
-           .$d_ruta->getcolonia()."','"
-           .$d_ruta->getciudad()."','"
-           .$d_ruta->getnumext()."','"
-           .$d_ruta->getnumint()."','"
-           .$d_ruta->getcoordenadas()."')");
+  "insert into reseña
+  values (".$d_reseña->getid().",'"
+           .$d_reseña->gettitulo()."','"
+           .$d_reseña->getautor()."','"
+           .$d_reseña->getfechapub()."','"
+           .$d_reseña->gethorapub()."','"
+           .$d_reseña->getcontenido()."')");
 
 pg_close($conexion);
 
@@ -98,7 +98,7 @@ if ($sesion == "si") {
   ?>
   <script type="text/javascript">
     alert('EL REGISTRO SE HA REALIZADO CON EXITO.');
-    window.location="../tabla_rutas.php";
+    window.location="../tabla_resena.php";
   </script>
 
   <?php
@@ -116,44 +116,41 @@ if ($sesion == "si") {
 
  }
 
-function modificaruta(){
-  global $d_ruta;
+function modificaresena(){
+  global $d_reseña;
   include '../basedatos/conexion.php';
   if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {
     $modifica_id = $_POST["txtid_crud"];
-    pg_query($conexion,"update ruta
-                        set nombre = '".$d_ruta->getnombre()."',
-                         calle = '".$d_ruta->getcalle()."',
-                         cp = '".$d_ruta->getcp()."',
-                         colonia = '".$d_ruta->getcolonia()."',
-                         ciudad = '".$d_ruta->getciudad()."',
-                         num_ext = '".$d_ruta->getnumext()."',
-                         num_int = '".$d_ruta->getnumint()."',
-                         coordenadas = '".$d_ruta->getcoordenadas()."'
+    pg_query($conexion,"update reseña
+                        set titulo = '".$d_reseña->gettitulo()."',
+                         autor = '".$d_reseña->getautor()."',
+                         fecha_pub = '".$d_reseña->getfechapub()."',
+                         hora = '".$d_reseña->gethorapub()."',
+                         descripcion = '".$d_reseña->getcontenido()."'
 
-                         where id_ruta = ".$modifica_id);
+                         where id_reseña = ".$modifica_id);
     pg_close($conexion);
     ?>
 
     <script type="text/javascript">
-    alert('LA RUTA CON ID: <?php echo $modifica_id ?> HA SIDO MODIFICADA.');
-    window.location="../tabla_rutas.php";
+    alert('LA RESEÑA CON ID: <?php echo $modifica_id ?> HA SIDO MODIFICADA.');
+    window.location="../tabla_resena.php";
    </script>
     <?php
   }
 
 }
 
-function eliminaruta(){
+function eliminaresena(){
   include '../basedatos/conexion.php';
   if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {
     $delete_id = $_POST["txtid_crud"];
-    pg_query($conexion,"delete from ruta where id_ruta =". $delete_id);
+    pg_query($conexion,"delete from reseña where id_reseña =". $delete_id);
     pg_close($conexion);
     ?>
     <script type="text/javascript">
-    alert('LA RUTA CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADA.');
-    window.location="../tabla_rutasr.php";
+    alert('LA RESEÑA CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADA.');
+    window.location="../tabla_resena.php";
   </script>
     <?php
   }

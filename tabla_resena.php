@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" type="text/css" href="css/tablas.css">
     <link rel="icon" href="img/verbena.ico">
+    <script src="js/resena.js" charset="utf-8"></script>
     <title>Tabla Reseñas</title>
   </head>
   <body>
@@ -15,7 +16,6 @@
     include_once 'modelo/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
     include_once 'modelo/sget_reseña.php';
-    $nombre_de_usuario= $_GET['keyname'];
     ?>
 
     <div class="fondo_tabla">
@@ -24,7 +24,6 @@
 
           <input type="hidden" name="txtope">
           <input type="hidden" name="txtid">
-          <input type="hidden" name="nameuser" value="<?php echo $nombre_de_usuario; ?>">
 
           <table class="tabla_clientes">
             <thead>

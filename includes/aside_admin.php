@@ -44,14 +44,14 @@
             </div>
 
           </div>
+
           <nav>
             <ul>
-              <?php $valor ="holiperra" ?>
               <li><a href="index.php">Inicio</a></li>
               <li><a href="tabla_cliente.php">Clientes</a></li>
               <li><a href="tabla_colaborador.php">Colaboradores</a></li>
               <li><a href="tabla_evento.php">Eventos</a></li>
-              <li><a href=<?php echo "tabla_resena.php?keyname=".$valor?>>Reseña</a></li>
+              <li><a href="tabla_resena.php">Reseña</a></li>
               <li><a href="tabla_rutas.php">Rutas</a></li>
               <li><a href="tabla_obras.php">Tienda</a></li>
             </ul>
@@ -60,24 +60,6 @@
         </div>
       </div>
     </aside>
-<!--
-    <aside class="caja_der_uno">
-      <div class="caja_fondo_der">
-        <div class="derecho">
-
-        </div>
-
-      </div>
-    </aside>
-
-    <aside class="caja_der_dos">
-      <div class="caja_fondo_der_dos">
-        <div class="derecho_dos">
-
-        </div>
-
-      </div>
-    </aside> -->
 
   </body>
 </html>

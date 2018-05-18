@@ -147,7 +147,7 @@ function eliminaruta(){
     ?>
     <script type="text/javascript">
     alert('LA RUTA CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADA.');
-    window.location="../tabla_rutasr.php";
+    window.location="../tabla_rutas.php";
   </script>
     <?php
   }
