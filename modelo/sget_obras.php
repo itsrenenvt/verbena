@@ -4,7 +4,7 @@ class obras{
   protected $identificador="";
   protected $nombre="";
   protected $artista="";
-  protected $categoria="";
+  protected $categoria="Categoría";
   protected $descripcion="";
 	protected $precio="";
 
