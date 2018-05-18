@@ -11,8 +11,25 @@
   <body>
     <?php
 
-    include_once 'modelo/ingreso.php';
-    include_once 'modelo/verifica_sesion.php';
+    // class inicio{
+    //   protected $name="";
+    //   function setname($pname){
+    //     $this->name = $pname;
+    //   }
+    //
+    //   function getname(){
+    //     return $this->name;
+    //   }
+    // }
+    ?>
+
+    <?php
+    // include_once 'modelo/ingreso.php';
+    $nomuser=isset($_REQUEST["Usuario"]) ? $_REQUEST["Usuario"]: "NO USER";
+    session_start();
+    include 'modelo/verifica_sesion.php';
+    // $obj = new inicio();
+    // $obj->setname($nomuser);
     ?>
 
       <div class="fondo_ventana">

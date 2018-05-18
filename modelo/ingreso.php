@@ -1,5 +1,5 @@
 <?php
-include_once 'usuario.php';
+include 'usuario.php';
 session_start();
 $sesion_user = new usuario();
 if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
@@ -12,17 +12,20 @@ if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
     $sesion_user->buscaadmin();
     if ($contrasena==$sesion_user->getpass_c()) {
       $_SESSION["usuario"]="administrador";
-      header('Location: ../inicio.php');
+      ?>
+      <input type="hidden" name="username" value="<?php echo $sesion_user->getuser(); ?>">
+      <?php
+      header('Location: ../inicio.php?Usuario='.$sesion_user->getuser());
     }else{
       $sesion_user->buscacolaborador();
       if ($contrasena==$sesion_user->getpass_c()) {
         $_SESSION["usuario"]="colaborador";
-        header('Location: ../inicio.php');
+        header('Location: ../inicio.php?Usuario='.$sesion_user->getuser());
       }else{
         $sesion_user->buscacliente();
         if ($contrasena==$sesion_user->getpass_c()) {
           $_SESSION["usuario"]="cliente";
-          header('Location: ../inicio.php');
+          header('Location: ../inicio.php?Usuario='.$sesion_user->getuser());
         }else{
           ?>
           <script type="text/javascript">
@@ -37,7 +40,6 @@ if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
   } catch (Exception $e) {
 
   }
-
-
 }
+
 ?>

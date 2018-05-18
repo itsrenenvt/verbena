@@ -15,6 +15,7 @@
     include_once 'modelo/verifica_sesion.php';
     include_once 'basedatos/conexion.php';
     include_once 'modelo/sget_reseña.php';
+    $nombre_de_usuario= $_GET['keyname'];
     ?>
 
     <div class="fondo_tabla">
@@ -23,6 +24,7 @@
 
           <input type="hidden" name="txtope">
           <input type="hidden" name="txtid">
+          <input type="hidden" name="nameuser" value="<?php echo $nombre_de_usuario; ?>">
 
           <table class="tabla_clientes">
             <thead>
@@ -41,21 +43,21 @@
             $result=pg_query($conexion, 'select * from reseña order by id_reseña desc');
             while ($dato = pg_fetch_array($result)){
 
-              $objReseña = new reseña();
+              $objReseña = new resena();
 
               $objReseña->setid($dato['id_reseña']);
               $objReseña->settitulo($dato['titulo']);
               $objReseña->setautor($dato['autor']);
               $objReseña->setfechapub($dato['fecha_pub']);
               $objReseña->sethorapub($dato['hora']);
-              $objReseña->setdescripcion($dato['descripcion']);
+              $objReseña->setcontenido($dato['descripcion']);
 
               ?>
               <tr>
                 <td><?php echo $objReseña->getid() ?></td>
                 <td><?php echo $objReseña->getautor() ?></td>
                 <td><?php echo $objReseña->gettitulo() ?></td>
-                <td><?php echo $objReseña->getdescripcion() ?></td>
+                <td><?php echo $objReseña->getcontenido() ?></td>
                 <td><?php echo $objReseña->getfechapub() ?></td>
                 <td><?php echo $objReseña->gethorapub() ?></td>
                 <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_reseña.action='form_reseña.php';txtope.value='m';txtid.value='<?php echo $objReseña->getid() ?>'"></td>
@@ -70,7 +72,6 @@
             ?>
           </table>
         </div>
-
           <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_reseña.action='form_reseña.php';txtope.value='g'">
         </form>
     </div>

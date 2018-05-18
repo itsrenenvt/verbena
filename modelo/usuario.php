@@ -1,6 +1,4 @@
-<?php
-// require '..\basedatos\conexion.php';
-?>
+
 <?php
 $c_user="";
 $c_pass="";
@@ -69,6 +67,6 @@ class usuario{
     }
     pg_close($conexion);
   }
-  
+
 }
 ?>

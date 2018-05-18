@@ -26,7 +26,6 @@
     <?php
     session_start();
     include_once 'modelo/verifica_sesion.php';
-
     ?>
 
     <div class="fondo_reseña">
@@ -36,21 +35,18 @@
         <div class="marcoresena">
           <div class="">
               <form name="reseña" class="formulario" action="" method="post" id="frm-test">
+
                 <div class="input_box">
                   <label class="label_uno" for="txttitulo"><i class="fas fa-quote-left"></i></label>
                   <input class="input_ancho" type="text" name="txttitulo" value="" placeholder="Titulo">
                 </div>
 
                 <div class="form-group">
-                  <textarea class="texto_del_area" id="txt-content" name="txtcontenido"></textarea>
+                  <textarea class="texto_del_area" id="txt-content" name="txt-content"></textarea>
                 </div>
 
                 <div class="input_btm_box">
-                  <?php
-                  $name = $_POST["nameuser"];
-                  // echo "user:".$name;
-                   ?>
-                  <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onclick="reseña.action='modelo/crud_reseña.php';">
+                  <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo">
                   <input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Cancelar" onclick="reseña.action='tabla_resena.php';">
                 </div>
 

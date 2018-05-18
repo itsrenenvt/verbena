@@ -1,12 +1,12 @@
 <?php
 
-class reseña{
+class resena{
   protected $identificador="";
   protected $titulo="";
   protected $autor="";
   protected $fecha_pub="";
 	protected $hora_pub="";
-	protected $descripcion="";
+	protected $contenido="";
 
   function setid($pidentificador){
     $this->identificador = $pidentificador;
@@ -48,12 +48,12 @@ class reseña{
     return $this->hora_pub;
   }
 
-  function setdescripcion($pdescripcion){
-    $this->descripcion = $pdescripcion;
+  function setcontenido($pcontenido){
+    $this->contenido = $pcontenido;
   }
 
-  function getdescripcion(){
-    return $this->descripcion;
+  function getcontenido(){
+    return $this->contenido;
   }
 
 }

@@ -10,13 +10,8 @@
   </head>
   <body>
 
-    <!-- <div class="fondo_ventana"> -->
       <div class="marco_portada">
-        <!-- <div class="portada"> -->
-          <!-- <img src="img/img_verbena8.jpg" alt=""> -->
-        <!-- </div> -->
       </div>
-    <!-- </div> -->
 
     <aside class="caja_izq">
       <div class="caja_fondo">
@@ -24,6 +19,7 @@
           <div class="img_perfil"></div>
           <label class="label_img">ADMINISTRADOR</label>
           <div class="estadistica">
+
             <div class="estadistica_cliente">
               <?php
               include_once 'basedatos/conexion.php';
@@ -35,6 +31,7 @@
               <p><?php echo $total_user ?></p>
               <label for="estadistica_cliente">Clientes</label>
             </div>
+
             <div class="estadistica_colaboradores">
               <?php
               $result=pg_query($conexion, 'select count (id_colaborador) from colaborador');
@@ -45,14 +42,16 @@
               <p><?php echo $total_colaboradores ?></p>
               <label for="estadistica_colaboradores">Colaboradores</label>
             </div>
+
           </div>
           <nav>
             <ul>
+              <?php $valor ="holiperra" ?>
               <li><a href="index.php">Inicio</a></li>
               <li><a href="tabla_cliente.php">Clientes</a></li>
               <li><a href="tabla_colaborador.php">Colaboradores</a></li>
               <li><a href="tabla_evento.php">Eventos</a></li>
-              <li><a href="tabla_resena.php">Reseña</a></li>
+              <li><a href=<?php echo "tabla_resena.php?keyname=".$valor?>>Reseña</a></li>
               <li><a href="tabla_rutas.php">Rutas</a></li>
               <li><a href="tabla_obras.php">Tienda</a></li>
             </ul>
