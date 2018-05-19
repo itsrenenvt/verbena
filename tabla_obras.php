@@ -15,6 +15,9 @@
     include_once 'modelo/verifica_sesion.php';
     include_once 'modelo/sget_obras.php';
     include 'basedatos/conexion.php';
+    if ($sesion_user=="cliente" ) {
+      header('Location: inicio.php');
+    }
     ?>
 
     <div class="fondo_tabla">

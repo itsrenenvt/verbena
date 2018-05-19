@@ -7,8 +7,6 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="icon" href="img/verbena.ico">
-    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
-    <script src="js/login.js" charset="utf-8"></script>
     <title>Inicio Sesión - Verbena de la buena</title>
   </head>
   <body>
@@ -21,7 +19,8 @@
       <div class="div_login">
         <div class="div_cristal">
           <img src="img/verbena.svg" class="img_usuario_login" alt="">
-          <h3>Inicia Sesi&oacute;n</h3>
+          <!-- <h3>Inicia Sesi&oacute;n</h3> -->
+          <p class="plogin">Inicia Sesi&oacute;n</p>
           <form id="formulario_login" method="post" action="modelo\ingreso.php">
             <!-- Poner requieres despues -->
             <div class="input_box">

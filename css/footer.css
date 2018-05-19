@@ -70,8 +70,7 @@ footer{
   margin: -2.3px;
 	outline: none;
 	padding: 10px;
-	/* width: 16em; */
-	width: 6em;
+	width: 16em;
 	font-size: 12px;
   border: none;
   border-bottom: solid #C8C8C8 .2rem;

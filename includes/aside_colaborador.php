@@ -35,17 +35,16 @@
               <p><?php echo $total_user ?></p>
               <label for="estadistica_cliente">Clientes</label>
             </div>
-            
+
           </div>
           <nav>
             <ul>
               <li><a href="index.php">Inicio</a></li>
               <li><a href="tabla_cliente.php">Clientes</a></li>
-              <!-- <li><a href="agrega_colaborador.php">Colaboradores</a></li> -->
-              <li><a href="agrega_evento.php">Eventos</a></li>
-              <li><a href="agrega_reseña.php">Reseña</a></li>
-              <li><a href="agrega_ruta.php">Rutas</a></li>
-              <li><a href="agrega_producto.php">Tienda</a></li>
+              <li><a href="tabla_evento.php">Eventos</a></li>
+              <li><a href="tabla_resena.php">Reseña</a></li>
+              <li><a href="tabla_rutas.php">Rutas</a></li>
+              <li><a href="tabla_obras.php">Tienda</a></li>
             </ul>
           </nav>
           <a class="cerrar" href="logout.php">Cerrar Sesi&oacute;n</a>

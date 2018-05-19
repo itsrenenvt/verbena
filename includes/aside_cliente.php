@@ -52,10 +52,11 @@
               <li><a href="index.php">Inicio</a></li>
               <!-- <li><a href="tabla_cliente.php">Clientes</a></li> -->
               <!-- <li><a href="agrega_colaborador.php">Colaboradores</a></li> -->
-              <li><a href="agrega_evento.php">Eventos</a></li>
+              <li><a href="#">Cartelera</a></li>
               <!-- <li><a href="agrega_reseña.php">Reseña</a></li> -->
-              <li><a href="agrega_ruta.php">Rutas</a></li>
-              <li><a href="agrega_producto.php">Tienda</a></li>
+              <li><a href="#">Rutas</a></li>
+              <li><a href="#">Tienda</a></li>
+              <li><a href="#">Carrito</a></li>
             </ul>
           </nav>
           <a class="cerrar" href="logout.php">Cerrar Sesi&oacute;n</a>

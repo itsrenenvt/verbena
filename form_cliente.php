@@ -17,6 +17,9 @@
       include_once 'modelo/verifica_sesion.php';
       include 'modelo/sget_persona.php';
       $objCliente = new persona();
+      if ($sesion_user=="cliente" ) {
+        header('Location: inicio.php');
+      }
        ?>
       <div class="fondo_agrega_colaborador">
         <div class="contenedor_form_colaborador">

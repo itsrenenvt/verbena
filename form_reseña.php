@@ -28,6 +28,9 @@
     include_once 'modelo/verifica_sesion.php';
     include 'modelo/sget_reseña.php';
     $objReseña = new resena();
+    if ($sesion_user=="cliente" ) {
+      header('Location: inicio.php');
+    }
 
     ?>
 
@@ -71,6 +74,8 @@
 
                   <div class="input_btm_box">
                     <input type="hidden" name="txtope_crud" value="<?php echo $clv_ope?>">
+                    <input type="hidden" name="txtusername" value="<?php echo $username ?>">
+                      <input type="hidden" name="tipousuario" value="<?php echo $sesion_user ?>">
                     <input type="hidden" name="txtid_crud" value="<?php echo $objReseña->getid(); ?>">
 
                     <input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Listo" onclick="reseña.action='modelo/crud_reseña.php';">

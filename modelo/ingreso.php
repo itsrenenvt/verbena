@@ -12,19 +12,19 @@ if (isset($_POST["txtuser"]) && !empty($_POST["txtuser"]) &&
     $sesion_user->buscaadmin();
     if ($contrasena==$sesion_user->getpass_c()) {
       $_SESSION["usuario"]="administrador";
-      ?>
-      <input type="hidden" name="username" value="<?php echo $sesion_user->getuser(); ?>">
-      <?php
+      $_SESSION["nombre"]=$usuario;
       header('Location: ../inicio.php?usuario='.$sesion_user->getuser());
     }else{
       $sesion_user->buscacolaborador();
       if ($contrasena==$sesion_user->getpass_c()) {
         $_SESSION["usuario"]="colaborador";
+        $_SESSION["nombre"]=$usuario;
         header('Location: ../inicio.php?usuario='.$sesion_user->getuser());
       }else{
         $sesion_user->buscacliente();
         if ($contrasena==$sesion_user->getpass_c()) {
           $_SESSION["usuario"]="cliente";
+          $_SESSION["nombre"]=$usuario;
           header('Location: ../inicio.php?usuario='.$sesion_user->getuser());
         }else{
           ?>

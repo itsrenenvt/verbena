@@ -5,19 +5,10 @@ $d_reseña = new resena();
 date_default_timezone_set('America/Mexico_City');
 
 $d_reseña->settitulo(isset ($_POST["txttitulo"]) ? $_POST["txttitulo"] : "");
-$d_reseña->setautor("none");
+// $d_reseña->setautor(isset ($_POST["txtusername"]) ? $_POST["txtusername"] : "");
 $d_reseña->setfechapub(date("d-m-Y"));
 $d_reseña->sethorapub(date("H:i:s"));
 $d_reseña->setcontenido(isset ($_POST["txtcontenido"]) ? $_POST["txtcontenido"] : "");
-
-
-?>
-<!-- <p>Titulo: <?php //echo $d_reseña->gettitulo(); ?></p>
-<p>Fecha: <?php  //echo $d_reseña->getfechapub();?></p>
-<p>Hora: <?php  //echo $d_reseña->gethorapub();?></p>
-<p>Contenido: <?php //echo $d_reseña->getcontenido();?></p>
-<p>Autor: <?php //echo $nombre_de_usuario;?></p>-->
-<?php
 
 
 session_start();
@@ -67,10 +58,25 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
 
 }
 
-
+function capturanombre(){
+  global $d_reseña;
+  include 'sget_persona.php';
+  $objUserName = new persona();
+  $usuariologin = isset ($_POST["txtusername"]) ? $_POST["txtusername"] : "";
+  $tipousuario = isset ($_POST["tipousuario"]) ? $_POST["tipousuario"] : "";
+  include '../basedatos/conexion.php';
+  $result=pg_query($conexion, "select nombre, ap_paterno, ap_paterno, ap_materno from " . $tipousuario. " where usuario = '". $usuariologin."'");
+  while ($dato = pg_fetch_array($result)){
+    $objUserName->setnombre($dato['nombre']);
+    $objUserName->setpaterno($dato['ap_paterno']);
+    $objUserName->setmaterno($dato['ap_materno']);
+    $d_reseña->setautor($objUserName->getNombreCompleto());
+  }
+  pg_close($conexion);
+}
 
 function registroresena(){
-
+  capturanombre();
   include '../basedatos/conexion.php';
   global $d_reseña;
   global $sesion;

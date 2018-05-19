@@ -16,6 +16,9 @@
       include_once 'modelo/verifica_sesion.php';
       include 'modelo/sget_obras.php';
       $objObra = new obras();
+      if ($sesion_user=="cliente" ) {
+        header('Location: inicio.php');
+      }
        ?>
       <div class="fondo_agrega_producto">
         <div class="contenedor_form_producto">

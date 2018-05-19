@@ -16,6 +16,9 @@
       include_once 'modelo/verifica_sesion.php';
       include 'modelo/sget_ruta.php';
       $objRuta = new rutas();
+      if ($sesion_user=="cliente" ) {
+        header('Location: inicio.php');
+      }
        ?>
       <div class="fondo_agrega_ruta">
         <div class="contenedor_form_ruta">

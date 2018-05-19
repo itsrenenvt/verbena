@@ -16,6 +16,9 @@
     include_once 'modelo/verifica_sesion.php';
     include 'modelo/sget_evento.php';
     $objEvento = new evento();
+    if ($sesion_user=="cliente" ) {
+      header('Location: inicio.php');
+    }
      ?>
     <div class="fondo_agrega_evento">
       <div class="contenedor_form_evento">
