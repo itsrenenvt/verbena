@@ -47,16 +47,17 @@
             </div>
           </div>
           <nav>
+
             <ul>
-              <li><a href="cliente.php">Perfil</a></li>
+              <li><a href="form_cliente.php">Perfil</a></li>
               <li><a href="index.php">Inicio</a></li>
               <!-- <li><a href="tabla_cliente.php">Clientes</a></li> -->
               <!-- <li><a href="agrega_colaborador.php">Colaboradores</a></li> -->
-              <li><a href="#">Cartelera</a></li>
+              <li><a href="cartelera.php">Cartelera</a></li>
               <!-- <li><a href="agrega_reseña.php">Reseña</a></li> -->
-              <li><a href="#">Rutas</a></li>
-              <li><a href="#">Tienda</a></li>
-              <li><a href="#">Carrito</a></li>
+              <li><a href="rutas.php">Rutas</a></li>
+              <li><a href="tienda.php">Tienda</a></li>
+              <li><a href="carrito.php">Carrito</a></li>
             </ul>
           </nav>
           <a class="cerrar" href="logout.php">Cerrar Sesi&oacute;n</a>

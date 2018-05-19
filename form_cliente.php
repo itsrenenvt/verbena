@@ -17,9 +17,6 @@
       include_once 'modelo/verifica_sesion.php';
       include 'modelo/sget_persona.php';
       $objCliente = new persona();
-      if ($sesion_user=="cliente" ) {
-        header('Location: inicio.php');
-      }
        ?>
       <div class="fondo_agrega_colaborador">
         <div class="contenedor_form_colaborador">
@@ -27,9 +24,9 @@
           <div class="formulario">
             <?php
             try {
-              $clv_ope=$_POST["txtope"];
+              $clv_ope= isset($_POST["txtope"]) ?  $_POST["txtope"] : "m";
               if($clv_ope == "m" || $clv_ope == "e"){
-                $id_ope=$_POST["txtid"];
+                $id_ope=isset($_POST["txtid"]) ? $_POST["txtid"] : $objCliente->consultaid($username);;
                 $objCliente->tablaclientes($id_ope);
               }else{
               }
@@ -44,6 +41,7 @@
 
              ?>
           <form name="cliente" class="" action="" method="post">
+
             <div class="input_box">
               <label class="label_uno" for="txtnombre"><i class="fas fa-user"></i></label>
               <input class="input_ancho" type="text" name="txtnombre" value="<?php echo $objCliente->getnombre(); ?>" placeholder="Nombre(s)" <?php echo $editable ?>>

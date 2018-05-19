@@ -98,6 +98,18 @@ class persona{
 		return $this->ap_paterno." ".$this->ap_materno." ".$this->nombre;
 	}
 
+  function consultaid($username){
+    $idusuario="";
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, "select id_usuario from usuario where usuario = '".$username."'");
+    while ($dato = pg_fetch_array($result)){
+       $idusuario = $dato['id_usuario'];
+    }
+    // return "15011200";
+    return $idusuario;
+  }
+
+
   function tablaclientes($id_ope){
     include 'basedatos/conexion.php';
     $result=pg_query($conexion, 'select * from usuario where id_usuario ='.$id_ope);

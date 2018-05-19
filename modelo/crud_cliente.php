@@ -182,7 +182,18 @@ function modificausuario(){
 
     <script type="text/javascript">
     alert('EL USUARIO CON ID: <?php echo $modifica_id ?> HA SIDO MODIFICADO.');
-    window.location="../tabla_cliente.php";
+    // window.location="../tabla_cliente.php";
+    <?php
+    if ($_SESSION["usuario"]=="cliente") {
+      ?>
+      window.location="../form_cliente.php";
+      <?php
+    }else{
+      ?>
+      window.location="../tabla_cliente.php";
+      <?php
+    }
+    ?>
    </script>
     <?php
   }
