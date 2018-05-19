@@ -13,8 +13,8 @@
     <?php
     session_start();
     include_once 'modelo/verifica_sesion.php';
-    include_once 'basedatos/conexion.php';
     include_once 'modelo/sget_ruta.php';
+    include 'basedatos/conexion.php';
     ?>
 
     <div class="fondo_tabla">

@@ -98,5 +98,24 @@ class evento{
     return $this->hr_inicio." - ".$this->hr_fin;
   }
 
+  function tablaevento($id_ope){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from evento where id_evento ='.$id_ope);
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_evento']);
+      $this->setnombre($dato['nombre']);
+      $this->setdireccion($dato['direccion']);
+      $this->setfecha($dato['fecha']);
+      $this->sethrinicio($dato['hora_inicio']);
+      $this->sethrfin($dato['hora_fin']);
+      $this->setorganizador($dato['organizador']);
+      $this->setclasificacion($dato['clasificacion']);
+      $this->setcategoria($dato['categoria']);
+      $this->setdescripcion($dato['descripcion']);
+    }
+    pg_close($conexion);
+  }
+
 }
 ?>

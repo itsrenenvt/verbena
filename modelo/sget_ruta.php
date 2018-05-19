@@ -91,5 +91,23 @@ class rutas{
     return $this->num_ext." - ".$this->num_int;
   }
 
+  function tablaruta($id_ope){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from ruta where id_ruta ='.$id_ope);
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_ruta']);
+      $this->setnombre($dato['nombre']);
+      $this->setcalle($dato['calle']);
+      $this->setcp($dato['cp']);
+      $this->setcolonia($dato['colonia']);
+      $this->setciudad($dato['ciudad']);
+      $this->setnumext($dato['num_ext']);
+      $this->setnumint($dato['num_int']);
+      $this->setcoordenadas($dato['coordenadas']);
+    }
+    pg_close($conexion);
+  }
+
 }
 ?>

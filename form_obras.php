@@ -28,18 +28,7 @@
               $clv_ope=$_POST["txtope"];
               if($clv_ope == "m" || $clv_ope == "e"){
                 $id_ope=$_POST["txtid"];
-                include 'basedatos/conexion.php';
-                $result=pg_query($conexion, 'select * from obra where id_obra ='.$id_ope);
-                while ($dato = pg_fetch_array($result)){
-
-                  $objObra->setid($dato['id_obra']);
-                  $objObra->setnombre($dato['nombre']);
-                  $objObra->setartista($dato['artista']);
-                  $objObra->setcategoria($dato['categoria']);
-                  $objObra->setdescripcion($dato['descripcion']);
-                  $objObra->setprecio($dato['precio']);
-                }
-                pg_close($conexion);
+                $objObra->tablaobras($id_ope);
               }else{
               }
 

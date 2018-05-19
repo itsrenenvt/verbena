@@ -56,6 +56,20 @@ class obras{
     return $this->precio;
   }
 
+  function tablaobras($id_ope){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from obra where id_obra ='.$id_ope);
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_obra']);
+      $this->setnombre($dato['nombre']);
+      $this->setartista($dato['artista']);
+      $this->setcategoria($dato['categoria']);
+      $this->setdescripcion($dato['descripcion']);
+      $this->setprecio($dato['precio']);
+    }
+    pg_close($conexion);
+  }
 
 
 }

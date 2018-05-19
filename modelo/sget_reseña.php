@@ -56,5 +56,20 @@ class resena{
     return $this->contenido;
   }
 
+  function tablaresena($id_ope){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from reseña where id_reseña ='.$id_ope);
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_reseña']);
+      $this->settitulo($dato['titulo']);
+      $this->setautor($dato['autor']);
+      $this->setfechapub($dato['fecha_pub']);
+      $this->sethorapub($dato['hora']);
+      $this->setcontenido($dato['descripcion']);
+    }
+    pg_close($conexion);
+  }
+
 }
 ?>

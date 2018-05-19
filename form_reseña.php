@@ -43,18 +43,7 @@
               $clv_ope=$_POST["txtope"];
               if($clv_ope == "m" || $clv_ope == "e"){
                 $id_ope=$_POST["txtid"];
-                include 'basedatos/conexion.php';
-                $result=pg_query($conexion, 'select * from reseña where id_reseña ='.$id_ope);
-                while ($dato = pg_fetch_array($result)){
-
-                  $objReseña->setid($dato['id_reseña']);
-                  $objReseña->settitulo($dato['titulo']);
-                  $objReseña->setautor($dato['autor']);
-                  $objReseña->setfechapub($dato['fecha_pub']);
-                  $objReseña->sethorapub($dato['hora']);
-                  $objReseña->setcontenido($dato['descripcion']);
-                }
-                pg_close($conexion);
+                $objReseña->tablaresena($id_ope);
               }else{
               }
 

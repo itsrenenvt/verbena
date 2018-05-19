@@ -115,5 +115,23 @@ class persona{
     }
     pg_close($conexion);
   }
+
+  function tabla_colaborador($id_ope){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from colaborador where id_colaborador ='.$id_ope);
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_colaborador']);
+      $this->setusuario($dato['usuario']);
+      $this->setcontrasena($dato['contraseña']);
+      $this->setnombre($dato['nombre']);
+      $this->setpaterno($dato['ap_paterno']);
+      $this->setmaterno($dato['ap_materno']);
+      $this->setemail($dato['email']);
+      $this->settelefono($dato['telefono']);
+      $this->setdireccion($dato['direccion']);
+    }
+    pg_close($conexion);
+  }
 }
 ?>
