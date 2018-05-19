@@ -10,6 +10,13 @@
   </head>
   <body>
 
+    <?php
+    include_once 'modelo/sget_estadisticas.php';
+    $objEst = new estadisticas();
+    $objEst->capcliente();
+    $objEst->capcolaborador();
+    ?>
+
       <div class="marco_portada">
       </div>
 
@@ -21,25 +28,12 @@
           <div class="estadistica">
 
             <div class="estadistica_cliente">
-              <?php
-              include_once 'basedatos/conexion.php';
-              $result=pg_query($conexion, 'select count (id_usuario) from usuario');
-              while ($dato = pg_fetch_array($result)) {
-                $total_user = $dato["count"];
-              }
-               ?>
-              <p><?php echo $total_user ?></p>
+              <p><?php echo $objEst->getcliente();?></p>
               <label for="estadistica_cliente">Clientes</label>
             </div>
 
             <div class="estadistica_colaboradores">
-              <?php
-              $result=pg_query($conexion, 'select count (id_colaborador) from colaborador');
-              while ($dato = pg_fetch_array($result)) {
-                $total_colaboradores = $dato["count"];
-              }
-               ?>
-              <p><?php echo $total_colaboradores ?></p>
+              <p><?php echo $objEst->getcolaborador();?></p>
               <label for="estadistica_colaboradores">Colaboradores</label>
             </div>
 

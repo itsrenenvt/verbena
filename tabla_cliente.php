@@ -13,7 +13,7 @@
     <?php
     session_start();
     include_once 'modelo/verifica_sesion.php';
-    include_once 'basedatos/conexion.php';
+    include 'basedatos/conexion.php';
     include_once 'modelo/sget_persona.php';
     ?>
 
