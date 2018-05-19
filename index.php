@@ -11,7 +11,7 @@
   <body>
     <?php
     // include("header.html");
-    include_once 'includes/header.html';
+    include_once 'includes/header.php';
     ?>
 
     <div class="seccion_1">

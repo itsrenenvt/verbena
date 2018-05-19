@@ -11,7 +11,7 @@
   <body>
 
       <?php
-       include 'includes/header.html';
+       include 'includes/header.php';
       ?>
 
 
