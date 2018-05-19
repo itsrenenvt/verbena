@@ -23,18 +23,13 @@ body{
 
 .contenedor_tabla{
 	overflow: scroll;
-	/* position: absolute; */
 	position: relative;
-	/* top: 28%;
-  left: 19%; */
 	width: 68em;
 	height: 20em;
 	background-color: white;
-	/* border-radius: .5em; */
 }
 
-
-.tabla_clientes td, .tabla_cliente th {
+.tabla_clientes td, .tabla_cliente th{
     border: 1px solid #ddd;
     padding: 2px;
 }
@@ -188,6 +183,93 @@ body{
 	border-bottom: solid #055b1c .2rem;
 }
 .btn-cancelar:hover{
+	background-color: #c1110c;
+	border-bottom: solid #931200 .2rem;
+}
+
+/* tabla newsletter */
+
+.fondo_news{
+	position: absolute;
+	top: 95%;
+	margin-bottom: 5em;
+	left: 25%;
+	width: 58em;
+	height: 21em;
+	border-radius: .5em;
+	background-color: white;
+}
+
+.table_news th{
+	padding-top: 8em;
+	padding-bottom: 12px;
+	text-align: center;
+	color: black;
+	font-size: 15px;
+}
+
+.contenedor_tabla .tabla_news th:nth-child(1){
+	background-color: #FF9E99;
+}
+
+.table_news td, .table_news th{
+	text-align: center;
+	border: 1px solid #ddd;
+	padding: 2px;
+}
+.table_news th:nth-child(1){
+	background-color: #FF9E99;
+	width: 10em;
+}
+
+.table_news th:nth-child(2){
+	background-color: #ABE4FF;
+	width: 35em;
+}
+
+.table_news th:nth-child(3){
+background-color: #FFF3AE;
+width: 15em;
+}
+
+.contenedor_news .table_news tr:nth-child(even){
+	background-color: #E6E7E8;
+}
+.contenedor_news .table_news tr:nth-child(odd){
+	background-color: #BCBEC0;
+}
+
+.contenedor_news .table_news tr:hover{
+	/* background-color: #DDFFAB; */
+	/* background-color: #FF9E99; */
+	background-color: #FFDAAB;
+}
+
+.contenedor_news{
+	overflow: scroll;
+	position: relative;
+	width: 58em;
+	height: 20em;
+	background-color: white;
+}
+
+ .btn-aceptar{
+	background-color: #d42823;
+  padding: 10px;
+  /* margin: -2.3px; */
+  height: 20%;
+  border: none;
+  border-bottom: solid #851404 .2rem;
+  transition: all .5s;
+  /* width: 100%;
+  max-width: 110px; */
+  color: rgba(#d42823, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+	/* margin-left: 20px; */
+}
+.btn-aceptar:hover{
 	background-color: #c1110c;
 	border-bottom: solid #931200 .2rem;
 }

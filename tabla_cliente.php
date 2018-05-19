@@ -14,6 +14,7 @@
     session_start();
     include_once 'modelo/verifica_sesion.php';
     include_once 'modelo/sget_persona.php';
+    include_once 'modelo/sget_newsletter.php';
     include 'basedatos/conexion.php';
     if ($sesion_user=="cliente" ) {
       header('Location: inicio.php');
@@ -72,13 +73,52 @@
             if (!empty(pg_fetch_array($result))) {
               echo "<tr><td colspan='8' >NO HAY DATOS</td></tr>";
             }
-            pg_close($conexion);
+            // pg_close($conexion);
             ?>
           </table>
         </div>
-
           <input type="submit" name="" class="btn-agregar" id="btn-agregar" value="Agregar" onClick="form_cliente.action='form_cliente.php';txtope.value='g'">
         </form>
+    </div>
+
+    <div class="fondo_news">
+      <div class="contenedor_news">
+        <form class="" action="modelo/crud_newsletter.php" method="post">
+
+          <input type="hidden" name="txtope">
+          <input type="hidden" name="txtid">
+
+          <table class="table_news">
+
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>E-mail</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+
+            <?php
+            $result=pg_query($conexion, 'select * from newsletter order by id_newsletter desc');
+            while ($dato = pg_fetch_array($result)){
+
+              $objNews = new news();
+              $objNews->setid($dato['id_newsletter']);
+              $objNews->setemail($dato["email"]);
+              ?>
+              <tr>
+                <td><?php echo $objNews->getid() ?></td>
+                <td><?php echo $objNews->getemail() ?></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Aceptar" onClick="txtope.value='e';txtid.value='<?php echo $objNews->getid() ?>'"></td>
+              </tr>
+              <?php
+            }
+
+            ?>
+
+          </table>
+        </form>
+      </div>
     </div>
   </body>
   </html>
