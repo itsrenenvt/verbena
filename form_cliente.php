@@ -27,21 +27,7 @@
               $clv_ope=$_POST["txtope"];
               if($clv_ope == "m" || $clv_ope == "e"){
                 $id_ope=$_POST["txtid"];
-                include 'basedatos/conexion.php';
-                $result=pg_query($conexion, 'select * from usuario where id_usuario ='.$id_ope);
-                while ($dato = pg_fetch_array($result)){
-
-                  $objduser->setid($dato['id_usuario']);
-                  $objduser->setusuario($dato['usuario']);
-                  $objduser->setcontrasena($dato['contraseña']);
-                  $objduser->setnombre($dato['nombre']);
-                  $objduser->setpaterno($dato['ap_paterno']);
-                  $objduser->setmaterno($dato['ap_materno']);
-                  $objduser->setemail($dato['email']);
-                  $objduser->settelefono($dato['telefono']);
-                  $objduser->setdireccion($dato['direccion']);
-                }
-                pg_close($conexion);
+                $objduser->tablaclientes($id_ope);
               }else{
               }
 
