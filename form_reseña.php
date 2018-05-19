@@ -8,7 +8,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="js/editor.js" charset="utf-8"></script>
-    <!-- <script src="js/resena.js" charset="utf-8"></script> -->
+    <script src="js/resena.js" charset="utf-8"></script>
 
     <link rel="icon" href="img/verbena.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
@@ -30,21 +30,6 @@
     $objReseña = new resena();
 
     ?>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $('#txt-content').Editor();
-
-      $('#btn-enviar').click(function(e){
-        e.preventDefault();
-        // var texto = $('#txt-content').Editor('getText');
-        // $('#texto').html(texto);
-        $('#txt-content').Editor('setText', ["<?php echo $objReseña->getcontenido();  ?>"])
-        $('#txt-content').text($('#txt-content').Editor('getText'));
-        $('#frm-test').submit();
-      });
-    });
-    </script>
 
     <div class="fondo_reseña">
 
@@ -91,7 +76,7 @@
                   </div>
 
                   <div class="form-group">
-                    <textarea class="texto_del_area" id="txt-content" name="txt_content" <?php echo $editable ?> ></textarea>
+                    <textarea class="texto_del_area" id="txt-content" name="txtcontenido" <?php echo $editable ?> > </textarea>
 
                   </div>
 

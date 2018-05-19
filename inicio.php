@@ -15,7 +15,7 @@
     ?>
 
     <?php
-    $nomuser=isset($_REQUEST["Usuario"]) ? $_REQUEST["Usuario"]: "NO USER";
+    // $nomuser=isset($_REQUEST["Usuario"]) ? $_REQUEST["Usuario"]: "NO USER";
     session_start();
     include 'modelo/verifica_sesion.php';
     ?>
