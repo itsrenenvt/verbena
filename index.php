@@ -44,7 +44,7 @@
 
       <?php
       // include("footer.html");
-      include_once 'includes/footer.html';
+      include_once 'includes/footer.php';
       ?>
 
 

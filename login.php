@@ -12,7 +12,7 @@
   <body>
 
     <?php
-    include_once("includes/header.html");
+    include_once("includes/header.php");
     ?>
 
     <div class="fondo_iniciosesion">
