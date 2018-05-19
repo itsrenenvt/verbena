@@ -15,8 +15,8 @@ $d_reseña->setcontenido(isset ($_POST["txtcontenido"]) ? $_POST["txtcontenido"]
 <!-- <p>Titulo: <?php //echo $d_reseña->gettitulo(); ?></p>
 <p>Fecha: <?php  //echo $d_reseña->getfechapub();?></p>
 <p>Hora: <?php  //echo $d_reseña->gethorapub();?></p>
-<p>Contenido: <?php //echo $d_reseña->getcontenido();?></p> -->
-<!-- <p>Autor: <?php //echo $nombre_de_usuario;?></p>
+<p>Contenido: <?php //echo $d_reseña->getcontenido();?></p>
+<p>Autor: <?php //echo $nombre_de_usuario;?></p>-->
 <?php
 
 
