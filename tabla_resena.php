@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" type="text/css" href="css/tablas.css">
     <link rel="icon" href="img/verbena.ico">
+    <script src="js/editor.js" charset="utf-8"></script>
     <script src="js/resena.js" charset="utf-8"></script>
     <title>Tabla Reseñas</title>
   </head>
@@ -59,7 +60,7 @@
                 <td><?php echo $objReseña->getcontenido() ?></td>
                 <td><?php echo $objReseña->getfechapub() ?></td>
                 <td><?php echo $objReseña->gethorapub() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Modificar" onClick="form_reseña.action='form_reseña.php';txtope.value='m';txtid.value='<?php echo $objReseña->getid() ?>'"></td>
+                <td><input type="submit" name="" class="btn-enviar" id="btn-modificar" value="Modificar" onClick="form_reseña.action='form_reseña.php';txtope.value='m';txtid.value='<?php echo $objReseña->getid() ?>'"></td>
                 <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_reseña.action='form_reseña.php';txtope.value='e';txtid.value='<?php echo $objReseña->getid() ?>'"></td>
               </tr>
               <?php

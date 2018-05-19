@@ -33,9 +33,12 @@ footer{
   overflow: hidden;
   margin: 1em;
 }
+
+/*
 .footer_principal .foot_pilar h3{
   text-align: center;
-}
+} */
+
 .footer_principal .foot_pilar:nth-child(1){
 	list-style-type: none;
 	text-align: justify;
@@ -44,6 +47,7 @@ footer{
 .btn_submit{
   background-color: #EFEFEF;
   padding: 10px;
+	font-size: 12px;
   margin: -2.3px;
   height: 20%;
   border: none;
@@ -61,21 +65,37 @@ footer{
   color: white;
 }
 
-.input{
+.newsemail{
   background-color: #474040;
   margin: -2.3px;
-  padding: 10px;
+	outline: none;
+  /* padding: 10px; */
+	padding: 10px;
+	width: 16em;
+	font-size: 12px;
   border: none;
   border-bottom: solid #C8C8C8 .2rem;
   transition: all .5s;
   color: white;
 }
 
-.input:focus {
+.newsemail:focus {
   border-bottom: solid #53f476 .2rem;
   color: white;
 }
 
+
+/* Cambiar el estilo de los header del footer */
+.footer_principal .foot_pilar .ph3footer{
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+
+.footer_principal .foot_pilar .foot_n{
+	text-align: justify;
+}
+/*
 .footer_principal .foot_pilar:nth-child(2) p{
   text-align: justify;
 }
@@ -86,7 +106,7 @@ footer{
 
 .footer_principal .foot_pilar:nth-child(4) p{
   text-align: justify;
-}
+} */
 
 .img_foot{
   width: 100%;
@@ -184,6 +204,10 @@ footer{
 }
 
 @media screen and (max-width: 335px){
+
+	.newsemail{
+		width: 14em;
+	}
   .btn_submit{
   	border-radius: 4px;
 	}
