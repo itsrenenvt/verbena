@@ -22,6 +22,7 @@
     ?>
 
     <div class="fondo_tabla">
+      <h2>CLIENTES</h2>
       <div class="contenedor_tabla">
         <form name="form_cliente" class="" action="" method="post">
 
@@ -81,7 +82,8 @@
         </form>
     </div>
 
-    <div class="fondo_news">
+    <div  class="fondo_news" id="newsdiv">
+      <h2>NEWSLETTER</h2>
       <div class="contenedor_news">
         <form class="" action="modelo/crud_newsletter.php" method="post">
 
@@ -103,6 +105,7 @@
             while ($dato = pg_fetch_array($result)){
 
               $objNews = new news();
+              $aux=$dato['id_newsletter'];
               $objNews->setid($dato['id_newsletter']);
               $objNews->setemail($dato["email"]);
               ?>
@@ -111,6 +114,11 @@
                 <td><?php echo $objNews->getemail() ?></td>
                 <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Aceptar" onClick="txtope.value='e';txtid.value='<?php echo $objNews->getid() ?>'"></td>
               </tr>
+              <?php
+            }
+            if(empty($aux)){
+              ?>
+              <td colspan="3">NO HAY DATOS</td>
               <?php
             }
 

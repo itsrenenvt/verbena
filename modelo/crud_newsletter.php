@@ -6,6 +6,7 @@ $email = (isset ($_POST["txtsuscribe"]) ? $_POST["txtsuscribe"] : "no llega nada
 
 session_start();
 if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
+  $sesion ="si";
     if(isset($_POST["txtope"]) && !empty($_POST["txtope"])){
       $clv_operacion = $_POST["txtope"];
 
@@ -19,17 +20,20 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
       ?>
       <script type="text/javascript">
         alert('LO SENTIMOS ¡ALGO SALIO MAL!.');
-        window.location="../tabla_cliente.php";
+        window.history.back();
+        // window.reload(true);
       </script>
       <?php
     }
-    }
-}else{
-  try {
-    agregaemail();
-  } catch (Exception $e){
-
+  }else{
+    verifica();
   }
+}else{
+  $sesion ="no";
+}
+
+if ($sesion=="no") {
+  verifica();
 }
 
 function eliminasubscripcion(){
@@ -41,11 +45,30 @@ function eliminasubscripcion(){
     ?>
     <script type="text/javascript">
     alert('LA SUBSCRIPCIÓN CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADA.');
-    window.location="../tabla_cliente.php";
+    window.location="../tabla_cliente.php#newsdiv";
   </script>
     <?php
   }
 
+}
+
+function verifica(){
+  global $email;
+  include '../basedatos/conexion.php';
+  $result=pg_query($conexion, "select email from newsletter where email = '". $email."'");
+  while ($dato = pg_fetch_array($result)) {
+    $auxemail = $dato['email'];
+  }
+  if (empty($auxemail)) {
+    agregaemail();
+  }else{
+    ?>
+    <script type="text/javascript">
+    alert('EL E-MAIL: <?php echo $email ?> YA HA SIDO REGISTRADO, PRUEBE CON OTRO.');
+    window.history.back();
+  </script>
+    <?php
+  }
 }
 
 function agregaemail(){
@@ -67,8 +90,8 @@ pg_close($conexion);
 ?>
 <script type="text/javascript">
   alert('GRACIAS POR SUSCRIBIRTE.');
-  // investigar como recargar la misma pagina
-  window.location="../index.php";
+  window.history.back();
+  // window.reload(true);
 </script>
 
 <?php
