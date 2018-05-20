@@ -10,13 +10,18 @@
   </head>
   <body>
 
-    <!-- <div class="fondo_ventana"> -->
+    <?php
+    include_once 'modelo/sget_estadisticas.php';
+    $objEst = new estadisticas();
+    $objEst->capcliente();
+    $objEst->capcolaborador();
+    $objEst->capnewsletters();
+    ?>
+
       <div class="marco_portada">
-        <!-- <div class="portada"> -->
-          <!-- <img src="img/img_verbena8.jpg" alt=""> -->
-        <!-- </div> -->
+
       </div>
-    <!-- </div> -->
+
 
     <aside class="caja_izq">
       <div class="caja_fondo">
@@ -24,19 +29,19 @@
           <div class="img_perfil"></div>
           <label class="label_img">COLABORADOR</label>
           <div class="estadistica">
-            <div class="estadistica_cliente_col">
-              <?php
-              include_once 'basedatos/conexion.php';
-              $result=pg_query($conexion, 'select count (id_usuario) from usuario');
-              while ($dato = pg_fetch_array($result)) {
-                $total_user = $dato["count"];
-              }
-               ?>
-              <p><?php echo $total_user ?></p>
+
+            <div class="estadistica_cliente">
+              <p><?php echo $objEst->getcliente();?></p>
               <label for="estadistica_cliente">Clientes</label>
             </div>
 
+            <div class="estadistica_colaboradores">
+              <p><?php echo $objEst->getnews();?></p>
+              <label for="estadistica_colaboradores">Newsletters</label>
+            </div>
+
           </div>
+
           <nav>
             <ul>
               <li><a href="index.php">Inicio</a></li>

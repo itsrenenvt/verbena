@@ -4,6 +4,7 @@ class estadisticas{
 
   protected $clientes="";
   protected $colaborador="";
+  protected $news="";
 
   function setcliente($pcliente){
     $this->clientes=$pcliente;
@@ -19,6 +20,14 @@ class estadisticas{
 
   function getcolaborador(){
     return $this->colaborador;
+  }
+
+  function setnews($pnews){
+    $this->news=$pnews;
+  }
+
+  function getnews(){
+    return $this->news;
   }
 
   function capcliente(){
@@ -38,6 +47,16 @@ class estadisticas{
       $total_colaboradores = $dato["count"];
     }
     $this->setcolaborador($total_colaboradores);
+    pg_close($conexion);
+  }
+
+  function capnewsletters(){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select count (id_newsletter) from newsletter');
+    while ($dato = pg_fetch_array($result)) {
+      $total_news = $dato["count"];
+    }
+    $this->setnews($total_news);
     pg_close($conexion);
   }
 }
