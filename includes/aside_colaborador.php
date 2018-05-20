@@ -27,17 +27,22 @@
       <div class="caja_fondo">
         <div class="izquierdo">
           <div class="img_perfil"></div>
-          <label class="label_img">COLABORADOR</label>
+          <div class="usuario">
+            <!-- <label class="label_img">COLABORADOR</label> -->
+            <p class="label_img">COLABORADOR</p>
+          </div>
           <div class="estadistica">
 
             <div class="estadistica_cliente">
-              <p><?php echo $objEst->getcliente();?></p>
-              <label for="estadistica_cliente">Clientes</label>
+              <p class="pestadistica"><?php echo $objEst->getcliente();?></p>
+              <!-- <label for="estadistica_cliente">Clientes</label> -->
+              <p class="petiqueta">Clientes</p>
             </div>
 
             <div class="estadistica_colaboradores">
-              <p><?php echo $objEst->getnews();?></p>
-              <label for="estadistica_colaboradores">Newsletters</label>
+              <p class="pestadistica"><?php echo $objEst->getnews();?></p>
+              <!-- <label for="estadistica_colaboradores">Newsletters</label> -->
+              <p class="petiqueta">Newsletters</p>
             </div>
 
           </div>

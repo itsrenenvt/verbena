@@ -21,6 +21,7 @@
     ?>
 
     <div class="fondo_tabla">
+      <h2>COLABORADORES</h2>
       <div class="contenedor_tabla">
         <form name="form_colaborador" class="" action="" method="post">
 

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/tablas.css">
     <link rel="icon" href="img/verbena.ico">
     <title>Usuarios Cliente</title>
@@ -85,48 +86,64 @@
     <div  class="fondo_news" id="newsdiv">
       <h2>NEWSLETTER</h2>
       <div class="contenedor_news">
-        <form class="" action="modelo/crud_newsletter.php" method="post">
-
-          <input type="hidden" name="txtope">
+        <form name="newsletter" class="" action="" method="post">
+          <input type="hidden" name="txtope" value="g">
           <input type="hidden" name="txtid">
 
-          <table class="table_news">
+        <div class="crud_formulario">
+          <h2>CRUD</h2>
+          <div class="input_box">
+            <label class="label_seis" for="txtemail"><i class="fas fa-envelope"></i></label>
+            <input class="input_ancho" type="email" name="txtsuscribe" value="" placeholder="Correo Electronico" required>
+          </div>
 
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>E-mail</th>
-                <th>Eliminar</th>
-              </tr>
-            </thead>
+          <input type="submit" name="" class="btn-listo" id="btn-enviar" value="Listo" onClick="newsletter.action='modelo/crud_newsletter.php'">
+          <input type="submit" name="" class="btn-cancel" id="btn-cancelar" value="Eliminar" onClick="newsletter.action='modelo/crud_newsletter.php';txtope.value='e';">
 
-            <?php
-            $result=pg_query($conexion, 'select * from newsletter order by id_newsletter desc');
-            while ($dato = pg_fetch_array($result)){
+        </div>
 
-              $objNews = new news();
-              $aux=$dato['id_newsletter'];
-              $objNews->setid($dato['id_newsletter']);
-              $objNews->setemail($dato["email"]);
-              ?>
-              <tr>
-                <td><?php echo $objNews->getid() ?></td>
-                <td><?php echo $objNews->getemail() ?></td>
-                <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Aceptar" onClick="txtope.value='e';txtid.value='<?php echo $objNews->getid() ?>'"></td>
-              </tr>
+        <div class="tabla_form">
+          <h2>SUBSCRIPCIONES</h2>
+
+            <table class="table_news">
+
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th colspan="2">E-mail</th>
+                </tr>
+              </thead>
+
               <?php
-            }
-            if(empty($aux)){
+              $result=pg_query($conexion, 'select * from newsletter order by id_newsletter desc');
+              while ($dato = pg_fetch_array($result)){
+
+                $objNews = new news();
+                $aux=$dato['id_newsletter'];
+                $objNews->setid($dato['id_newsletter']);
+                $objNews->setemail($dato["email"]);
+                ?>
+                <tr>
+                  <td><?php echo $objNews->getid() ?></td>
+                  <td><?php echo $objNews->getemail() ?></td>
+                  <td><input type="button" name="" class="btn-enviar" id="btn-enviar" value="Editar" onClick="txtsuscribe.value='<?php echo $objNews->getemail() ?>';txtid.value='<?php echo $objNews->getid() ?>';txtope.value='m'"></td>
+                </tr>
+                <?php
+              }pg_close($conexion);
+              if(empty($aux)){
+                ?>
+                <td colspan="3">NO HAY DATOS</td>
+                <?php
+              }
+
               ?>
-              <td colspan="3">NO HAY DATOS</td>
-              <?php
-            }
 
-            ?>
+            </table>
+        </div>
+      </form>
 
-          </table>
-        </form>
       </div>
     </div>
+
   </body>
   </html>

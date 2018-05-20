@@ -22,7 +22,10 @@
       <div class="caja_fondo">
         <div class="izquierdo">
           <div class="img_perfil"></div>
-          <label class="label_img">CLIENTE</label>
+          <div class="usuario">
+            <!-- <label class="label_img">CLIENTE</label> -->
+            <p class="label_img">CLIENTE</p>
+          </div>
           <div class="estadistica">
             <div class="estadistica_cliente">
               <?php
@@ -32,8 +35,10 @@
                 $total_user = $dato["count"];
               }
                ?>
-              <p><?php echo $total_user ?></p>
-              <label for="estadistica_cliente">Clientes</label>
+              <p class="pestadistica"><?php echo $total_user ?></p>
+              <!-- <label for="estadistica_cliente">Clientes</label> -->
+              <p class="petiqueta">En Carrito</p>
+
             </div>
             <div class="estadistica_colaboradores">
               <?php
@@ -42,8 +47,9 @@
                 $total_colaboradores = $dato["count"];
               }
                ?>
-              <p><?php echo $total_colaboradores ?></p>
-              <label for="estadistica_colaboradores">Colaboradores</label>
+              <p class="pestadistica"><?php echo $total_colaboradores ?></p>
+              <!-- <label for="estadistica_colaboradores">Colaboradores</label> -->
+              <p class="petiqueta" >Compras</p>
             </div>
           </div>
           <nav>

@@ -1,0 +1,36 @@
+*{
+	font-family: Montserrat;
+}
+
+body{
+	margin: 0;
+	background: url('../img/img_verbena6.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	/* text-align: center; */
+	height: 100vh;
+}
+
+.fondo_inicio{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	width: 62em;
+	height: 25em;
+
+	background-color: white;
+	/* background: url('../img/img_verbena20.jpg');
+	background-size: cover;
+	background-position: center; */
+
+	border-radius: 1em;
+	padding: 2em;
+	text-align: center;
+	/* font-style: normal;
+	font-family: FontAwesome; */
+}
+
+.nombreuser{
+	color: rgb(37, 0, 159);
+}

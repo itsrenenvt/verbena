@@ -9,11 +9,19 @@ body{
 
 .marco_portada{
 	position: fixed;
+	/* position: absolute; */
 	background: url('../img/img_verbena8.jpg');
 	background-size: cover;
 	background-position: center;
 	width: 100%;
   height: 20vh;
+	text-align: center;
+}
+
+.marco_portada h1{
+	color: white;
+	font-size: 6em;
+	margin-top: .1em;
 }
 
 
@@ -25,49 +33,15 @@ body{
 	top: 20%;
 }
 
-.caja_fondo_der{
-	position: relative;
-  /* float: right; */
-	width: 20em;
-	height: 15em;
-	top: 20%;
-}
-
-.derecho{
-	position: fixed;
-	/* float: right; */
-	left: 70%;
-	background-color: white;
-	transition: .5s;
-	width: 25em;
-	height: 20em;
-	top: 21.7%;
-	box-shadow: 0px 0px 20px -6px black;
-}
-/*Cambiar la posición para ya sabes que*/
-.caja_fondo_der_dos{
-	/* position: absolute; */
-  /* float: right; */
-	width: 25em;
-	height: 15em;
-	top: 20%;
-}
-
-.derecho_dos{
-	position: fixed;
-	/* float: right; */
-	left: 70%;
-	background-color: white;
-	transition: .5s;
-	width: 25em;
-	height: 10em;
-	top: 74%;
-	box-shadow: 0px 0px 20px -6px black;
-}
 .izquierdo{
   position: fixed;
   float: left;
   background-color: white;
+
+	/* background: url('../img/img_verbena21.jpg');
+	background-size: cover;
+	background-position: center; */
+
 	transition: .5s;
   width: 15em;
   height: 100vh;
@@ -80,10 +54,19 @@ body{
   margin-top: -15px;
 }
 
+/* MODIFICA EL ESPACIO DE LOS LI */
 .izquierdo li{
   list-style: none;
-  padding-top: .7em;
-  padding-bottom: .7em;
+	margin: 0;
+  /* padding-top: .7em;
+  padding-bottom: .7em; */
+
+	/* padding-top:8px;
+  padding-bottom: 8px; */
+
+	padding-top: .5em;
+  padding-bottom: .5em;
+
   border-style: solid;
 	border-width: 1px;
 	border-color: rgb(92, 92, 92);
@@ -91,6 +74,11 @@ body{
 	border-left: none;
 	border-right: none;
   margin-left: -2.5em;
+	/* para las lineas toquen el borde la pantalla */
+}
+
+.izquierdo li:nth-child(1){
+	margin-top: 1em;
 }
 
 .izquierdo a:hover:not(.cerrar){
@@ -107,27 +95,39 @@ body{
   margin-left: 22%;
 }
 
+/* CAJA DE LA ESTADISTICA */
 .estadistica{
   margin: auto;
-	margin-top: 1.2em;
+	margin-top: .5em;
+	/* margin-top: 1.2em; */
 	margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-.estadistica p{
+/* NUMEROS OBTENIDOS DE LA BD */
+.estadistica .pestadistica{
 	font-size: 3em;
 	margin-top: -12px;
-	padding-top: 9px;
-	margin-bottom: -1px;
+	padding-top: 12px;
+	margin-bottom: -.6em;
 	color: rgb(43, 48, 218);
 	font-weight: bold;
 }
 
-.estadistica label{
+/* .estadistica label{
 	padding-bottom: 9px;
 	color: rgb(69, 7, 186);
+} */
+/* ETIQUETA DEBAJO DE LA BD */
+.petiqueta{
+	/* padding-bottom: 9px; */
+	color: rgb(69, 7, 186);
+	font-size: 13px;
+	padding-top: 5px;
+	margin-bottom: 8px;
 }
+
 .estadistica_cliente , .estadistica_colaboradores{
 	width: 119.3px;
 	border-style: solid;
@@ -186,8 +186,18 @@ body{
   box-shadow: 0px 0px 30px -6px black;
 }
 
-.label_img{
+/* .label_img{
 	color: black;
 	font-weight: bold;
-	margin-left: 20%;
+	/* margin-left: 20%;
+} */
+
+.usuario{
+	text-align: center;
+	color: black;
+	font-weight: bold;
+}
+
+.label_img{
+	margin-top: -1em;
 }

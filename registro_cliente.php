@@ -14,7 +14,7 @@
   <body>
 
     <?php
-    include_once 'includes/header.html';
+    include_once 'includes/header.php';
     ?>
 
     <div class="background-login">
@@ -28,9 +28,9 @@
 
           <div class="izquierdo">
             <h3>Rellena estos campos</h3>
-            <form name="" class="" action="accesodatos/crud_cliente.php" method="post">
+            <form name="" class="" action="modelo/crud_cliente.php" method="post">
               <div class="input_box">
-                <input class="placeholder" type="text" id="idnombre" name="txtnombre" placeholder="Nombre" value="" required>
+                <input class="placeholder" type="text" id="idnombre" name="txtnombre" placeholder="Nombre (s)" value="" required>
               <!-- </div> -->
 
               <!-- <div class="input_box"> -->
@@ -74,7 +74,7 @@
     </div>
 
     <?php
-    include_once 'includes/footer.html';
+    include_once 'includes/footer.php';
     ?>
 
   </body>

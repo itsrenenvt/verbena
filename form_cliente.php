@@ -39,6 +39,12 @@
             } catch (Exception $e) {
             }
 
+            if ($sesion_user=="cliente") {
+              $edit ="disabled";
+            }else{
+              $edit="";
+            }
+
              ?>
           <form name="cliente" class="" action="" method="post">
 
@@ -56,7 +62,7 @@
             </div>
             <div class="input_box">
               <label class="label_cuatro" for="txtusername"><i class="fas fa-user-circle"></i></label>
-              <input class="input_ancho" type="text" name="txtusername" value="<?php echo $objCliente->getusuario(); ?>" placeholder="Nombre de usuario" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txtusername" value="<?php echo $objCliente->getusuario(); ?>" placeholder="Nombre de usuario" <?php echo $editable . $edit ?> >
             <!-- </div>
             <div class="input_box"> -->
               <label class="label_cinco" for="txtpass"><i class="fas fa-lock"></i></label>

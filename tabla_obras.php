@@ -21,6 +21,7 @@
     ?>
 
     <div class="fondo_tabla">
+      <h2>OBRAS</h2>
       <div class="contenedor_tabla">
         <form name="form_obras" class="" action="" method="post">
 

@@ -190,18 +190,6 @@ body{
 
 /* tabla newsletter */
 
-.fondo_news{
-	position: absolute;
-	top: 110%;
-	margin-bottom: 4em;
-	left: 25%;
-	width: 58em;
-	height: 25em;
-	text-align: center;
-	border-radius: .5em;
-	background-color: white;
-}
-
 .table_news th{
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -247,9 +235,9 @@ body{
 	width: 35em;
 }
 
-.table_news th:nth-child(3){
-background-color: #FFF3AE;
-width: 15em;
+.table_news td:nth-child(3){
+/* background-color: #FFF3AE; */
+width: 4em;
 }
 
 .contenedor_news .table_news tr:nth-child(even){
@@ -266,11 +254,58 @@ width: 15em;
 }
 
 .contenedor_news{
-	overflow: scroll;
+	/* overflow: scroll;
 	position: relative;
 	width: 58em;
 	height: 20em;
+	background-color: white; */
+}
+
+/* MODIFICA LAS PROPIEDADES DE LA TABLA */
+.contenedor_news{
+	display: flex;
+	flex-wrap: wrap;
+	width: 68em;
+	height: 20em;
+}
+
+/* MODIFICA EL FONDO DE LA TABLA */
+.fondo_news{
+	position: absolute;
+	/* position: relative; */
+	top: 110%;
+	margin-bottom: 1.5em;
+	left: 18.5%;
+	width: 68em;
+	/* height: 25em; */
+	height: 30em;
+	text-align: center;
+	border-radius: .5em;
 	background-color: white;
+	float: left;
+
+	/* top: 24%;
+  left: 18.5%;
+	width: 68em; */
+}
+
+.crud_formulario, .tabla_form{
+	width: 34em;
+	/* height: 20em; */
+	height: 25.4em;
+	float: left;
+}
+
+.crud_formulario{
+	text-align: center;
+	/* background-color: rgb(255, 241, 111); */
+}
+.input_box{
+	margin-top: 13%;
+}
+
+.tabla_form{
+	overflow: scroll;
 }
 
  .btn-aceptar{
@@ -292,4 +327,97 @@ width: 15em;
 .btn-aceptar:hover{
 	background-color: #c1110c;
 	border-bottom: solid #931200 .2rem;
+}
+.crud_formulario .input_box label{
+  position: relative;
+  background-color: rgb(249, 244, 129);
+	text-align: center;
+  border-radius: .5em;
+  margin-right: .3em;
+}
+
+.crud_formulario input[type="email"],
+.crud_formulario input[type="text"]{
+	padding-right: 20px;
+
+	position: relative;
+  margin-top: 1em;
+
+  border: none;
+  border-radius: .5em;
+	outline: none;
+	width: 20em;
+	height: 40px;
+	color: #262626;
+  background-color: rgba(79, 79, 79, 0.20);
+
+	font-size: 16px;
+	padding-left: 30px;
+}
+
+.label_seis{
+	/* padding-top: 13px;
+	padding-left: 14px;
+	padding-right:14px;
+	padding-bottom: 12px; */
+	padding-top: 13px;
+	padding-left: 9px;
+	padding-right:8px;
+	padding-bottom: 12px;
+}
+
+/* BOTONES */
+.btn-listo{
+	background-color: #13cb74;
+  padding: 10px;
+  margin: -2.3px;
+  height: 10%;
+  border: none;
+  border-bottom: solid #00a633 .2rem;
+  transition: all .5s;
+  width: 100%;
+  max-width: 110px;
+  color: rgba(#13cb74, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-listo, .btn-cancel{
+  position: relative;
+  margin-top: 2em;
+  /* margin-bottom: -.5em; */
+  /* left: 5%; */
+}
+
+.btn-cancel{
+	background-color: #d42823;
+  padding: 10px;
+  margin: -2.3px;
+  height: 10%;
+  border: none;
+  border-bottom: solid #be1700 .2rem;
+  transition: all .5s;
+  width: 100%;
+  max-width: 110px;
+  color: rgba(#d42823, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+	margin-left: 20px;
+}
+.btn-listo:hover{
+	background-color: #0fa25c;
+	border-bottom: solid #05822b .2rem;
+}
+.btn-cancel:hover{
+	background-color: #c1110c;
+	border-bottom: solid #931200 .2rem;
+}
+
+i{
+	font-size: 1.5rem;
+	color: #000000;
+	font-style: normal;
+	font-family: FontAwesome;
 }

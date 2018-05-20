@@ -18,23 +18,29 @@
     ?>
 
       <div class="marco_portada">
+        <h1>VERBENA DE LA BUENA</h1>
       </div>
 
     <aside class="caja_izq">
       <div class="caja_fondo">
         <div class="izquierdo">
           <div class="img_perfil"></div>
-          <label class="label_img">ADMINISTRADOR</label>
+          <div class="usuario">
+            <!-- <label class="label_img">ADMINISTRADOR</label> -->
+            <p class="label_img">ADMINISTRADOR</p>
+          </div>
           <div class="estadistica">
 
             <div class="estadistica_cliente">
-              <p><?php echo $objEst->getcliente();?></p>
-              <label for="estadistica_cliente">Clientes</label>
+              <p class="pestadistica"><?php echo $objEst->getcliente();?></p>
+              <!-- <label for="estadistica_cliente">Clientes</label> -->
+              <p class="petiqueta">Clientes</p>
             </div>
 
             <div class="estadistica_colaboradores">
-              <p><?php echo $objEst->getcolaborador();?></p>
-              <label for="estadistica_colaboradores">Colaboradores</label>
+              <p class="pestadistica" ><?php echo $objEst->getcolaborador();?></p>
+              <!-- <label for="estadistica_colaboradores">Colaboradores</label> -->
+              <p class="petiqueta" >Colaboradores</p>
             </div>
 
           </div>

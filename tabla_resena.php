@@ -23,6 +23,7 @@
     ?>
 
     <div class="fondo_tabla">
+      <h2>RESEÑAS</h2>
       <div class="contenedor_tabla">
         <form name="form_reseña" class="" action="" method="post">
 

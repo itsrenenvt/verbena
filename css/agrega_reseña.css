@@ -121,44 +121,23 @@ body{
 }
 
 .fondo_reseña{
-	/* position: absolute;
-	background-color: white;
-	width: 55em; */
-	/* position: absolute; */
-	/* top: 28%;
-	left: 32%;
-	width: 45em;
-	height: 35em;
-	background-color: rgb(255, 255, 255);
-	border-radius: 1em;
-	padding: 2em; */
 }
-/*
-.titulo_caja{
-	font-size: 2em;
-	font-weight: bold;
-} */
 
 .editor_texto_reseña{
 	position: absolute;
 	top: 15%;
-	left: 26%;
+	left: 20.5%;
+	/* width: 80%; */
 	/* border-style: solid;
 	border-width: 1px;
 	border-color: rgb(92, 92, 92); */
 }
-.container{
 
-}
-
-.row{
-}
-
-.texto_del_area{
-}
 
 .form-group{
 	background-color: white;
-	width: 55em;
+	width: 65em;
+	/* width: 65em; */
+	/* height: 20em */
 	/* left: 40%; */
 }

@@ -1,6 +1,6 @@
 <?php
 
-$email = (isset ($_POST["txtsuscribe"]) ? $_POST["txtsuscribe"] : "no llega nada");
+$email = (isset ($_POST["txthtmlinsta"]) ? $_POST["txthtmlinsta"] : "no llega nada");
 
 // agregaemail();
 
@@ -16,7 +16,7 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
           verifica();
         }else {
           if ($clv_operacion=="e") {
-            eliminasubscripcion();
+            eliminafoto();
           }
         }
       }
@@ -27,28 +27,28 @@ if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
 }else{
   $sesion ="no";
 }
+//
+// if ($sesion=="no") {
+//   verifica();
+// }
 
-if ($sesion=="no") {
-  verifica();
-}
-
-function eliminasubscripcion(){
+function eliminafoto(){
   include '../basedatos/conexion.php';
   if (isset($_POST["txtid"]) && !empty($_POST["txtid"])) {
     $delete_id = $_POST["txtid"];
-    pg_query($conexion,"delete from newsletter where id_newsletter =". $delete_id);
+    pg_query($conexion,"delete from galeria where id_imagen =". $delete_id);
     pg_close($conexion);
     ?>
     <script type="text/javascript">
-    alert('LA SUBSCRIPCIÓN CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADA.');
-    window.location="../tabla_cliente.php#newsdiv";
+    alert('LA IMAGEN CON ID: <?php echo $delete_id ?> HA SIDO ELIMINADA.');
+    window.location="../tabla_evento.php#newsdiv";
   </script>
     <?php
   }else{
     ?>
     <script type="text/javascript">
-    alert('SELECCIONE UN E-MAIL DE LA TABLA ADJUNTA');
-    window.location="../tabla_cliente.php#newsdiv";
+    alert('SELECCIONE UN URL DE LA TABLA ADJUNTA');
+    window.location="../tabla_evento.php#newsdiv";
   </script>
     <?php
   }
@@ -59,9 +59,9 @@ function verifica(){
   global $clv_operacion;
   global $email;
   include '../basedatos/conexion.php';
-  $result=pg_query($conexion, "select email from newsletter where email = '". $email."'");
+  $result=pg_query($conexion, "select html_instagram from galeria where html_instagram = '". $email."'");
   while ($dato = pg_fetch_array($result)) {
-    $auxemail = $dato['email'];
+    $auxemail = $dato['html_instagram'];
   }
   if (empty($auxemail)) {
     if ($clv_operacion=="m") {
@@ -69,14 +69,12 @@ function verifica(){
     }else{
       if ($clv_operacion=="g") {
         agregaemail();
-      }else {
-        agregaemail();
       }
     }
   }else{
     ?>
     <script type="text/javascript">
-    alert('EL E-MAIL: <?php echo $email ?> YA HA SIDO REGISTRADO, PRUEBE CON OTRO.');
+    alert('EL TAG HTML: <?php echo $email ?> YA HA SIDO REGISTRADO, PRUEBE CON OTRO.');
     window.history.back();
   </script>
     <?php
@@ -88,16 +86,16 @@ function modicaemail(){
   include '../basedatos/conexion.php';
   if (isset($_POST["txtid"]) && !empty($_POST["txtid"])) {
     $modifica_id = $_POST["txtid"];
-    pg_query($conexion,"update newsletter
-                              set email = '".$email."'
+    pg_query($conexion,"update galeria
+                              set html_instagram = '".$email."'
 
-                              where id_newsletter =". $modifica_id);
+                              where id_imagen =". $modifica_id);
     pg_close($conexion);
     ?>
 
     <script type="text/javascript">
-    alert('LA SUBSCRIPCIÓN CON ID: <?php echo $modifica_id ?> HA SIDO MODIFICADA.');
-    window.location="../tabla_cliente.php#newsdiv";
+    alert('LA IMAGEN CON ID: <?php echo $modifica_id ?> HA SIDO MODIFICADA.');
+    window.location="../tabla_evento.php#newsdiv";
   </script>
     <?php
   }
@@ -107,7 +105,7 @@ function agregaemail(){
   global $email;
   global $sesion;
   include '../basedatos/conexion.php';
-  $result=pg_query($conexion, 'select max (id_newsletter) from newsletter');
+  $result=pg_query($conexion, 'select max (id_imagen) from galeria');
   while ($dato = pg_fetch_array($result)) {
     $max_id = $dato['max'];
   }
@@ -115,15 +113,13 @@ function agregaemail(){
 
 
   $insert=pg_query($conexion,
-  "insert into newsletter
+  "insert into galeria
   values (".$autogenera_id.",'".$email."')");
   pg_close($conexion);
 
 ?>
 <script type="text/javascript">
-  alert('SUBSCRIPCIÓN EXITOSA, EL E-MAIL <?php echo $email; ?> RECIBIRA APARTIR DE HOY LAS BUENAS NUEVAS DE VERBENA DE LA BUENA.');
-  // window.history.back();
-  // window.reload(true);
+  alert('EL REGISTRO DE LA IMAGEN SE HA REALIZADO CON EXITO.');
   <?php
   if ($sesion=="no") {
     ?>
@@ -131,7 +127,7 @@ function agregaemail(){
     <?php
   }else {
     ?>
-    window.location="../tabla_cliente.php#newsdiv";
+    window.location="../tabla_evento.php#newsdiv";
     <?php
   }
   ?>
