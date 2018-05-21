@@ -96,7 +96,7 @@
         <div class="crud_formulario">
           <h2>CRUD</h2>
           <div class="input_box">
-            <label class="label_seis" for="txtemail"><i class="fas fa-envelope"></i></label>
+            <label class="label_seis" for="txtemail"><i class="fab fa-instagram"></i></label>
             <input class="input_ancho" type="text" name="txthtmlinsta" value="" placeholder="HTML Instagram" required>
           </div>
 
@@ -128,7 +128,7 @@
                 ?>
                 <tr>
                   <td><?php echo $objGaleria->getid() ?></td>
-                  <td><?php echo substr ($objGaleria->gethtmlformulario(),0,40) ?></td>
+                  <td><?php echo substr ($objGaleria->gethtmlformulario(),0,70) ?></td>
                   <td><input type="button" name="" class="btn-enviar" id="btn-enviar" value="Editar" onClick="txtid.value='<?php echo $objGaleria->getid() ?>';txtope.value='m';txthtmlinsta.value='<?php echo $objGaleria->gethtmlformulario(); ?>'"></td>
                 </tr>
                 <?php
