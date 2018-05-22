@@ -128,7 +128,7 @@
                 ?>
                 <tr>
                   <td><?php echo $objGaleria->getid() ?></td>
-                  <td><?php echo substr ($objGaleria->gethtmlformulario(),0,70) ?></td>
+                  <td><?php echo substr ($objGaleria->gethtmlformulario(),0,60) ?></td>
                   <td><input type="button" name="" class="btn-enviar" id="btn-enviar" value="Editar" onClick="txtid.value='<?php echo $objGaleria->getid() ?>';txtope.value='m';txthtmlinsta.value='<?php echo $objGaleria->gethtmlformulario(); ?>'"></td>
                 </tr>
                 <?php

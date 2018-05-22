@@ -33,29 +33,42 @@
     </div>
 
     <div class="seccion_2">
-  
+      <div class="galeria">
+        <!-- <img src="img/img_presentacion.jpg" alt="" class="presentacion"> -->
+        <div class="general">
+
+          <div class="infografia">
+            <img src="img/info.svg" alt="">
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <div class="seccion_3">
 
-    </div>
+      <div class="headImg">
+        <p>GALERIA</p>
+      </div>
+
+      <div class="contenedorImg">
+
+        <div class="imgInsta">
+
+
+          <div class="cuadroInsta">
+            <img src="https://instagram.fpbc2-2.fna.fbcdn.net/vp/836f98a740c2563743bdac0edd546f0b/5BA1A09E/t51.2885-15/e35/13392869_1628713024112802_1619165795_n.jpg?_nc_eui2=AeG-SmbPEyI3lfkkO0Ob5D4zri17vJkMKXw__w92qQUqzBM9Ri_bk7BbX2n61ucfW6K5hai26vjSO3MURC_EXnZdYf-SuPXRqC3O2PVSUMf-Kg" alt="" >
+          </div>
+
+        </div>
+
+      </div>
+      </div>
 
     <div class="google-maps">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60412.89663238948!2d-97.09934193492258!3d18.851290138151015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c502a4c0439f05%3A0xd83faa836b275780!2sOrizaba%2C+Ver.!5e0!3m2!1ses-419!2smx!4v1523123596789" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
-    <div class="panel_lateral_index">
-      <input type="checkbox" class="checkbox" id="check" name="" value="">
-      <label class="menu" for="check"><img src="img/menu.svg" alt=""></label>
-      <!-- <label class="menu" for="check">|||</label> -->
-      <div class="left-panel">
-        <ul>
-          <!-- <h4>NEWSLETTER</h4> -->
-          <p>NEWSLETTER</p>
-          <a href="#newsletter"><li>SUSCRIBETE</li></a>
-        </ul>
-      </div>
-      </div>
 
       <?php
       // include("footer.html");
