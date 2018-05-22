@@ -36,8 +36,9 @@ body{
 	left: 50%;
 	background-color: rgba(0, 0, 0, 0.5);
 	text-align: center;
-	width: 40em;
-	margin-left: -20em;
+	width: 50%;
+	/* margin-left: -20em; */
+	margin-left: -25%;
 	margin-top: -7.5em;
 	height: 15em;
 	border-radius: 2em;
@@ -50,7 +51,7 @@ body{
 }
 .seccion_1Marco img{
 	margin-top: 2em;
-	width: 30em;
+	width: 80%;
 }
 
 .seccion_1Marco i{
@@ -201,6 +202,7 @@ body{
 	background-color: white;
 	padding: 5px;
 	margin-bottom: 1em;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .cuadroInsta img:hover{

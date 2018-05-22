@@ -301,11 +301,26 @@ width: 4em;
 	/* background-color: rgb(255, 241, 111); */
 }
 .input_box{
-	margin-top: 13%;
+	/* margin-top: 13%; */
 }
 
-.tabla_form{
+.crud_formulario img{
+	width: 200px;
+	height: 150px;
+	border-radius: 10px;
+	margin-top: 4%;
+	/* margin-bottom: 0; */
+}
+
+/* .tabla_form{
 	overflow: scroll;
+} */
+
+.scroll_tabla{
+		overflow: scroll;
+		width: 34em;
+		/* height: 20em; */
+		height: 21em;
 }
 
  .btn-aceptar{

@@ -95,6 +95,9 @@
 
         <div class="crud_formulario">
           <h2>CRUD</h2>
+
+          <img src="img/shoot_verbena.png" alt="" id="imgshoot">
+
           <div class="input_box">
             <label class="label_seis" for="txtemail"><i class="fab fa-instagram"></i></label>
             <input class="input_ancho" type="text" name="txthtmlinsta" value="" placeholder="HTML Instagram" required>
@@ -107,7 +110,7 @@
 
         <div class="tabla_form">
           <h2>INSTAGRAM PICTURES</h2>
-
+          <div class="scroll_tabla">
             <table class="table_news">
 
               <thead>
@@ -129,9 +132,16 @@
                 <tr>
                   <td><?php echo $objGaleria->getid() ?></td>
                   <td><?php echo substr ($objGaleria->gethtmlformulario(),0,60) ?></td>
-                  <td><input type="button" name="" class="btn-enviar" id="btn-enviar" value="Editar" onClick="txtid.value='<?php echo $objGaleria->getid() ?>';txtope.value='m';txthtmlinsta.value='<?php echo $objGaleria->gethtmlformulario(); ?>'"></td>
+                  <td><input type="button" name="" class="btn-enviar" id="btn-enviar" value="Editar" onClick="javascript:mostrar_imagen('<?php echo $objGaleria->gethtml(); ?>');txtid.value='<?php echo $objGaleria->getid() ?>';txtope.value='m';txthtmlinsta.value='<?php echo $objGaleria->gethtmlformulario(); ?>';"></td>
                 </tr>
+
+                <script type="text/javascript">
+                function mostrar_imagen(url) {
+                   document.getElementById('imgshoot').src = url;
+                 }
+                </script>
                 <?php
+
               }pg_close($conexion);
               if(empty($aux)){
                 ?>
@@ -142,6 +152,7 @@
               ?>
 
             </table>
+          </div>
         </div>
       </form>
 
