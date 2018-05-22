@@ -9,13 +9,104 @@ body{
 
 /*Estilo de index*/
 .seccion_1{
-  background: url('../img/img_verbena1.jpg');
+  /* background: url('../img/img_verbena1.jpg'); */
+	background: url('../img/img_verbena20.jpg');
 	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	height: 662px;
+	/* height: 662px; */
+
+	height: 100vh;
+	width: 100%;
+	max-width: 71.80em;
+}
+
+.seccion_1Fondo{
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	width: 40em;
+	margin-left: -20em;
+	margin-top: -7.5em;
+	height: 15em;
+	border-radius: 2em; */
+}
+
+.seccion_1Marco{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	width: 40em;
+	margin-left: -20em;
+	margin-top: -7.5em;
+	height: 15em;
+	border-radius: 2em;
+}
+.seccion_1Marco p{
+	margin-top: 0;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.seccion_1Marco img{
+	margin-top: 2em;
+	width: 30em;
+}
+
+.seccion_1Marco i{
+	font-size: 2rem;
+	font-weight: 400;
+	color: #fff;
+	font-style: normal;
+	font-family: FontAwesome;
+}
+
+
+
+
+.seccion_1News i{
+	font-size: 2rem;
+	font-weight: 400;
+	color: #fff;
+	font-style: normal;
+	font-family: FontAwesome;
+	float: left;
+	margin-top: 22px;
+	margin-left: 20px;
+}
+
+.seccion_1News{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	border-radius: 1em;
+	top: 80%;
+	left:80%;
+	width: 15em;
+	height: 4.5em;
+	color: white;
+	/* float: left; */
+	/* font-weight: bold; */
+}
+.seccion_1News p{
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.seccion_1News a{
+	text-decoration: none;
+	color: white;
+}
+
+.seccion_1News a:hover{
+	color: rgb(21, 232, 252);
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .seccion_2{
@@ -25,11 +116,36 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	height: 662px;
+	/* height: 662px; */
+	height: 100vh;
+	width: 100%;
+	max-width: 71.80em;
 }
 
+.general{
+	/* display: flex;
+	flex-wrap: wrap; */
+	/* position: absolute; */
+}
+
+.infografia{
+	width: 25em;
+	height: 35em;
+	margin-top: 4%;
+	margin-left: -3em;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 1em;
+	float: left;
+}
+
+
+/* .galeria .presentacion{
+	float: left;
+	left: 0;
+} */
+
 .seccion_3{
-  background: url('../img/img_verbena3.jpg');
+  background: url('../img/img_verbena23.jpg');
 	background-attachment: fixed;
 	padding: 50px 100px;
 	background-size: cover;
@@ -37,6 +153,40 @@ body{
 	text-align: center;
 	height: 662px;
 }
+
+.contenedorImg{
+	width: 100%;
+	height: 40.5em;
+	/* margin-left: 2em; */
+	/* margin-top: 4%; */
+	/* background-color: rgba(4, 73, 250, 0.5); */
+	border-radius: 1em;
+	float: left;
+}
+
+.imgInsta{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contenedorImg p{
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+.cuadroInsta img{
+	margin-left: 20px;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	background-color: white;
+	padding: 5px;
+}
+
+
+/* PANEL ELIMINADO */
 
 .panel_lateral_index .menu{
 	width: 2.4rem;
@@ -57,6 +207,8 @@ body{
 .menu img{
 	width: .8em;
 	padding-bottom: 2.5px;
+	padding-top: -20px;
+	/* Agrege esto para acomodar el toggle al centro */
 }
 
 .panel_lateral_index .checkbox:checked ~ .menu{
@@ -80,7 +232,11 @@ body{
 	border-radius: 0.7rem 0 0 0.7rem;
 }
 
-.left-panel h4{
+/* .left-panel h4{
+	color: white;
+} */
+
+.left-panel p{
 	color: white;
 }
 

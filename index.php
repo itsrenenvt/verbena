@@ -15,11 +15,25 @@
     ?>
 
     <div class="seccion_1">
+      <div class="seccion_1Fondo">
+        <div class="seccion_1Marco">
+          <img src="img/tituloverbena_.svg" alt="">
+          <p>¡BARRIGA LLENA <i class="fas fa-heart"></i> CONTENTO!</p>
+        </div>
 
+        <div class="seccion_1News">
+            <i class="fas fa-newspaper"></i>
+            <div class="dataNews">
+              <p>NEWSLETTER</p>
+              <a href="#newsletter">SUSCRIBIRSE</a>
+            </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="seccion_2">
-
+  
     </div>
 
     <div class="seccion_3">
@@ -36,7 +50,8 @@
       <!-- <label class="menu" for="check">|||</label> -->
       <div class="left-panel">
         <ul>
-          <h4>NEWSLETTER</h4>
+          <!-- <h4>NEWSLETTER</h4> -->
+          <p>NEWSLETTER</p>
           <a href="#newsletter"><li>SUSCRIBETE</li></a>
         </ul>
       </div>

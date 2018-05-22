@@ -74,8 +74,8 @@ function verifica(){
   }else{
     ?>
     <script type="text/javascript">
-    alert('EL TAG HTML: <?php echo $email ?> YA HA SIDO REGISTRADO, PRUEBE CON OTRO.');
-    window.history.back();
+    alert('EL TAG HTML: <?php echo substr(htmlentities($email),0,120); ?> YA HA SIDO REGISTRADO, PRUEBE CON OTRO.');
+    window.location="../tabla_evento.php#newsdiv";
   </script>
     <?php
   }
