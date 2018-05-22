@@ -28,7 +28,7 @@
           <a href="#" target="_blank"><img src="img/twitter.svg" alt="" class="img_foot" target="_blank"></a>
         </div>
 
-        <div class="foot_pilar" id="">
+        <div class="foot_pilar" id="newsletter">
           <!-- <h3>Newsletter</h3> -->
           <form class="form_sub" action="modelo/crud_newsletter.php" method="post">
 

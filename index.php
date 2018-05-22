@@ -54,11 +54,28 @@
       <div class="contenedorImg">
 
         <div class="imgInsta">
+          <?php
 
+          include 'modelo/sget_galeria.php';
+          $img = new galeria();
+          $img->insertaimagen();
+          // $c=0;
 
-          <div class="cuadroInsta">
-            <img src="https://instagram.fpbc2-2.fna.fbcdn.net/vp/836f98a740c2563743bdac0edd546f0b/5BA1A09E/t51.2885-15/e35/13392869_1628713024112802_1619165795_n.jpg?_nc_eui2=AeG-SmbPEyI3lfkkO0Ob5D4zri17vJkMKXw__w92qQUqzBM9Ri_bk7BbX2n61ucfW6K5hai26vjSO3MURC_EXnZdYf-SuPXRqC3O2PVSUMf-Kg" alt="" >
-          </div>
+          // while ($c < 18) {
+            // $img->insertaimagen();
+
+            ?>
+
+            <!-- <div class="cuadroInsta">
+              <img src="<?php  ?>" alt="" >
+            </div> -->
+
+            <?php
+          //   $c++;
+          // }
+
+          // pg_close($conexion);
+          ?>
 
         </div>
 
