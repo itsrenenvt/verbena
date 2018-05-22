@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="icon" href="img/verbena.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Verbena de la buena</title>
@@ -59,22 +61,7 @@
           include 'modelo/sget_galeria.php';
           $img = new galeria();
           $img->insertaimagen();
-          // $c=0;
 
-          // while ($c < 18) {
-            // $img->insertaimagen();
-
-            ?>
-
-            <!-- <div class="cuadroInsta">
-              <img src="<?php  ?>" alt="" >
-            </div> -->
-
-            <?php
-          //   $c++;
-          // }
-
-          // pg_close($conexion);
           ?>
 
         </div>

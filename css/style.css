@@ -16,24 +16,18 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	/* height: 662px; */
-
+	/* height: 662px;
+	width: 100%; */
 	height: 100vh;
-	width: 100%;
-	max-width: 71.80em;
+
+
+	/* height: 100vh; */
+	/* width: 100%; */
+	/* max-width: 71.80em; */
+	/* max-width: 90em; */
 }
 
 .seccion_1Fondo{
-	/* position: absolute;
-	top: 50%;
-	left: 50%;
-	background-color: rgba(0, 0, 0, 0.5);
-	text-align: center;
-	width: 40em;
-	margin-left: -20em;
-	margin-top: -7.5em;
-	height: 15em;
-	border-radius: 2em; */
 }
 
 .seccion_1Marco{
@@ -95,11 +89,12 @@ body{
 }
 .seccion_1News p{
 	font-weight: bold;
-	margin-bottom: 3px;
+	padding-top: .6em;
+	margin-bottom: 0px;
 }
 
 .seccion_1News a{
-	text-decoration: none;
+	/* text-decoration: none; */
 	color: white;
 }
 
@@ -107,6 +102,7 @@ body{
 	color: rgb(21, 232, 252);
 	font-size: 20px;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .seccion_2{
@@ -117,9 +113,10 @@ body{
 	background-position: center;
 	text-align: center;
 	/* height: 662px; */
-	height: 100vh;
+	/* height: 100vh; */
+	height: 690px;
 	width: 100%;
-	max-width: 71.80em;
+	/* max-width: 71.80em; */
 }
 
 .general{
@@ -156,7 +153,8 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	height: 662px;
+	height: 690px;
+	width: 100%;
 }
 
 .contenedorImg{
@@ -167,8 +165,10 @@ body{
 }
 
 .imgInsta{
+	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: -1.7em;
 }
 
 .headImg p{
@@ -185,6 +185,7 @@ body{
 	border-radius: .5em;
 	width: 15em;
 	margin-left: 40%;
+	margin-top: 4%;
 	/* width: 20em;
 	padding: 1em;
 	padding: 0;
@@ -311,7 +312,12 @@ body{
 
 
 /*Estilo de cartelera.html*/
-
+@media screen and (max-width: 1120px){
+	.cuadroInsta img{
+		width: 90px;
+		height: 90px;
+	}
+}
 
 /*==============================
   =    CONFIG. SMART LARGE    =
@@ -322,6 +328,11 @@ body{
 		padding-bottom: 45%; // This is the aspect ratio
 	}
 /*= FIN CONFIG. DIV GOOGLE MAPS =*/
+
+.cuadroInsta img{
+	width: 70px;
+	height: 70px;
+}
 
 }
 
@@ -346,6 +357,10 @@ body{
 		padding-bottom: 85%; // This is the aspect ratio
 	}
 /*= FIN CONFIG. DIV GOOGLE MAPS =*/
+.cuadroInsta img{
+	width: 50px;
+	height: 50px;
+}
 
 }
 
