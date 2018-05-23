@@ -117,5 +117,51 @@ class evento{
     pg_close($conexion);
   }
 
+  function insertaevento(){
+    setlocale(LC_ALL,"es_ES");
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from evento');
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_evento']);
+      $this->setnombre($dato['nombre']);
+      $this->setdireccion($dato['direccion']);
+      $this->setfecha($dato['fecha']);
+      $this->sethrinicio($dato['hora_inicio']);
+      $this->sethrfin($dato['hora_fin']);
+      $this->setorganizador($dato['organizador']);
+      $this->setclasificacion($dato['clasificacion']);
+      $this->setcategoria($dato['categoria']);
+      $this->setdescripcion($dato['descripcion']);
+      ?>
+      <div class="itemsEvento">
+
+        <div class="fechaCaja">
+          <div class="barras"></div>
+          <dl>
+            <dt><?php echo strtoupper(strftime("%B"));?></dt>
+            <dd><?php echo substr($this->getfecha(),8,9); ?></dd>
+          </dl>
+        </div>
+
+        <div class="Evento">
+          <strong class="tipoEvento"><?php echo $this->getcategoria(); ?></strong>
+          <p class="nombreEvento"><?php echo $this->getnombre(); ?></p>
+          <p class="hora"><?php echo substr($this->gethrinicio(),0,5)."H - ".substr($this->gethrfin(),0,5)."H" ?></p>
+
+          <span class="tooltiptext">
+            <strong>Organiza:</strong> <?php echo $this->getorganizador(); ?><br>
+                <strong>Dirreción:</strong> <?php echo $this->getdireccion(); ?><br>
+                <strong>Dirigido:</strong><?php echo $this->getclasificacion(); ?><br>
+                <strong>Descripción:</strong> <?php echo $this->getdescripcion(); ?>
+         </span>
+
+        </div>
+      </div>
+      <?php
+    }
+    pg_close($conexion);
+  }
+
 }
 ?>
