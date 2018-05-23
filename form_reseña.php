@@ -70,6 +70,12 @@
                   <div class="form-group">
                     <textarea class="texto_del_area" id="txt-content" name="txtcontenido" <?php echo $editable ?> > </textarea>
 
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#txt-content').Editor('setText', ['<?php echo $objReseña->getcontenido(); ?>']);
+                    });
+                    </script>
+
                   </div>
 
                   <div class="input_btm_box">
