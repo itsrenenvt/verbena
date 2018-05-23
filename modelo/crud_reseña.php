@@ -123,6 +123,7 @@ if ($sesion == "si") {
  }
 
 function modificaresena(){
+  capturanombre();
   global $d_reseña;
   include '../basedatos/conexion.php';
   if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {

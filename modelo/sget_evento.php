@@ -120,7 +120,7 @@ class evento{
   function insertaevento(){
     setlocale(LC_ALL,"es_ES");
     include 'basedatos/conexion.php';
-    $result=pg_query($conexion, "select * from evento where fecha between '".date("Y")."-".date("m")."-01' and '".date("Y")."-".date("m")."-31'");
+    $result=pg_query($conexion, "select * from evento where fecha between '".date("Y")."-".date("m")."-01' and '".date("Y")."-".date("m")."-31' order by fecha asc;");
     while ($dato = pg_fetch_array($result)){
 
       $this->setid($dato['id_evento']);
@@ -151,7 +151,7 @@ class evento{
 
           <span class="tooltiptext">
             <strong>Organiza: </strong> <?php echo $this->getorganizador(); ?><br>
-                <strong>Dirreción: </strong> <?php echo $this->getdireccion(); ?><br>
+                <strong>Direción: </strong> <?php echo $this->getdireccion(); ?><br>
                 <strong>Dirigido: </strong><?php echo $this->getclasificacion(); ?><br>
                 <strong>Descripción: </strong> <?php echo $this->getdescripcion(); ?>
          </span>

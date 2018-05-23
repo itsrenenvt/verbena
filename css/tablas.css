@@ -217,7 +217,7 @@ body{
 
 .table_news td:nth-child(2){
 	text-align: left;
-	padding-left: 2em;
+	padding-left: .5em;
 }
 
 .table_news td{
