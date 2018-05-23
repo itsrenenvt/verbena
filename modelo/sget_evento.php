@@ -120,7 +120,7 @@ class evento{
   function insertaevento(){
     setlocale(LC_ALL,"es_ES");
     include 'basedatos/conexion.php';
-    $result=pg_query($conexion, 'select * from evento');
+    $result=pg_query($conexion, "select * from evento where fecha between '".date("Y")."-".date("m")."-01' and '".date("Y")."-".date("m")."-31'");
     while ($dato = pg_fetch_array($result)){
 
       $this->setid($dato['id_evento']);
@@ -145,15 +145,15 @@ class evento{
         </div>
 
         <div class="Evento">
-          <strong class="tipoEvento"><?php echo $this->getcategoria(); ?></strong>
+          <strong class="tipoEvento"><?php echo strtoupper($this->getcategoria()); ?></strong>
           <p class="nombreEvento"><?php echo $this->getnombre(); ?></p>
           <p class="hora"><?php echo substr($this->gethrinicio(),0,5)."H - ".substr($this->gethrfin(),0,5)."H" ?></p>
 
           <span class="tooltiptext">
-            <strong>Organiza:</strong> <?php echo $this->getorganizador(); ?><br>
-                <strong>Dirreción:</strong> <?php echo $this->getdireccion(); ?><br>
-                <strong>Dirigido:</strong><?php echo $this->getclasificacion(); ?><br>
-                <strong>Descripción:</strong> <?php echo $this->getdescripcion(); ?>
+            <strong>Organiza: </strong> <?php echo $this->getorganizador(); ?><br>
+                <strong>Dirreción: </strong> <?php echo $this->getdireccion(); ?><br>
+                <strong>Dirigido: </strong><?php echo $this->getclasificacion(); ?><br>
+                <strong>Descripción: </strong> <?php echo $this->getdescripcion(); ?>
          </span>
 
         </div>
