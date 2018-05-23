@@ -60,6 +60,7 @@ body{
 	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: -3em;
 	/* margin-left: -1.7em; */
 }
 
@@ -105,10 +106,6 @@ body{
 	float: left;
 }
 
-.Evento .nombreEvento{
-
-}
-
 /* Tooltip text */
 .Evento .tooltiptext {
     visibility: hidden;
@@ -127,8 +124,8 @@ body{
     /* bottom: 125%; */
 		bottom: 30%;
     /* left: 50%; */
-		left: 60%;
-    margin-left: -60px;
+		/* left: 60%; */
+    /* margin-left: -60px; */
 
     /* Fade in tooltip */
     opacity: 0;
