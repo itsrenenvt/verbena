@@ -71,7 +71,7 @@
             <!-- </div>
             <div class="input_box"> -->
               <label class="label_siete" for="txttelefono"><i class="fas fa-phone"></i></label>
-              <input class="input_ancho" type="text" name="txttelefono" value="<?php echo $objColaborador->gettelefono(); ?>" placeholder="Telefono" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txttelefono" value="<?php echo $objColaborador->gettelefono(); ?>" maxlength="10" placeholder="Telefono" <?php echo $editable ?>>
             </div>
             <div class="input_box">
               <label class="label_ocho" for="txtdireccion"><i class="fas fa-map-marker"></i></label>

@@ -152,8 +152,8 @@ class evento{
           <span class="tooltiptext">
             <strong ><?php echo strtoupper($this->getnombre()); ?></strong><br>
             <strong>Organiza: </strong> <?php echo $this->getorganizador(); ?><br>
-                <strong>Direción: </strong> <?php echo $this->getdireccion(); ?><br>
-                <strong>Dirigido: </strong><?php echo $this->getclasificacion(); ?><br>
+                <strong>Dirección: </strong> <?php echo $this->getdireccion(); ?><br>
+                <strong>Público: </strong><?php echo $this->getclasificacion(); ?><br>
                 <strong>Descripción: </strong> <?php echo $this->getdescripcion(); ?>
          </span>
 
