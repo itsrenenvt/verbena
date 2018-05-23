@@ -146,10 +146,11 @@ class evento{
 
         <div class="Evento">
           <strong class="tipoEvento"><?php echo strtoupper($this->getcategoria()); ?></strong>
-          <p class="nombreEvento"><?php echo $this->getnombre(); ?></p>
+          <p class="nombreEvento"><?php echo substr($this->getnombre(),0,20)."..."; ?></p>
           <p class="hora"><?php echo substr($this->gethrinicio(),0,5)."H - ".substr($this->gethrfin(),0,5)."H" ?></p>
 
           <span class="tooltiptext">
+            <strong ><?php echo strtoupper($this->getnombre()); ?></strong><br>
             <strong>Organiza: </strong> <?php echo $this->getorganizador(); ?><br>
                 <strong>Direción: </strong> <?php echo $this->getdireccion(); ?><br>
                 <strong>Dirigido: </strong><?php echo $this->getclasificacion(); ?><br>
