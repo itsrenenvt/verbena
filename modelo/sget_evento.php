@@ -120,7 +120,7 @@ class evento{
   function insertaevento(){
     setlocale(LC_ALL,"es_ES");
     include 'basedatos/conexion.php';
-    $result=pg_query($conexion, "select * from evento where fecha between '".date("Y")."-".date("m")."-01' and '".date("Y")."-".date("m")."-31' order by fecha asc;");
+    $result=pg_query($conexion, "select * from evento where fecha between '".date("Y-m-01")."' and '".date("Y-m-31")."' order by fecha asc;");
     while ($dato = pg_fetch_array($result)){
 
       $this->setid($dato['id_evento']);
