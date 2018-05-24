@@ -26,7 +26,7 @@
                 <table class="tabla_rutas">
                   <thead>
                     <tr>
-                      <th>Lugar</th>
+                      <th class="lugar">Lugar</th>
                       <th>Información</th>
                     </tr>
                   </thead>

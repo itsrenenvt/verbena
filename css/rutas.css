@@ -24,6 +24,7 @@ body{
 	position:relative;
 	overflow: scroll;
 	height: 30em;
+	width: 25em; /*cambie esto para eliminar el espacio en blanco*/
 }
 
 .fondotablaRutas{
@@ -34,32 +35,55 @@ body{
 }
 .tabla_rutas td, .tabla_rutas th{
     border: 1px solid #ddd;
-    padding: 2px;
+    /* padding: 2px; */
 }
 .tabla_rutas th:nth-child(1){
 	background-color: #FF9E99;
+	width: 15em;
 	/* background-color: #DDFFAB; */
 }
 .tabla_rutas th:nth-child(2){
 	background-color: #DDFFAB;
-
+	width: 5em;
 }
 
 .tabla_rutas th:nth-child(3){
 	background-color: #ABE4FF;
-
+	width: 10em;
 }
 .tabla_rutas th:nth-child(4){
 	background-color: #FFDAAB;
-
+	width: 10em;
 }
 .tabla_rutas th:nth-child(5){
 	background-color: #D9ABFF;
-
+	width: 8em;
 }
 .tabla_rutas tr:hover{
 	background-color: #e7e7e7;
+	width: 8em;
 	/* background-color: #FF9E99; */
+}
+
+.tabla_rutas th:nth-child(1){
+	/* width: 15em; */
+}
+.tabla_rutas th:nth-child(2){
+	/* width: 5em; */
+}
+
+
+.tabla_rutas th:nth-child(3){
+	/* width: 10em; */
+}
+.tabla_rutas th:nth-child(4){
+	/* width: 10em; */
+}
+.tabla_rutas th:nth-child(5){
+	/* width: 8em; */
+}
+.tabla_rutas th:nth-child(6){
+	/* width: 8em; */
 }
 
 .nomCalle{
@@ -68,6 +92,7 @@ body{
 	.tabla_rutas th {
     padding: 12px;
 	}
+
 .tablaRutas, .mapa{
 	float: left;
 }
@@ -95,6 +120,7 @@ body{
 .btn_ruta{
 	background-color: #f0e00d;
 	padding: 10px;
+	margin: 0;
 	height: 20%;
 	border: none;
 	border-bottom: solid #b4a80a .2rem;
@@ -103,28 +129,10 @@ body{
 	outline: none;
 	border-radius: 6px;
 	font-weight: bold;
+
 }
 
 .btn_ruta:hover{
 	background-color: #c7ba0a;
 	border-bottom: solid #918807 .2rem;
-}
-
-.tabla_rutas th:nth-child(1){
-	width: 10em;
-}
-.tabla_rutas th:nth-child(2){
-	width: 5em;
-}
-.tabla_rutas th:nth-child(3){
-	width: 10em;
-}
-.tabla_rutas th:nth-child(4){
-	width: 10em;
-}
-.tabla_rutas th:nth-child(5){
-	width: 8em;
-}
-.tabla_rutas th:nth-child(6){
-	width: 8em;
 }
