@@ -154,6 +154,10 @@ body{
   border-radius: 6px;
   font-weight: bold;
 }
+.btn-enviar:hover{
+	background-color: #c7ba0a;
+	border-bottom: solid #918807 .2rem;
+}
 
 .btn-enviar, .btn-cancelar, .btn-agregar{
   position: relative;
@@ -175,17 +179,13 @@ body{
   font-weight: bold;
 	/* margin-left: 20px; */
 }
-.btn-enviar:hover{
-	background-color: #c7ba0a;
-	border-bottom: solid #918807 .2rem;
+.btn-cancelar:hover{
+	background-color: #c1110c;
+	border-bottom: solid #931200 .2rem;
 }
 .btn-agregar:hover{
 	background-color: #08952f;
 	border-bottom: solid #055b1c .2rem;
-}
-.btn-cancelar:hover{
-	background-color: #c1110c;
-	border-bottom: solid #931200 .2rem;
 }
 
 /* tabla newsletter */
