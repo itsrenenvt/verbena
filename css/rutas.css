@@ -65,27 +65,6 @@ body{
 	/* background-color: #FF9E99; */
 }
 
-.tabla_rutas th:nth-child(1){
-	/* width: 15em; */
-}
-.tabla_rutas th:nth-child(2){
-	/* width: 5em; */
-}
-
-
-.tabla_rutas th:nth-child(3){
-	/* width: 10em; */
-}
-.tabla_rutas th:nth-child(4){
-	/* width: 10em; */
-}
-.tabla_rutas th:nth-child(5){
-	/* width: 8em; */
-}
-.tabla_rutas th:nth-child(6){
-	/* width: 8em; */
-}
-
 .nomCalle{
 	font-size: 14px;
 }
