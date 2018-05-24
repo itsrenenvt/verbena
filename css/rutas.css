@@ -1,0 +1,18 @@
+
+*{
+	font-family: Montserrat;
+}
+
+body{
+	margin: 0;
+}
+
+.contenedor_rutas{
+	background: url('../img/img_ruta.jpg');
+	background-attachment: fixed;
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 100vh;
+}

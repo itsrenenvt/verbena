@@ -10,7 +10,7 @@ body{
 .marco_portada{
 	position: fixed;
 	/* position: absolute; */
-	background: url('../img/img_verbena8.jpg');
+	background: url('../img/header_verbena.jpg');
 	background-size: cover;
 	background-position: center;
 	width: 100%;

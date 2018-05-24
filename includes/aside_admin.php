@@ -18,7 +18,7 @@
     ?>
 
       <div class="marco_portada">
-        <h1>VERBENA DE LA BUENA</h1>
+        <!-- <h1>VERBENA DE LA BUENA</h1> -->
       </div>
 
     <aside class="caja_izq">

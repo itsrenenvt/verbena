@@ -130,7 +130,7 @@
                 $objGaleria->sethtml($dato["html_instagram"]);
                 ?>
                 <tr>
-                  <td><?php echo $objGaleria->getid() ?></td>
+                  <td><?php echo $objGaleria->getid(); ?></td>
                   <td><?php echo substr ($objGaleria->gethtmlformulario(),0,60) ?></td>
                   <td><input type="button" name="" class="btn-enviar" id="btn-enviar" value="Editar" onClick="javascript:mostrar_imagen('<?php echo $objGaleria->gethtml(); ?>');txtid.value='<?php echo $objGaleria->getid() ?>';txtope.value='m';txthtmlinsta.value='<?php echo $objGaleria->gethtmlformulario(); ?>';"></td>
                 </tr>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="js/editor.js" charset="utf-8"></script>
     <script src="js/resena.js" charset="utf-8"></script>
@@ -69,14 +69,12 @@
 
                   <div class="form-group">
                     <textarea class="texto_del_area" id="txt-content" name="txtcontenido" <?php echo $editable ?> > </textarea>
-
-                    <script type="text/javascript">
-                    $(document).ready(function() {
-                        $('#txt-content').Editor('setText', ['<?php echo $objReseña->getcontenido(); ?>']);
-                    });
-                    </script>
-
                   </div>
+                  <script type="text/javascript">
+                  $(document).ready(function() {
+                    $('#txt-content').Editor('setText', ['<?php echo $objReseña->getcontenido(); ?>']);
+                  });
+                  </script>
 
                   <div class="input_btm_box">
                     <input type="hidden" name="txtope_crud" value="<?php echo $clv_ope?>">

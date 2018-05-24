@@ -14,6 +14,9 @@
        include 'includes/header.php';
       ?>
 
+      <div class="contenedor_rutas">
+
+      </div>
 
       <?php
       include 'includes/footer.php';

@@ -58,12 +58,13 @@
 
               ?>
               <tr>
-                <td><?php echo $objReseña->getid() ?></td>
-                <td><?php echo $objReseña->getautor() ?></td>
-                <td><?php echo $objReseña->gettitulo() ?></td>
-                <td><?php echo $objReseña->getcontenido() ?></td>
-                <td><?php echo $objReseña->getfechapub() ?></td>
-                <td><?php echo $objReseña->gethorapub() ?></td>
+                <td><?php echo $objReseña->getid(); ?></td>
+                <td><?php echo $objReseña->getautor(); ?></td>
+                <td><?php echo $objReseña->gettitulo(); ?></td>
+                <!-- html_entity_decode -->
+                <td><?php echo substr(strip_tags($objReseña->getcontenido()),0,70)."..."; ?></td>
+                <td><?php echo $objReseña->getfechapub(); ?></td>
+                <td><?php echo $objReseña->gethorapub(); ?></td>
                 <td><input type="submit" name="" class="btn-enviar" id="btn-modificar" value="Modificar" onClick="form_reseña.action='form_reseña.php';txtope.value='m';txtid.value='<?php echo $objReseña->getid() ?>';colocatexto();"></td>
                 <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_reseña.action='form_reseña.php';txtope.value='e';txtid.value='<?php echo $objReseña->getid() ?>'"></td>
               </tr>
