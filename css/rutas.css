@@ -7,7 +7,7 @@ body{
 	margin: 0;
 }
 
-.seccion_2{
+.seccion_1{
 	background: url('../img/img_ruta.jpg');
 	background-attachment: fixed;
 	padding: 50px 100px;
@@ -15,6 +15,21 @@ body{
 	background-position: center;
 	text-align: center;
 	height: 100vh;
+}
+
+.seccion_1 img{
+	width: 30em;
+	margin-top: 10%;
+}
+
+.seccion_2{
+	background: url('../img/img_ruta2.jpg');
+	background-attachment: fixed;
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 665px;
 }
 
 .contenedorRuta{

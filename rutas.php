@@ -15,6 +15,9 @@
        include_once 'modelo/sget_ruta.php';
        include 'basedatos/conexion.php';
       ?>
+      <div class="seccion_1">
+        <img src="img/rutas.svg" alt="">
+      </div>
 
       <div class="seccion_2">
         <div class="contenedorRuta">

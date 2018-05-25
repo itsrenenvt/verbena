@@ -28,9 +28,11 @@
           <div class="carousel-item active" style="height: 100vh">
             <img class="d-block w-100" src="img/img_verbena4.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-              <h1>LUNES VERBUENO</h1>
-              <p> Es la bonita costumbre que les venimos manejando, esto no es sobre religión es más bien de acercarnos a la verbena de la calle.
-                En los atrios puedes encontrar pan de feria, de burro, nieves, gorditas de nata... </p>
+              <img src="img/cartelera.svg" alt="" class="imgCartelera">
+              <p> Sabemos que en nuestra región pasan muchas cosas bonitas por lo que es difícil seguirles la pista, así que ven y
+                descubre nuestra humilde cartelera. Surge como propuesta para que andes siempre enterado y no te vuelvas a perder
+                cualquiera que sea tu tipo de evento, aquí encontrarás T-O-D-O-S.
+                Somos una comunidad en constante comunicación para no perder ni un detalle.</p>
             </div>
           </div>
           <div class="carousel-item" style="height: 100vh">

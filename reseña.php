@@ -16,12 +16,13 @@
 
 
     <div class="seccion_1">
+      <img src="img/reseña.svg" alt="">
     </div>
 
     <div class="seccion_2">
 
       <div class="headReseña">
-        <p>PASE USTED</p>
+        <img src="img/reseña.svg" alt="">
       </div>
 
       <div class="contenedor">

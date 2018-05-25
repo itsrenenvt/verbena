@@ -18,6 +18,40 @@ body{
 	width: 100%;
 }
 
+.seccion_1 img{
+	width: 30em;
+	margin-top: 10%;
+}
+
+.seccion_2 .headReseña img{
+	width: 15em;
+	margin-top: 35%;
+	margin-bottom: 10%;
+}
+
+.seccion_1 p{
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	/* margin-top: 2px; */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.textoResena_izq{
+	width: 15em;
+	height: 15em;
+	/* border: 3px solid #555; */
+	border-radius: -5em;
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
 .seccion_2{
 	background: url('../img/img_verbena9.jpg');
 	background-attachment: fixed;

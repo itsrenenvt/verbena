@@ -190,6 +190,10 @@ body{
 	font-weight: bold;
 	text-shadow: black 0.1em 0.1em 0.2em
 }
+
+.slide_carrusel .imgCartelera{
+	width: 30em;
+}
 .slide_carrusel p{
 	font-size: 1.1em;
 	font-weight: bold;
