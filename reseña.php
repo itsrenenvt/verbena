@@ -22,7 +22,8 @@
     <div class="seccion_2">
 
       <div class="headReseña">
-        <img src="img/reseña.svg" alt="">
+        <!-- <img src="img/reseña.svg" alt=""> -->
+        <p>¡HOLA! DICEN POR AHÍ...</p>
       </div>
 
       <div class="contenedor">

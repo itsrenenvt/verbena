@@ -70,8 +70,8 @@ body{
 
 .headReseña{
 	border-radius: .5em;
-	width: 15em;
-	margin-left: 40%;
+	width: 60em;
+	margin-left: 14%;
 }
 
 .headReseña p{
@@ -79,7 +79,7 @@ body{
 	font-size: 4em;
 	font-weight: bold;
 	/* margin-top: 2px; */
-	padding-top: 5px;
+	padding-top: 1.5em;
 	padding-bottom: 5px;
 	text-shadow: black 0.1em 0.1em 0.2em
 }

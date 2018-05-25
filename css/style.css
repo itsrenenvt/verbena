@@ -173,20 +173,26 @@ body{
 }
 
 .headImg p{
-	color: white;
+	/* color: white;
 	font-size: 40px;
 	font-weight: bold;
 	margin-top: 2px;
 	padding-top: 5px;
+	padding-bottom: 5px; */
+	color: white;
+	font-size: 4em;
+	font-weight: bold;
+	padding-top: 5px;
 	padding-bottom: 5px;
+	text-shadow: black 0.1em 0.1em 0.2em
 }
 
 .headImg{
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	border-radius: .5em;
 	width: 15em;
 	margin-left: 40%;
-	margin-top: 4%;
+	/* margin-top: 4%; */
 }
 
 .cuadroInsta img{
