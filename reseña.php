@@ -23,7 +23,7 @@
 
       <div class="headReseña">
         <!-- <img src="img/reseña.svg" alt=""> -->
-        <p>¡HOLA! DICEN POR AHÍ...</p>
+        <p>TACO DE OJO</p>
       </div>
 
       <div class="contenedor">
