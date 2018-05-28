@@ -147,9 +147,11 @@ body{
 .itemReseña:nth-child(odd) details{
 	background-color: #FEE778;
 }
+
 .itemReseña:nth-child(even) details{
 	background-color: #94ff95;
 }
+
 .itemReseña summary{
 	outline: none;
 	color: #4b4b4b;

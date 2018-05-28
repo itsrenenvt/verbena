@@ -83,7 +83,6 @@
 
               <label class="label_seis" for="srcimagen"><i class="fas fa-image"></i></label>
               <input class="input_ancho" type="file" name="srcimagen" <?php echo $editable ?> >
-              <!-- <img src="img/shoot_verbena.png" alt="" id="imgshoot"> -->
 
             </div>
 
