@@ -4,6 +4,10 @@
 
 body{
 	margin: 0;
+	background: url('../img/bosque.svg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
 }
 
 .btn-enviar{
@@ -55,10 +59,10 @@ body{
 }
 
 .fondo_agrega_producto{
-  background: url('../img/img_verbena6.jpg');
+  /* background: url('../img/img_verbena6.jpg');
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: center;
+	background-position: center; */
 	text-align: justify;
 	height: 100vh;
 }
@@ -66,7 +70,7 @@ body{
 .contenedor_form_producto{
   /* margin: auto; */
   position: absolute;
-  top: 28%;
+  top: 33%;
   left: 32%;
   width: 40em;
   height: 19em;
