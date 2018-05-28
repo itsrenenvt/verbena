@@ -15,7 +15,7 @@ body{
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	height: 100vh;
+	height: 690px;
 }
 
 .headObra{
@@ -42,7 +42,7 @@ body{
 .item-obra{
   background-color: white;
   width: 150px;
-  height: 210px;
+  height: 235px;
   border-radius: 5px;
   text-align: center;
 
@@ -51,26 +51,25 @@ body{
 }
 
 .item-obra img{
-	/* margin-left: 20px; */
 	width: 150px;
 	height: 150px;
 	border-radius: 5px;
 	background-color: white;
-	/* margin-bottom: 1em; */
 	padding: 5px;
-  /* margin-bottom: 5px; */
-	/* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
-}
-
-.item-obra img:hover{
-	/* transform: scaleX(1.1) scaleY(1.1); */
 }
 
 .item-obra:hover{
   transform: scaleX(1.1) scaleY(1.1);
 }
 
-.item-obra p{
+.nombre{
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+  margin-bottom: 2px;
+}
+
+.precio{
   font-size: 16px;
   color: #000;
   font-weight: bold;
@@ -78,14 +77,11 @@ body{
   margin-bottom: 2px;
 }
 
-.item-obra button:nth-child(4){
+.add{
   background-color: #13cb74;
-
-  /* padding: 5px; */
   padding-top: 3px;
-
   margin: -2.3px;
-  height: 15%;
+  height: 12%;
   border: none;
   border-bottom: solid #00a633 .2rem;
   transition: all .5s;
@@ -96,12 +92,12 @@ body{
   border-radius: 6px;
   font-weight: bold;
 }
-.item-obra button:nth-child(3){
+.info{
   background-color: #0073eb;
   padding-top: 3px;
   margin: -2.3px;
   margin-right: 3px;
-  height: 15%;
+  height: 12%;
   border: none;
   border-bottom: solid #0152a7 .2rem;
   transition: all .5s;
@@ -113,16 +109,60 @@ body{
   font-weight: bold;
 }
 
-.item-obra button:nth-child(4):hover{
+.add:hover{
   background-color: #0fa25c;
 	border-bottom: solid #05822b .2rem;
 }
 
-.item-obra button:nth-child(3):hover{
+.info:hover{
   background-color: #0152a7;
 	border-bottom: solid #003e80 .2rem;
 }
 
 .item-obra i{
   color: white;
+}
+
+.obra_box{
+	margin-top: 4.5em;
+	background-color: white;
+	height: 30em;
+	width: 60em;
+
+	margin-left: 6em;
+	border-radius: .5em;
+}
+.info_box{
+	margin-left: 4em;
+	float: left;
+}
+
+.nombre_obra{
+	margin-top: 4.5em;
+	text-align: center;
+	width: 25em;
+	border: 3px;
+	border-style: solid;
+	border-color: rgba(103, 103, 103, 0.5);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	/* background-color: red; */
+}
+
+.datos_obra{
+	padding-top: 2em;
+	text-align: justify;
+}
+.img img{
+	float: left;
+	margin-left: 30px;
+	margin-top: 2.5em;
+	width: 25em;
+	height: 25em;
+	border-radius: 5px;
+	background-color: white;
+	margin-bottom: 1em;
+	padding: 5px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }

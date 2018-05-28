@@ -76,6 +76,7 @@ class obras{
       $this->setcategoria($dato['categoria']);
       $this->setdescripcion($dato['descripcion']);
       $this->setprecio($dato['precio']);
+      $this->setsrcimg($dato['imagen']);
     }
     pg_close($conexion);
   }
@@ -97,15 +98,59 @@ class obras{
       <div class="item-obra">
 
         <img src="img/obras/<?php echo $this->getsrcimg(); ?>" alt="">
-        <p><?php echo "$ ".$this->getprecio(); ?></p>
-        <button type="button" name="button"><i class="fas fa-info"></i></button>
-        <button type="button" name="button"><i class="fas fa-cart-plus"></i></button>
+        <p class="nombre"><?php echo $this->getnombre(); ?></p>
+        <p class="precio"><?php echo "$ ".$this->getprecio(); ?></p>
+        <button type="button" name="button" class="info" onclick="location='info_obra.php?id=<?php echo $this->getid(); ?>'"><i class="fas fa-info"></i></button>
+        <button type="button" name="button" class="add"><i class="fas fa-cart-plus"></i></button>
+
+        <script type="text/javascript">
+
+        </script>
 
       </div>
       <?php
-      
+
     }pg_close($conexion);
   }
+
+  function info_obra($id_ope){
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, 'select * from obra where id_obra ='.$id_ope);
+    while ($dato = pg_fetch_array($result)){
+
+      $this->setid($dato['id_obra']);
+      $this->setnombre($dato['nombre']);
+      $this->setartista($dato['artista']);
+      $this->setcategoria($dato['categoria']);
+      $this->setdescripcion($dato['descripcion']);
+      $this->setprecio($dato['precio']);
+      $this->setsrcimg($dato['imagen']);
+    }pg_close($conexion);
+    ?>
+
+    <div class="img">
+      <img src="img/obras/<?php echo $this->getsrcimg(); ?>" alt="">
+    </div>
+
+    <div class="info_box">
+      <div class="nombre_obra">
+        <h3><?php echo $this->getnombre();?></h3>
+      </div>
+
+      <div class="datos_obra">
+        <p><strong>Precio: </strong><?php echo "$ ".$this->getprecio(); ?></p>
+        <p><strong>Artista: </strong><?php  echo $this->getartista();?></p>
+        <p><strong>Categoría: </strong><?php  echo $this->getcategoria();?></p>
+        <p><strong>Descripción: </strong><?php  echo $this->getdescripcion();?></p>
+      </div>
+
+      <button type="button" name="button" class="add"><i class="fas fa-cart-plus"></i></button>
+  </div>
+    <?php
+
+  }
+
+
 
 
 }

@@ -25,7 +25,8 @@
           <div class="contenido_reseña">
             <?php
             $id = $_GET['id'];
-            echo $leeReseña->leer($id); ?>
+            $leeReseña->leer($id);
+            ?>
           </div>
         </section>
 
