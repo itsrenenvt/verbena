@@ -16,7 +16,9 @@
        include 'basedatos/conexion.php';
       ?>
       <div class="seccion_1">
-        <img src="img/rutas.svg" alt="">
+        
+          <img src="img/rutas.svg" alt="">
+
       </div>
 
       <div class="seccion_2">

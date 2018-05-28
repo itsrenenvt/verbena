@@ -29,7 +29,12 @@
             <?php
             session_start();
             $ruta="";
-            if (!empty($_SESSION["usuario"])) { $ruta ="inicio.php"; } else { $ruta = "login.php"; }
+            $carrito="";
+            if (!empty($_SESSION["usuario"])) {
+              $ruta ="inicio.php";
+            } else {
+              $ruta = "login.php";
+            }
              ?>
 
           <div class="d-flex flex-row justify-content-center hover" id="btn_icon">

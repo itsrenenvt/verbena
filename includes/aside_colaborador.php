@@ -29,7 +29,7 @@
           <div class="img_perfil"></div>
           <div class="usuario">
             <!-- <label class="label_img">COLABORADOR</label> -->
-            <p class="label_img">COLABORADOR</p>
+            <p class="label_img"><a href="inicio.php">COLABORADOR</a></p>
           </div>
           <div class="estadistica">
 
@@ -49,12 +49,12 @@
 
           <nav>
             <ul>
-              <li><a href="index.php">Inicio</a></li>
-              <li><a href="tabla_cliente.php">Clientes</a></li>
-              <li><a href="tabla_evento.php">Eventos</a></li>
-              <li><a href="tabla_resena.php">Reseña</a></li>
-              <li><a href="tabla_rutas.php">Rutas</a></li>
-              <li><a href="tabla_obras.php">Tienda</a></li>
+              <li><a href="index.php">INICIO</a></li>
+              <li><a href="tabla_cliente.php">CLIENTES</a></li>
+              <li><a href="tabla_evento.php">EVENTOS</a></li>
+              <li><a href="tabla_resena.php">RESEÑA</a></li>
+              <li><a href="tabla_rutas.php">RUTAS</a></li>
+              <li><a href="tabla_obras.php">TIENDA</a></li>
             </ul>
           </nav>
           <a class="cerrar" href="logout.php">Cerrar Sesi&oacute;n</a>

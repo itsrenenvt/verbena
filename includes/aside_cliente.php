@@ -24,7 +24,7 @@
           <div class="img_perfil"></div>
           <div class="usuario">
             <!-- <label class="label_img">CLIENTE</label> -->
-            <p class="label_img">CLIENTE</p>
+            <p class="label_img"><a href="inicio.php">CLIENTE</a></p>
           </div>
           <div class="estadistica">
             <div class="estadistica_cliente">
@@ -55,15 +55,15 @@
           <nav>
 
             <ul>
-              <li><a href="form_cliente.php">Perfil</a></li>
-              <li><a href="index.php">Inicio</a></li>
+              <li><a href="form_cliente.php">PERFIL</a></li>
+              <li><a href="index.php">INICIO</a></li>
               <!-- <li><a href="tabla_cliente.php">Clientes</a></li> -->
               <!-- <li><a href="agrega_colaborador.php">Colaboradores</a></li> -->
-              <li><a href="cartelera.php">Cartelera</a></li>
+              <li><a href="cartelera.php">CARTELERA</a></li>
               <!-- <li><a href="agrega_reseña.php">Reseña</a></li> -->
-              <li><a href="rutas.php">Rutas</a></li>
-              <li><a href="tienda.php">Tienda</a></li>
-              <li><a href="carrito.php">Carrito</a></li>
+              <li><a href="rutas.php">RUTAS</a></li>
+              <li><a href="tienda.php">TIENDA</a></li>
+              <li><a href="carrito.php">CARRITO</a></li>
             </ul>
           </nav>
           <a class="cerrar" href="logout.php">Cerrar Sesi&oacute;n</a>

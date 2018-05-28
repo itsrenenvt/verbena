@@ -4,7 +4,9 @@
 
 body{
 	margin: 0;
-	background: url('../img/img_verbena6.jpg');
+	/* background: url('../img/img_verbena6.jpg'); */
+	background: url('../img/bosque.svg');
+
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -19,7 +21,11 @@ body{
 	text-align: center;
 	height: 30em;
 	border-radius: .5em;
-	background-color: white;
+	/* background-color: white; */
+	background: url('../img/form_fondo.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .contenedor_tabla{

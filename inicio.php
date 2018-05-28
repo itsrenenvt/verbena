@@ -23,7 +23,7 @@
 
       <div class="fondo_inicio">
         <div class="contendedor">
-          <h2>Bienvenido</h2>
+          <!-- <h2>Bienvenido</h2> -->
           <h1 class="nombreuser"> <?php echo $username ?></h1>
           <!-- <h2>VERBENA DE LA BUENA</h2> -->
         </div>

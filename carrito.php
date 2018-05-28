@@ -10,13 +10,22 @@
   </head>
   <body>
 
+
       <?php
-       include 'header.php';
+       include_once("includes/header.php");
+       if (!empty($_SESSION["usuario"])) {
+         //aquí incluir la vista cuando si haya sesión
+         echo "aqui te apareceran cositas chidas";
+       }else{
+         //aquí incluir un login con diseño de carrito
+         echo "inicia sesión";
+       }
       ?>
 
+      <!-- <h1>En construcción</h1> -->
 
       <?php
-      include 'footer.html';
+      include_once("includes/footer.php");
       ?>
 
 
