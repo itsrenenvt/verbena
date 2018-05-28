@@ -33,10 +33,10 @@ body{
 }
 
 .label_uno{
-	padding-top: 3px;
-	padding-left: 8px;
-	padding-right:8px;
-	padding-bottom: 3px;
+	padding-top: 8px;
+	padding-left: 11px;
+	padding-right:11px;
+	padding-bottom: 8px;
 }
 
 .formulario input[type="text"]{
@@ -109,6 +109,7 @@ body{
 	background-color: white;
 	margin-bottom: -1em;
 	padding-bottom: .8em;
+	border-radius: .5em .5em 0 0;
 }
 
 .input_btm_box{
@@ -118,6 +119,8 @@ body{
 	padding-top: 1em;
 	padding-bottom: 1em;
 	text-align: center;
+
+	border-radius: 0 0 .5em .5em ;
 }
 
 .fondo_reseña{
@@ -125,7 +128,7 @@ body{
 
 .editor_texto_reseña{
 	position: absolute;
-	top: 15%;
+	top: 25%;
 	left: 20.5%;
 	/* width: 80%; */
 	/* border-style: solid;
