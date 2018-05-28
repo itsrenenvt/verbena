@@ -1,0 +1,128 @@
+
+*{
+	font-family: Montserrat;
+}
+
+body{
+	margin: 0;
+}
+
+.seccion_1{
+  /* background: url('../img/img_verbena1.jpg'); */
+	background: url('../img/img_verbena3.jpg');
+	background-attachment: fixed;
+	padding: 50px 100px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 100vh;
+}
+
+.headObra{
+	color: white;
+	font-size: 4em;
+	font-weight: bold;
+	/* margin-top: 2px; */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.contenedor_obras{
+	margin-left: 1.5em;
+}
+
+.cajaObra{
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -3em;
+}
+
+.item-obra{
+  background-color: white;
+  width: 150px;
+  height: 210px;
+  border-radius: 5px;
+  text-align: center;
+
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.item-obra img{
+	/* margin-left: 20px; */
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	background-color: white;
+	/* margin-bottom: 1em; */
+	padding: 5px;
+  /* margin-bottom: 5px; */
+	/* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
+}
+
+.item-obra img:hover{
+	/* transform: scaleX(1.1) scaleY(1.1); */
+}
+
+.item-obra:hover{
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.item-obra p{
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.item-obra button:nth-child(4){
+  background-color: #13cb74;
+
+  /* padding: 5px; */
+  padding-top: 3px;
+
+  margin: -2.3px;
+  height: 15%;
+  border: none;
+  border-bottom: solid #00a633 .2rem;
+  transition: all .5s;
+  width: 100%;
+  max-width: 45px;
+  color: rgba(#13cb74, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.item-obra button:nth-child(3){
+  background-color: #0073eb;
+  padding-top: 3px;
+  margin: -2.3px;
+  margin-right: 3px;
+  height: 15%;
+  border: none;
+  border-bottom: solid #0152a7 .2rem;
+  transition: all .5s;
+  width: 100%;
+  max-width: 45px;
+  color: rgba(#13cb74, 0.20);
+	outline: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.item-obra button:nth-child(4):hover{
+  background-color: #0fa25c;
+	border-bottom: solid #05822b .2rem;
+}
+
+.item-obra button:nth-child(3):hover{
+  background-color: #0152a7;
+	border-bottom: solid #003e80 .2rem;
+}
+
+.item-obra i{
+  color: white;
+}

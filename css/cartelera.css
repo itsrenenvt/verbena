@@ -50,10 +50,9 @@ body{
 }
 
 .contenedorEvento{
-	width: 100%;
+	/* width: 100%;
 	height: 40.5em;
-	border-radius: 1em;
-
+	border-radius: 1em; */
 }
 
 .cajaEvento{

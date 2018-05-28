@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">  <!-- Google web font "Open Sans" -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/agrega_producto.css">
     <link rel="icon" href="img/verbena.ico">
     <title>e-commerce</title>
@@ -44,21 +44,21 @@
             }
 
              ?>
-          <form name="obras" class="" action="" method="post">
+          <form name="obras" class="" action="" method="post" enctype="multipart/form-data">
 
             <div class="input_box">
               <label class="label_uno" for="txtnombreobra"><i class="fas fa-shopping-bag"></i></label>
-              <input class="input_ancho" type="text" name="txtnombreobra" value="<?php echo $objObra->getnombre(); ?>" placeholder="Nombre" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txtnombreobra" value="<?php echo $objObra->getnombre(); ?>" placeholder="Nombre" required <?php echo $editable ?>>
             </div>
 
             <div class="input_box">
 
               <label class="label_dos" for="txtartista"><i class="fas fa-coffee"></i></label>
-              <input class="input_ancho" type="text" name="txtartista" value="<?php echo $objObra->getartista(); ?>" placeholder="Artista" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txtartista" value="<?php echo $objObra->getartista(); ?>" placeholder="Artista" required <?php echo $editable ?>>
 
               <label class="label_tres" for="txtcategoria"><i class="fas fa-folder-open"></i></label>
               <!-- <input class="input_ancho" type="text" name="nombre_evento" value="" placeholder="Categoría"> -->
-              <select class="categoria" name="txtcategoria" >
+              <select class="categoria" name="txtcategoria" required>
                 <option value="<?php echo $objObra->getcategoria(); ?>"><?php echo $objObra->getcategoria(); ?></option>
                 <option value="Decoración" <?php echo $editable ?>>Decoración</option>
                 <option value="Ropa" <?php echo $editable ?>>Ropa</option>
@@ -67,8 +67,8 @@
                 <option value="Otro" <?php echo $editable ?>>Otro</option>
               </select>
 
-              <label class="label_cuatro" for="txtprecio"><i class="fas fa-fire"></i></label>
-              <input class="input_ancho" type="text" name="txtprecio" value="<?php echo $objObra->getprecio(); ?>" placeholder="Precio" <?php echo $editable ?>>
+              <label class="label_cuatro" for="txtprecio"><i class="fas fa-dollar-sign"></i></label>
+              <input class="input_ancho" type="text" name="txtprecio" value="<?php echo $objObra->getprecio(); ?>" placeholder="Precio" required <?php echo $editable ?>>
 
             </div>
 
@@ -76,6 +76,14 @@
 
               <label class="label_cinco" for="txtdescripcion"><i class="fas fa-edit"></i></label>
               <input class="input_ancho" type="text" name="txtdescripcion" value="<?php echo $objObra->getdescripcion(); ?>" placeholder="Descripción" <?php echo $editable ?>>
+
+            </div>
+
+            <div class="input_box">
+
+              <label class="label_seis" for="srcimagen"><i class="fas fa-image"></i></label>
+              <input class="input_ancho" type="file" name="srcimagen"  <?php echo $editable ?> >
+              <!-- <img src="img/shoot_verbena.png" alt="" id="imgshoot"> -->
 
             </div>
 

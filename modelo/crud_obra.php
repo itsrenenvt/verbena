@@ -3,11 +3,19 @@
 include_once 'sget_obras.php';
 $d_obras = new obras();
 
+$carpeta ="../img/obras/";
+opendir($carpeta);
+$destino = $carpeta.$_FILES['srcimagen']['name'];
+copy($_FILES['srcimagen']['tmp_name'],$destino);
+$nombre = $_FILES['srcimagen']['name'];
+
+
 $d_obras->setnombre(isset ($_POST["txtnombreobra"]) ? $_POST["txtnombreobra"] : "");
 $d_obras->setartista(isset ($_POST["txtartista"]) ? $_POST["txtartista"] : "");
 $d_obras->setcategoria(isset($_POST["txtcategoria"]) ? $_POST["txtcategoria"] : "");
 $d_obras->setprecio(isset($_POST["txtprecio"]) ? $_POST["txtprecio"] : "");
 $d_obras->setdescripcion(isset($_POST["txtdescripcion"]) ? $_POST["txtdescripcion"] : "");
+$d_obras->setsrcimg(isset($nombre) ? $nombre : "");
 
 session_start();
 if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
@@ -79,7 +87,8 @@ function registroobra(){
            .$d_obras->getartista()."','"
            .$d_obras->getcategoria()."','"
            .$d_obras->getdescripcion()."','"
-           .$d_obras->getprecio()."')");
+           .$d_obras->getprecio()."','"
+           .$d_obras->getsrcimg()."')");
 
 pg_close($conexion);
 
@@ -115,7 +124,8 @@ function modificaobra(){
                          artista = '".$d_obras->getartista()."',
                          categoria = '".$d_obras->getcategoria()."',
                          descripcion = '".$d_obras->getdescripcion()."',
-                         precio = '".$d_obras->getprecio()."'
+                         precio = '".$d_obras->getrecio()."',
+                         imagen = '".$d_obras->getsrcimg()."'
 
                          where id_obra = ".$modifica_id);
     pg_close($conexion);

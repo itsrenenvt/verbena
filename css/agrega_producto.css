@@ -68,8 +68,8 @@ body{
   position: absolute;
   top: 28%;
   left: 32%;
-  width: 50%;
-  height: 15em;
+  width: 40em;
+  height: 19em;
   background-color: rgb(255, 255, 255);
   border-radius: 1em;
   padding: 2em;
@@ -91,6 +91,22 @@ body{
 
 }
 
+.formulario input[type="file"]{
+	position: relative;
+  margin-top: 1.6em;
+
+  border: none;
+  border-radius: .5em;
+	outline: none;
+	height: 40px;
+	color: #262626;
+  /* background-color: rgba(79, 79, 79, 0.20); */
+
+	font-size: 16px;
+	padding-left: 3px;
+	width: 35em;
+}
+
 .formulario input[type="text"]{
   padding-right: 20px;
 }
@@ -104,11 +120,6 @@ body{
   position: relative;
   background-color: rgb(249, 244, 129);
   border-radius: .5em;
-  /* font-weight: bold; */
-	/* padding: .72em;
-	padding-right: 1em;
-  font-weight: 500;
-  margin-right: .3em; */
 }
 
 /* .label_uno */
@@ -120,12 +131,21 @@ body{
 	padding-bottom: 11px;
 }
 
-.label_dos,.label_tres{
+.label_dos{
 	margin-right: .3em;
 	padding-top: 13px;
-	padding-left: 9px;
-	padding-right:9px;
+	padding-left: 6px;
+	padding-right:6px;
 	padding-bottom: 11px;
+
+	}
+
+.label_tres{
+		margin-right: .3em;
+		padding-top: 13px;
+		padding-left: 8px;
+		padding-right:8px;
+		padding-bottom: 11px;
 }
 
 .label_cuatro{
@@ -140,7 +160,15 @@ body{
 	margin-right: .3em;
 	padding-top: 13px;
 	padding-left: 10px;
-	padding-right:10px;
+	padding-right:5px;
+	padding-bottom: 11px;
+}
+
+.label_seis{
+	margin-right: .3em;
+	padding-top: 13px;
+	padding-left: 10px;
+	padding-right:8px;
 	padding-bottom: 11px;
 }
 
@@ -148,8 +176,9 @@ body{
   width: 83%;
 }
 .input_box:nth-child(2) input{
-	width: 15.8%;
+	width: 15.2%;
 }
+
 .input_box:nth-child(2) select{
 	margin-top: 1em;
 	margin-right: .8em;
@@ -176,9 +205,12 @@ body{
 }
 
 .input_box:nth-child(3) input{
-	width: 83%;
+	width: 82%;
 }
 
+.input_box:nth-child(4){
+	float: left;
+}
 
 
 .input_box:nth-child(2) input,
@@ -192,4 +224,15 @@ i{
 	color: #000000;
 	font-style: normal;
 	font-family: FontAwesome;
+}
+
+
+.input_box img{
+	width: 190px;
+	height: 190px;
+	border-radius: 10px;
+	margin-top: 0;
+	padding: 5px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+	/* margin-bottom: 0; */
 }

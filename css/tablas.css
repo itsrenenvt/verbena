@@ -109,6 +109,7 @@ body{
 
 .contenedor_tabla .tabla_clientes th:nth-child(1){
 	background-color: #FF9E99;
+	width: 5em;
 	/* background-color: #DDFFAB; */
 }
 
@@ -118,6 +119,12 @@ body{
 	/* background-color: #ABE8CE; */
 	background-color: #ABE4FF;
 }
+.contenedor_tabla .tabla_clientes th:nth-child(2){width: 8em;}
+.contenedor_tabla .tabla_clientes th:nth-child(3){width: 13.5em;}
+.contenedor_tabla .tabla_clientes th:nth-child(4){width: 14em;}
+.contenedor_tabla .tabla_clientes th:nth-child(5){width: 7.5em;}
+.contenedor_tabla .tabla_clientes th:nth-child(6){width: 9.6em;}
+.contenedor_tabla .tabla_clientes th:nth-child(7){width: 12em;}
 
 .contenedor_tabla .tabla_clientes th:nth-child(5),
 .contenedor_tabla .tabla_clientes th:nth-child(6){
