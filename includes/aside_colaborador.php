@@ -26,7 +26,7 @@
     <aside class="caja_izq">
       <div class="caja_fondo">
         <div class="izquierdo">
-          <div class="img_perfil"></div>
+          <div class="img_perfil_colaborador"></div>
           <div class="usuario">
             <!-- <label class="label_img">COLABORADOR</label> -->
             <p class="label_img"><a href="inicio.php">COLABORADOR</a></p>

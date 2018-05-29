@@ -21,7 +21,7 @@
     <aside class="caja_izq">
       <div class="caja_fondo">
         <div class="izquierdo">
-          <div class="img_perfil"></div>
+          <div class="img_perfil_cliente"></div>
           <div class="usuario">
             <!-- <label class="label_img">CLIENTE</label> -->
             <p class="label_img"><a href="inicio.php">CLIENTE</a></p>

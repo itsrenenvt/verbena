@@ -237,8 +237,19 @@ body{
   padding-left: 2em;
 }
 
-.img_perfil{
-  background-image: url(../img/luis.jpg);
+.img_perfil_admin{
+	background-image: url(../img/administrador.svg);
+}
+.img_perfil_colaborador{
+	background-image: url(../img/colaborador.svg);
+}
+.img_perfil_cliente{
+	background-image: url(../img/cliente.svg);
+}
+.img_perfil_admin,
+.img_perfil_colaborador,
+.img_perfil_cliente{
+  /* background-image: url(../img/luis.jpg); */
   margin: auto;
 	margin-bottom: -2em;
 
