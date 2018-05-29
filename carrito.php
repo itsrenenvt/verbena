@@ -12,23 +12,5 @@
   <body>
 
 
-      <?php
-       include_once("includes/header.php");
-       if (!empty($_SESSION["usuario"])) {
-         //aquí incluir la vista cuando si haya sesión
-         header('Location: carrito_tabs.php');
-       }else{
-         //aquí incluir un login con diseño de carrito
-         // header('Location: carrito_login.php');
-       }
-      ?>
-
-      <!-- <h1>En construcción</h1> -->
-
-      <?php
-      include_once("includes/footer.php");
-      ?>
-
-
   </body>
 </html>

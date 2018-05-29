@@ -94,19 +94,16 @@ class obras{
       $this->setprecio($dato['precio']);
       $this->setsrcimg($dato['imagen']);
 
+      $c=0;
       ?>
       <div class="item-obra">
 
         <img src="img/obras/<?php echo $this->getsrcimg(); ?>" alt="">
         <p class="nombre"><?php echo $this->getnombre(); ?></p>
         <p class="precio"><?php echo "$ ".$this->getprecio(); ?></p>
+
         <button type="button" name="button" class="info" onclick="location='info_obra.php?id=<?php echo $this->getid(); ?>'"><i class="fas fa-info"></i></button>
-        <button type="button" name="button" class="add"><i class="fas fa-cart-plus"></i></button>
-
-        <script type="text/javascript">
-
-        </script>
-
+        <button type="button" name="button" class="add" onclick=""><i class="fas fa-cart-plus" ></i></button>
       </div>
       <?php
 

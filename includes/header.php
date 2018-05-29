@@ -32,8 +32,14 @@
             $carrito="";
             if (!empty($_SESSION["usuario"])) {
               $ruta ="inicio.php";
+              $nombre = isset($_SESSION["nombre"]) ? $_SESSION["nombre"] : "";
+              $tipo = isset($_SESSION["usuario"]) ? $_SESSION["usuario"] : "";
+              $rutaimg="img/".$tipo.".svg";
             } else {
               $ruta = "login.php";
+              $rutaimg = "img/usuario.svg";
+              $nombre="Inicie Sesión";
+              $tipo="";
             }
              ?>
 
@@ -41,8 +47,16 @@
             <a href="carrito.php" class="mr-1">
               <img src="img/carrito.svg" width="45" height="45" class="d-inline-block align-top"></a>
 
-            <a href="<?php echo $ruta ?>" class="ml-2" id="user_r">
-              <img src="img/usuario.svg" width="45" height="45" class="d-inline-block align-top"></a>
+
+              <div class="usuario-nombre">
+                <a href="<?php echo $ruta ?>" class="ml-2" id="user_r">
+                  <img src="<?php echo $rutaimg ?>" width="45" height="45" class="d-inline-block align-top"></a>
+
+                  <span class="tooltiptext">
+                    <strong ><?php echo $nombre?></strong><br>
+                    <?php echo $tipo ?>
+                 </span>
+              </div>
           </div>
 
         </div>
