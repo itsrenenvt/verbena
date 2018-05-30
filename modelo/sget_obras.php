@@ -147,8 +147,90 @@ class obras{
 
   }
 
+  function consultacarrito(){
 
+    $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : "";
+    if ($usuario == "cliente") {
+      $usuario="usuario";
+    }
+    include 'basedatos/conexion.php';
+    include_once 'modelo/sget_obras.php';
+    ?>
+    <div class="fondo_tabla">
+      <h2>CARRITO</h2>
+      <div class="contenedor_tabla">
+        <form class="form_carrito" action="" method="post">
+          <input type="hidden" name="txtope">
+          <input type="hidden" name="txtid">
+          <table class="tabla_carrito">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Imágen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th colspan="2">Operaciones</th>
+              </tr>
+            </thead>
+            <?php
+            $result=pg_query($conexion, 'select obra.id_obra, obra.imagen, obra.nombre,obra.descripcion, obra.precio, obra.categoria
+                                         from obra inner join carrito on obra.id_obra = carrito.id_obra
+                                         inner join '.$usuario.' on '.$usuario.'.id_'.$usuario.' = carrito.id_usuario');
+            while ($dato = pg_fetch_array($result)){
 
+              $objObra = new obras();
+
+              $auxid=$dato['id_obra'];
+              $objObra->setid($dato['id_obra']);
+              $objObra->setnombre($dato['nombre']);
+              // $objObra->setartista($dato['artista']);
+              $objObra->setcategoria($dato['categoria']);
+              $objObra->setdescripcion($dato['descripcion']);
+              $objObra->setprecio($dato['precio']);
+              $objObra->setsrcimg($dato['imagen']);
+            ?>
+            <tr>
+              <td><?php echo $objObra->getid() ?></td>
+              <td><img class="img_obra" src="img/obras/<?php echo $objObra->getsrcimg() ?>" alt=""></td>
+              <td><?php echo $objObra->getnombre() ?></td>
+              <td><?php echo $objObra->getdescripcion() ?></td>
+              <td><?php echo "$ ".$objObra->getprecio() ?></td>
+              <td><?php echo $objObra->getcategoria() ?></td>
+              <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Ordenar" onClick="form_obras.action='form_obras.php';txtope.value='m';txtid.value='<?php echo $objObra->getid() ?>'"></td>
+              <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_obras.action='form_obras.php';txtope.value='e';txtid.value='<?php echo $objObra->getid() ?>'"></td>
+            </tr>
+            <?php
+          }
+
+          if (empty($auxid)) {
+            ?>
+            <tr><td colspan="8">NO HAY DATOS</td></tr>
+            <?php
+          }
+          pg_close($conexion);
+            ?>
+
+          </table>
+        </form>
+
+      </div>
+
+    </div>
+    <?php
+  }
+
+  function consultaid($username){
+    $idusuario="";
+    include 'basedatos/conexion.php';
+    $result=pg_query($conexion, "select id_usuario from usuario where usuario = '".$username."'");
+    while ($dato = pg_fetch_array($result)){
+       $idusuario = $dato['id_usuario'];
+    }
+    // return "15011200";
+    return $idusuario;
+  }
 
 }
 ?>

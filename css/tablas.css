@@ -110,7 +110,6 @@ body{
 .contenedor_tabla .tabla_clientes th:nth-child(1){
 	background-color: #FF9E99;
 	width: 5em;
-	/* background-color: #DDFFAB; */
 }
 
 .contenedor_tabla .tabla_clientes th:nth-child(2),

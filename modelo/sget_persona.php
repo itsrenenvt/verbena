@@ -105,7 +105,6 @@ class persona{
     while ($dato = pg_fetch_array($result)){
        $idusuario = $dato['id_usuario'];
     }
-    // return "15011200";
     return $idusuario;
   }
 

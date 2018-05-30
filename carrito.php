@@ -10,7 +10,28 @@
     <title>Carrito</title>
   </head>
   <body>
+    <?php
+
+    session_start();
+    if (!empty($_SESSION["usuario"])) {
+      include_once 'modelo/verifica_sesion.php';
+      include 'modelo/sget_obras.php';
+      $dCarrito = new obras();
+      $dCarrito->consultacarrito();
 
 
+
+    }else{
+      ?>
+      <script type="text/javascript">
+      alert("¡LO SENTIMOS!, PARA VER TU CARRITO DEBES INICIAR SESIÓN.");
+      window.location = 'login.php'
+      </script>
+      <?php
+    }
+
+
+
+     ?>
   </body>
 </html>
