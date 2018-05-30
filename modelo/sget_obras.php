@@ -145,7 +145,8 @@ class obras{
         <p><strong>Descripción: </strong><?php  echo $this->getdescripcion();?></p>
       </div>
 
-      <button type="button" name="button" class="add"><i class="fas fa-cart-plus"></i></button>
+      <button type="submit" name="" class="add" onclick="location='modelo/addcarrito.php?obra=<?php echo $this->getid(); ?>'"><i class="fas fa-cart-plus" ></i></button>
+
   </div>
     <?php
 

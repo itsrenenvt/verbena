@@ -30,7 +30,7 @@
             <div class="estadistica_cliente">
               <?php
               include_once 'basedatos/conexion.php';
-              $result=pg_query($conexion, 'select count (id_usuario) from usuario');
+              $result=pg_query($conexion, 'select count (carrito.id_usuario) from carrito inner join usuario on usuario.id_usuario = carrito.id_usuario');
               while ($dato = pg_fetch_array($result)) {
                 $total_user = $dato["count"];
               }
