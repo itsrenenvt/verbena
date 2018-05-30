@@ -18,9 +18,6 @@
       include 'modelo/sget_obras.php';
       $dCarrito = new obras();
       $dCarrito->consultacarrito();
-
-
-
     }else{
       ?>
       <script type="text/javascript">

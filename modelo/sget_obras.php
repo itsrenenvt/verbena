@@ -98,12 +98,15 @@ class obras{
       ?>
       <div class="item-obra">
 
-        <img src="img/obras/<?php echo $this->getsrcimg(); ?>" alt="">
-        <p class="nombre"><?php echo $this->getnombre(); ?></p>
-        <p class="precio"><?php echo "$ ".$this->getprecio(); ?></p>
 
-        <button type="button" name="button" class="info" onclick="location='info_obra.php?id=<?php echo $this->getid(); ?>'"><i class="fas fa-info"></i></button>
-        <button type="button" name="button" class="add" onclick=""><i class="fas fa-cart-plus" ></i></button>
+          <img src="img/obras/<?php echo $this->getsrcimg(); ?>" alt="">
+          <p class="nombre"><?php echo $this->getnombre(); ?></p>
+          <p class="precio"><?php echo "$ ".$this->getprecio(); ?></p>
+
+          <button type="button" name="button" class="info" onclick="location='info_obra.php?id=<?php echo $this->getid(); ?>'"><i class="fas fa-info"></i></button>
+          <button type="submit" name="" class="add" onclick="location='modelo/addcarrito.php?obra=<?php echo $this->getid(); ?>'"><i class="fas fa-cart-plus" ></i></button>
+
+
       </div>
       <?php
 
@@ -159,9 +162,11 @@ class obras{
     <div class="fondo_tabla">
       <h2>CARRITO</h2>
       <div class="contenedor_tabla">
-        <form class="form_carrito" action="" method="post">
-          <input type="hidden" name="txtope">
-          <input type="hidden" name="txtid">
+        <form name="form_carrito" action="" method="post">
+
+          <input type="hidden" name="txtope_crud">
+          <input type="hidden" name="txtid_crud">
+
           <table class="tabla_carrito">
             <thead>
               <tr>
@@ -198,8 +203,8 @@ class obras{
               <td><?php echo $objObra->getdescripcion() ?></td>
               <td><?php echo "$ ".$objObra->getprecio() ?></td>
               <td><?php echo $objObra->getcategoria() ?></td>
-              <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Ordenar" onClick="form_obras.action='form_obras.php';txtope.value='m';txtid.value='<?php echo $objObra->getid() ?>'"></td>
-              <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_obras.action='form_obras.php';txtope.value='e';txtid.value='<?php echo $objObra->getid() ?>'"></td>
+              <td><input type="submit" name="" class="btn-enviar" id="btn-enviar" value="Ordenar" onClick="form_carrito.action='modelo/addcarrito.php';txtope_crud.value='o';txtid_crud.value='<?php echo $objObra->getid() ?>'"></td>
+              <td><input type="submit" name="" class="btn-cancelar" id="btn-cancelar" value="Eliminar" onClick="form_carrito.action='modelo/addcarrito.php';txtope_crud.value='e';txtid_crud.value='<?php echo $objObra->getid() ?>'"></td>
             </tr>
             <?php
           }
