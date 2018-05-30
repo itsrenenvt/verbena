@@ -79,6 +79,7 @@ class obras{
       $this->setsrcimg($dato['imagen']);
     }
     pg_close($conexion);
+    return $id_ope;
   }
 
   function insertaObra(){

@@ -23,6 +23,7 @@
           <!-- <h3>AGREA UN EVENTO</h3> -->
           <div class="formulario">
             <?php
+            // $username = $_GET['user'];
             try {
               $clv_ope= isset($_POST["txtope"]) ?  $_POST["txtope"] : "m";
               if($clv_ope == "m" || $clv_ope == "e"){
@@ -50,11 +51,11 @@
 
             <div class="input_box">
               <label class="label_uno" for="txtnombre"><i class="fas fa-user"></i></label>
-              <input class="input_ancho" type="text" name="txtnombre" value="<?php echo $objCliente->getnombre(); ?>" placeholder="Nombre(s)" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txtnombre" value="<?php echo $objCliente->getnombre(); ?>" required placeholder="Nombre(s)" <?php echo $editable ?>>
             </div>
             <div class="input_box">
               <label class="label_dos" for="txtapp"><i class="fas fa-id-card"></i></label>
-              <input class="input_ancho" type="text" name="txtapp" value="<?php echo $objCliente->getpaterno(); ?>" placeholder="Apellido Paterno" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txtapp" value="<?php echo $objCliente->getpaterno(); ?>" required placeholder="Apellido Paterno" <?php echo $editable ?>>
             <!-- </div>
             <div class="input_box"> -->
               <label class="label_tres" for="txtapm"><i class="fas fa-id-card"></i></label>
@@ -62,15 +63,15 @@
             </div>
             <div class="input_box">
               <label class="label_cuatro" for="txtusername"><i class="fas fa-user-circle"></i></label>
-              <input class="input_ancho" type="text" name="txtusername" value="<?php echo $objCliente->getusuario(); ?>" placeholder="Nombre de usuario" <?php echo $editable . $edit ?> >
+              <input class="input_ancho" type="text" name="txtusername" value="<?php echo $objCliente->getusuario(); ?>" required placeholder="Nombre de usuario" <?php echo $editable //. $edit ?> >
             <!-- </div>
             <div class="input_box"> -->
               <label class="label_cinco" for="txtpass"><i class="fas fa-lock"></i></label>
-              <input class="input_ancho" type="text" name="txtpass" value="<?php echo $objCliente->getcontrasena(); ?>" placeholder="Contraseña" <?php echo $editable ?>>
+              <input class="input_ancho" type="text" name="txtpass" value="<?php echo $objCliente->getcontrasena(); ?>" required placeholder="Contraseña" <?php echo $editable ?>>
             </div>
             <div class="input_box">
               <label class="label_seis" for="txtemail"><i class="fas fa-envelope"></i></label>
-              <input class="input_ancho" type="email" name="txtemail" value="<?php echo $objCliente->getemail(); ?>" placeholder="Correo Electronico" <?php echo $editable ?>>
+              <input class="input_ancho" type="email" name="txtemail" value="<?php echo $objCliente->getemail(); ?>" required placeholder="Correo Electronico" <?php echo $editable ?>>
             <!-- </div>
             <div class="input_box"> -->
               <label class="label_siete" for="txttelefono"><i class="fas fa-phone"></i></label>

@@ -53,7 +53,10 @@
             </div>
           </div>
           <nav>
-
+            <?php
+            // session_start();
+            $nameuser = isset($_SESSION['usuario']) ? $_SESSION['usuario']: "";
+             ?>
             <ul>
               <li><a href="form_cliente.php">PERFIL</a></li>
               <li><a href="index.php">INICIO</a></li>
