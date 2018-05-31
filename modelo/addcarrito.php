@@ -1,6 +1,6 @@
 <?php
 $id_obra = isset($_GET['obra']) ? $_GET['obra'] : "";
-
+// $status =  isset($_POST['status'])?$_POST['status']:"Pendiente";
 session_start();
  if (isset($_SESSION['usuario']) ? $_SESSION['usuario'] : "") {
    $usuario = $_SESSION['usuario'];
@@ -13,6 +13,10 @@ session_start();
      }else{
        if ($clv_operacion == "o"){
          ordenar();
+       }else{
+         if ($clv_operacion == "a"){
+           actualizar();
+         }
        }
      }
 
@@ -88,7 +92,11 @@ function ordenar() {
   if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])){
     $obra_id = $_POST["txtid_crud"];
     pg_query($conexion,"insert into ordenes
-                        values (".idorden()."," .$obra_id."," .idcomprador().",'" .date("d-m-Y")."','" .date("H:i:s")."','pendiente')");
+                        values (".idorden().","
+                         // .$obra_id.","
+                         .idcomprador().",'"
+                         .date("d-m-Y")."','"
+                         .date("H:i:s")."','pendiente',".$obra_id.")");
 
     pg_query($conexion, "delete from carrito where id_obra = ".$obra_id);
 
@@ -115,6 +123,23 @@ function idorden(){
   return $autogenera_id;
 }
 
+function actualizar(){
+  include '../basedatos/conexion.php';
+  $status =  isset($_POST['txtstatus']) ? $_POST['txtstatus'] : "Sin Status";
+  echo "S: ".$status ."<br>";
+  if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {
+    $update_id = $_POST["txtid_crud"];
+    echo "ID: " .$update_id;
+    pg_query($conexion,"update ordenes set status = '". $status ."' where id_obra = ".$update_id);
+    pg_close($conexion);
+    ?>
+    <script type="text/javascript">
+    alert('LA ORDEN CON ID: <?php echo $update_id ?> HA SIDO ACTUALIZADA.');
+    // window.location="../tabla_obras.php#ordenes";
+  </script>
+    <?php
+  }
+}
 
 
 ?>
