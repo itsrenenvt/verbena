@@ -112,9 +112,13 @@
             if ($tipo == "cliente") {
               $tipo = "usuario";
             }
-            $result=pg_query($conexion, 'select ordenes.id_obra , ordenes.id_usuario, ordenes.status, obra.nombre, obra.precio, '.$tipo.'.email, '.$tipo.'.direccion
-from '.$tipo.' inner join ordenes on '.$tipo.'.id_'.$tipo.' = ordenes.id_usuario
-              inner join obra on ordenes.id_obra = obra.id_obra order by ordenes.id_orden');
+//             $result=pg_query($conexion, 'select ordenes.id_obra , ordenes.id_usuario, ordenes.status, obra.nombre, obra.precio, '.$tipo.'.email, '.$tipo.'.direccion
+// from '.$tipo.' inner join ordenes on '.$tipo.'.id_'.$tipo.' = ordenes.id_usuario
+//               inner join obra on ordenes.id_obra = obra.id_obra order by ordenes.id_orden');
+
+$result=pg_query($conexion, 'select ordenes.id_obra , ordenes.id_usuario, ordenes.status, obra.nombre, obra.precio, usuario.email, usuario.direccion
+from usuario inner join ordenes on usuario.id_usuario = ordenes.id_usuario
+  inner join obra on ordenes.id_obra = obra.id_obra order by ordenes.id_orden');
             while ($dato = pg_fetch_array($result)){
 
               $objObra = new obras();
@@ -148,7 +152,7 @@ from '.$tipo.' inner join ordenes on '.$tipo.'.id_'.$tipo.' = ordenes.id_usuario
                 <td>
 
                   <select class="select_status" name="txtstatus">
-                    <option value="<?php echo $objObra->getdescripcion(); ?>"><?php echo $objObra->getdescripcion(); ?></option>
+                    <option value="<?php echo $objObra->getdescripcion(); ?>"> <?php echo $objObra->getdescripcion(); ?> </option>
                     <option value="Pendiente" <?php echo $editable ?>>Pendiente</option>
                     <option value="Confirmada" <?php echo $editable ?>>Confirmada</option>
                     <option value="Entregada" <?php echo $editable ?>>Entregada</option>

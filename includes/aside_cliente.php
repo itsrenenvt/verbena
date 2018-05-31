@@ -49,7 +49,7 @@
                ?>
               <p class="pestadistica"><?php echo $total_colaboradores ?></p>
               <!-- <label for="estadistica_colaboradores">Colaboradores</label> -->
-              <p class="petiqueta" >Compras</p>
+              <p class="petiqueta" >Ordenes</p>
             </div>
           </div>
           <nav>

@@ -126,16 +126,16 @@ function idorden(){
 function actualizar(){
   include '../basedatos/conexion.php';
   $status =  isset($_POST['txtstatus']) ? $_POST['txtstatus'] : "Sin Status";
-  echo "S: ".$status ."<br>";
+  // echo "S: ".$status ."<br>";
   if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])) {
     $update_id = $_POST["txtid_crud"];
-    echo "ID: " .$update_id;
+    // echo "ID: " .$update_id;
     pg_query($conexion,"update ordenes set status = '". $status ."' where id_obra = ".$update_id);
     pg_close($conexion);
     ?>
     <script type="text/javascript">
     alert('LA ORDEN CON ID: <?php echo $update_id ?> HA SIDO ACTUALIZADA.');
-    // window.location="../tabla_obras.php#ordenes";
+    window.location="../tabla_obras.php#ordenes";
   </script>
     <?php
   }
