@@ -82,12 +82,39 @@ function eliminaobra(){
 }
 
 function ordenar() {
-?>
-<script type="text/javascript">
-alert('EN CONSTRUCCION');
-window.location="../carrito.php";
-</script>
-<?php
+  // global $id_obra;
+  include '../basedatos/conexion.php';
+
+  if (isset($_POST["txtid_crud"]) && !empty($_POST["txtid_crud"])){
+    $obra_id = $_POST["txtid_crud"];
+    pg_query($conexion,"insert into ordenes
+                        values (".idorden()."," .$obra_id."," .idcomprador().",'" .date("d-m-Y")."','" .date("H:i:s")."','pendiente')");
+
+    pg_query($conexion, "delete from carrito where id_obra = ".$obra_id);
+
+  }pg_close($conexion);
+  ?>
+  <script type="text/javascript">
+    alert('LA OBRA HA SIDO ORDENADA, EN BREVE RECIBIRAR UNA NOTIFICACIÓN EN TU E-MAIL.');
+    window.location="../carrito.php";
+  </script>
+
+  <?php
+
 }
+
+function idorden(){
+  include '../basedatos/conexion.php';
+  $result=pg_query($conexion, 'select max (id_orden) from ordenes');
+  while ($dato = pg_fetch_array($result)) {
+    $max_id = $dato['max'];
+  }
+  // pg_close($conexion);
+  $autogenera_id = $max_id +1;
+
+  return $autogenera_id;
+}
+
+
 
 ?>

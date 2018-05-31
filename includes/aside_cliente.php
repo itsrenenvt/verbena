@@ -42,7 +42,7 @@
             </div>
             <div class="estadistica_colaboradores">
               <?php
-              $result=pg_query($conexion, 'select count (id_colaborador) from colaborador');
+              $result=pg_query($conexion, 'select count (ordenes.id_usuario) from usuario inner join ordenes on usuario.id_usuario = ordenes.id_usuario');
               while ($dato = pg_fetch_array($result)) {
                 $total_colaboradores = $dato["count"];
               }
