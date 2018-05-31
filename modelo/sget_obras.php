@@ -82,7 +82,7 @@ class obras{
     return $id_ope;
   }
 
-  function insertaObra(){
+  function insertaObra(){ //Agrega al carrito
     include 'basedatos/conexion.php';
     $result=pg_query($conexion, 'select * from obra');
     while ($dato = pg_fetch_array($result)){
