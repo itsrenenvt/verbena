@@ -30,7 +30,8 @@
 
         <div class="foot_pilar" id="newsletter">
           <!-- <h3>Newsletter</h3> -->
-          <form class="form_sub" action="modelo/crud_newsletter.php" method="post">
+          <!-- <form class="form_sub" action="modelo/crud_newsletter.php" method="post"> -->
+          <form class="form_sub" action="https://fb.us18.list-manage.com/subscribe/post?u=128438ed91aba2afbf4942705&amp;id=90285f7fe5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
           <p class="ph3footer" >Newsletter</p>
           <p class="foot_n">Suscribete para resivir las buenas nuevas al instante.</p>
